@@ -1,20 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Fran-End</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="/style.css" rel="stylesheet" />
+  <title>Fran-End</title>
 </head>
 
 <body>
+  <div class="background">
+    <div id="sectionSobreMi">
+      <h1 >Francisco Galeano dev.</h1>
+      <p class="pe-title">Hola, bienvenid@! soy desarrollador Front-End Jr,
+        domino tecnologias como ES6,<br> React.js y node.js
+      </p>
+    </div>
+  </div>
+  <button class="burger" onclick="toggleMenu()"></button>
+  <div class="menu">
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div>
+            <h2>Sobre mi</h2>
+            <nav>
+              <a id="perfil" style="animation-delay: 0.8s">Perfil</a>
+              <a href="#" style="animation-delay: 0.9s">Skills</a>
+              <a href="#" style="animation-delay: 1s">Educacion</a>
+            </nav>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <h2>Portafolio</h2>
+            <nav>
+              <a href="#" style="animation-delay: 0.9s">Projectos</a>
+              <a href="#" style="animation-delay: 1s">GitHub</a>
+            </nav>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <h2>Contact</h2>
+            <nav>
+              <a href="#" style="animation-delay: 0.8s">Email</a>
+              <a href="#" style="animation-delay: 0.9s">Instagram</a>
+              <a href="#" style="animation-delay: 1s">LinkedIn</a>
+            </nav>
+          </div>
+        </div>
+      </div>
 
-    <h1>Francisco Galeano.</h1>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 
 
 
 
-    
 </body>
 
 </html>
