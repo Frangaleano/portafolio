@@ -1,10 +1,5 @@
-const sectionSM = document.getElementById('sectionSobreMi')
-const botonPerfil = document.getElementById('perfil')
-
-
 const toggleMenu = () => {
   document.body.classList.toggle("open");
-  irSobreMi(botonPerfil)
 };
 
 const swiper = new Swiper(".swiper", {
@@ -18,13 +13,3 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-function irSobreMi(botonPerfil) {
-  botonPerfil.addEventListener('click', () => {
-    inicio()
-  })
-}
-
-function inicio() {
-  location.reload()
-}
