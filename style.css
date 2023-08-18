@@ -1,93 +1,239 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap');
 
 * {
-  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
-
 
 body {
-  font-family: "Euclid Circular A", Poppins;
   color: #f9f9f9;
-}
-
-button {
-  border: 0;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-}
-
-.swiper {
   width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.swiper-slide {
-  display: grid;
-  place-items: center;
-  opacity: 0;
-  transition: 0.25s;
-}
-
-.swiper-slide-active {
-  opacity: 1;
-}
-
-.swiper-slide>div {
-  margin-top: -73px;
-}
-
-.swiper-slide h2 {
-  opacity: 0.35;
-  font-weight: 400;
-  width: 100%;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  opacity: 0.5;
-  color: rgb(255 255 255 / 96%);
-  transition: 0.3s;
-}
-
-:is(.swiper-button-next, .swiper-button-prev):hover {
-  opacity: 1;
-}
-
-.swiper-button-next {
-  right: 50px;
-}
-
-.swiper-button-prev {
-  left: 50px;
-}
-
-.burger,
-.menu,
-.background {
-  position: fixed;
-}
-
-.background {
-  z-index: 1;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  background-image: url("assets/bg.png");
+  height: 100vh;
+  background-image: url("assets/bg-lacaida.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0%;
-  transition: 0.5s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  display: grid;
+  align-items: start;
+  position: fixed;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 1s linear;
 
 }
+
+body:hover {
+  animation: shadow-inset-center 1s linear both;
+}
+
+@keyframes shadow-inset-center {
+  0% {
+    box-shadow: inset 0 0 0 0 transparent
+  }
+
+  100% {
+    box-shadow: inset 0 0 130px 2px rgb(0, 0, 0)
+  }
+}
+
+.div1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 0px 10px;
+  border-bottom: 1px solid white;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.div1:hover {
+  background: rgba(131, 113, 113, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.2px);
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  list-style: none;
+  animation-duration: 2s;
+  animation-name: slidein;
+  padding-left: 10px;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+}
+
+.ancla-1 {
+  text-decoration: none;
+  text-shadow: 3px 2px 5px #000000;
+  color: white;
+}
+
+.ancla-1::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: white;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform .5s;
+}
+
+.ancla-1:hover::after {
+  transform: scale(1, 1);
+}
+
+
+.nombre-inicio {
+  text-shadow: 3px 2px 5px #000000;
+  font-size: 20px;
+  color: white;
+  animation-duration: 10s;
+  animation-name: fade;
+}
+
+
+@keyframes fade {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+.div2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 50px;
+  margin-bottom: 40px;
+  padding: 30px;
+}
+
+.div-texto {
+  text-align: center;
+}
+
+.text-inicio {
+  font-size: 50px;
+  text-shadow: 3px 2px 5px #000000;
+  animation-duration: 3s;
+  animation-name: slideinr;
+  width: 650px;
+  height: 252px;
+  text-shadow: 1px 8px 5px rgba(0, 0, 0, 1);
+  position: relative;
+  padding-top: 35px;
+  padding-bottom: 0px;
+  transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.text-inicio:hover {
+  transform: scale(1.05);
+  transition-duration: 1s;
+}
+
+.div-texto .text-inicio::before,
+.div-texto .text-inicio::after {
+  content: '';
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  transition: all .5s ease;
+  opacity: 0;
+}
+
+.div-texto .text-inicio::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 8px solid #0000008f;
+  border-right: 5px solid #0000008f;
+  transform: translate(-100%, 50%);
+}
+
+.div-texto .text-inicio:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 8px solid #0000008f;
+  border-left: 5px solid #0000008f;
+  transform: translate(100%, -50%)
+}
+
+.div-texto .text-inicio:hover:before,
+.div-texto .text-inicio:hover:after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+
+
+@keyframes slideinr {
+  from {
+    margin-left: 500px;
+    opacity: 0%;
+  }
+
+  to {
+    margin-left: 0px;
+    opacity: 100%;
+  }
+}
+
+.text-inicio-sec {
+  font-family: 'Cinzel', serif;
+  position: absolute;
+  margin-left: 370px;
+  margin-top: 220px;
+  font-size: 60px;
+  transform: rotate(351deg);
+  text-shadow: 3px 2px 5px #000000;
+  letter-spacing: normal;
+}
+
+.span-1 {
+  position: absolute;
+  border: dotted 4px rgba(255, 255, 255, 0.658);
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  left: 1200px;
+  bottom: -0px;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 20s;
+  animation-name: spinner-loading;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes spinner-loading {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+.span-1:hover {
+  background-color: #f7f7f750;
+  transition-duration: .9s;
+  display: inline-block;
+}
+
 
 
 .conteiner-title {
@@ -139,7 +285,6 @@ body.open .menu {
   visibility: visible;
 }
 
-
 .menu nav {
   display: flex;
   flex-direction: column;
@@ -159,7 +304,7 @@ body.open .menu {
   position: relative;
   color: #f9f9f9;
   font-size: 32px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Euclid Circular A";
   padding: 20px 0;
   width: 260px;
   text-decoration: none;
@@ -184,23 +329,12 @@ body.open .menu {
   transform: scaleX(1);
 }
 
-.pe-title{
+.tituloSeccion {
+  color: white;
+}
+
+.pe-title {
   font-family: 'Courier New', Courier, monospace;
-}
-
-#sectionSobreMi {
-animation-duration: 1.5s;
-animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-top: 100%;
-    width: 100%;
-  }
-
-  to {
-    margin-top: 0%;
-    width: 100%;
-  }
+  color: white;
+  padding: 50px;
 }

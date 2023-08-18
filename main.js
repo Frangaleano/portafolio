@@ -1,15 +1,24 @@
-const toggleMenu = () => {
-  document.body.classList.toggle("open");
-};
+$("h2").lettering();
+      
+// hack to get animations to run again
+$("h2").click(function() { 
+  var el = $(this),  
+     newone = el.clone();
+  el.before(newone);
+  el.remove();
+}); 
+  
+  
+var text = $("#jquerybuddy"),
+numLetters = text.find("span").length;
 
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  loop: true,
-  speed: 750,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+function randomBlurize() {
+text.find("span:nth-child(" + (Math.floor(Math.random()*numLetters)+1) + ")")
+  .animate({
+    'textShadowBlur': Math.floor(Math.random()*25)+4,
+    'textShadowColor': 'rgba(0,100,0,' + (Math.floor(Math.random()*200)+55) + ')'
+  });
+// Call itself recurssively
+setTimeout(randomBlurize, 100);
+} // Call once
+randomBlurize();

@@ -5,98 +5,50 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="/style.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
-  <title>Fran-End</title>
+  <link href="./style.css" rel="stylesheet" />
 </head>
 
 <body>
-  <button class="burger" onclick="toggleMenu()"></button>
-  <div class="menu">
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="conteiner-sobremi">
-            <h2>Sobre mi</h2>
-            <nav>
-              <a class="anchor-menu" href="#" style="animation-delay: 0.8s">Perfil</a>
-              <a class="anchor-menu" href="#" style="animation-delay: 0.9s">Skills</a>
-              <a class="anchor-menu" href="#" style="animation-delay: 1s">Educacion</a>
-            </nav>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div>
-            <h2>Portafolio</h2>
-            <nav>
-              <a href="#" style="animation-delay: 0.9s">Projectos</a>
-              <a href="#" style="animation-delay: 1s">GitHub</a>
-            </nav>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div>
-            <h2>Contact</h2>
-            <nav>
-              <a href="#" style="animation-delay: 0.8s">Email</a>
-              <a href="#" style="animation-delay: 0.9s">Instagram</a>
-              <a href="#" style="animation-delay: 1s">LinkedIn</a>
-            </nav>
-          </div>
-        </div>
-      </div>
+  <div class="div1">
+    <div>
+      <ul class="nav">
+        <li>
+          <a class="nav-link ancla-1" aria-current="page" href="#">Sobre mi</a>
+        </li>
+        <li>
+          <a class="nav-link ancla-1" href="#">Proyectos</a>
+        </li>
+        <li>
+          <a class="nav-link ancla-1" href="#">Contacto</a>
+        </li>
+      </ul>
+    </div>
 
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <div>
+      <h1 class="nombre-inicio">Francisco Galeano Dev.</h1>
     </div>
   </div>
 
-  <div class="background">
-    <section id="sectionSobreMi">
-      <h1 class="tituloSeccion">Francisco Galeano dev.</h1>
-      <p class="pe-title">Hola, bienvenid@! soy desarrollador Front-End Jr,
-        domino tecnologias como ES6,<br> React.js y node.js
-      </p>
-    </section> 
-
-    <section>
-      <h2 class="tituloSeccion">Skills</h2>
-      
-      <div class="icon-cards">
-        <div class="face-front">
-          <img src="./assets/nodejs.png" alt="node">
-          <h3 class="titulo-card">Node.js</h3>
-        </div>
-        <div class="face-back">
-          <img class="stars-card" src="./ass" alt="estrella">
-        </div>
-      </div>
-      <div class="icon-cards"></div>
-      <div class="icon-cards"></div>
-      <div class="icon-cards"></div>
-      <div class="icon-cards"></div>
-      <div class="icon-cards"></div>
-      <div class="icon-cards"></div>
-      <div class="icon-cards"></div>
-      <div class="icon-cards"></div>
-      <div class="icon-cards"></div>
-
-    </section>
+  <div class="div2" >
+    <div class="span-1"></div>
+    <div class="div-texto">
+      <h2 class="text-inicio">Hola! mi nombre es Francisco, soy estudiante, tatuador y tambien...</h2>
+    </div>
+    <!--<h3 class="text-inicio-sec">Front-End <br> Developer.</h3>-->
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script type="text/javascript" src="main.js"></script>
-
-
+  <script type="text/javascript" src="/main.js"></script>
 </body>
 
 </html>
