@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Fjalla+One&family=Gilda+Display&family=Montserrat:wght@100&family=Prompt&display=swap');
+
+
 
 * {
   padding: 0px;
@@ -17,12 +19,10 @@ body {
   position: fixed;
   font-family: 'Montserrat', sans-serif;
   transition: all 1s linear;
+  animation: shadow-inset-center 3s linear both;
 
 }
 
-body:hover {
-  animation: shadow-inset-center 1s linear both;
-}
 
 @keyframes shadow-inset-center {
   0% {
@@ -73,9 +73,11 @@ body:hover {
 }
 
 .ancla-1 {
+  font-family: "Euclid Circular A", "Poppins";
   text-decoration: none;
   text-shadow: 3px 2px 5px #000000;
   color: white;
+  font-size: 18px;
 }
 
 .ancla-1::after {
@@ -94,6 +96,8 @@ body:hover {
 
 
 .nombre-inicio {
+  font-family: 'Gilda Display', serif;
+  ;
   text-shadow: 3px 2px 5px #000000;
   font-size: 20px;
   color: white;
@@ -116,7 +120,7 @@ body:hover {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-left: 50px;
+  margin-left: 20px;
   margin-bottom: 40px;
   padding: 30px;
 }
@@ -126,7 +130,7 @@ body:hover {
 }
 
 .text-inicio {
-  font-size: 50px;
+  font-size: 40px;
   text-shadow: 3px 2px 5px #000000;
   animation-duration: 3s;
   animation-name: slideinr;
@@ -136,7 +140,10 @@ body:hover {
   position: relative;
   padding-top: 35px;
   padding-bottom: 0px;
+  margin-bottom: 100px;
   transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  text-transform: uppercase;
+  font-family: 'Prompt', sans-serif;
 }
 
 .text-inicio:hover {
@@ -158,8 +165,8 @@ body:hover {
   content: '';
   right: 0;
   top: 0;
-  border-top: 8px solid #0000008f;
-  border-right: 5px solid #0000008f;
+  border-top: 10px solid #0000008f;
+  border-right: 10px solid #0000008f;
   transform: translate(-100%, 50%);
 }
 
@@ -167,8 +174,8 @@ body:hover {
   content: '';
   left: 0;
   bottom: 0;
-  border-bottom: 8px solid #0000008f;
-  border-left: 5px solid #0000008f;
+  border-bottom: 10px solid #0000008f;
+  border-left: 10px solid #0000008f;
   transform: translate(100%, -50%)
 }
 
@@ -193,15 +200,45 @@ body:hover {
 }
 
 .text-inicio-sec {
-  font-family: 'Cinzel', serif;
+  font-family: 'Fjalla One', sans-serif;
   position: absolute;
-  margin-left: 370px;
-  margin-top: 220px;
-  font-size: 60px;
-  transform: rotate(351deg);
+  margin-left: 140px;
+  margin-top: 230px;
+  padding: 25px;
+  border-radius: 100px;
+  font-size: 180px;
   text-shadow: 3px 2px 5px #000000;
   letter-spacing: normal;
+  text-transform: uppercase;
+  animation: scale-up-horizontal-center 1s;
 }
+
+@keyframes scale-up-horizontal-center {
+  0% {
+    transform: scaleX(.2);
+    opacity: 0%;
+  }
+
+  100% {
+    transform: scaleX(1);
+    opacity: 100%;
+  }
+}
+
+.text-inicio-sec:hover {
+  animation: shadow-inset-center .5s linear both
+}
+
+@keyframes shadow-inset-center {
+  0% {
+    box-shadow: inset 0 0 0 0 transparent
+  }
+
+  100% {
+    box-shadow: inset 0 0 14px 10px rgba(0, 0, 0, 1)
+  }
+}
+
 
 .span-1 {
   position: absolute;
@@ -210,7 +247,7 @@ body:hover {
   height: 300px;
   border-radius: 300px;
   left: 1200px;
-  bottom: -0px;
+  bottom: 50px;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-duration: 20s;
@@ -229,112 +266,132 @@ body:hover {
 }
 
 .span-1:hover {
-  background-color: #f7f7f750;
-  transition-duration: .9s;
+  background: rgba(131, 113, 113, 0);
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.2px);
+  transition-duration: .5s;
   display: inline-block;
 }
 
-
-
-.conteiner-title {
-  text-align: center;
-  padding: 0px 20px;
+.text-creatividad {
+  position: absolute;
+  margin-top: 200px;
+  right: 0;
+  margin-right: 203px;
+  font-family: 'Gilda Display', serif;
+  font-size: 25px;
+  text-shadow: 7px 7px 8px #000000;
+  animation-duration: 5s;
+  animation-name: fade;
 }
 
-body.open .background {
-  filter: blur(10px);
+.text-creatividad::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: white;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform .5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
 
 
-.burger {
-  z-index: 3;
+.text-creatividad:hover::after {
+  transform: scale(1, 1);
+}
+
+
+.button {
+  position: absolute;
+  overflow: hidden;
+  width: 140px;
+  height: 50px;
+  border-radius: 25px;
+  border: 0;
+  color: #f7f7f7;
+  background: transparent;
+  font-family: "Euclid Circular A", "Poppins";
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 830px;
+  box-shadow: inset 0 0 11px 5px rgba(0, 0, 0, 1);
+}
+
+.button i {
+  font-size: 18px;
+}
+
+.button-text,
+.button-links {
+  position: absolute;
   top: 0;
   left: 0;
-  display: grid;
-  place-items: center;
-  width: 88px;
-  height: 88px;
-  background-image: url("./assets/menu.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-body.open .burger {
-  background-image: url("./assets/close.svg");
-}
-
-
-
-.menu {
-  z-index: 2;
-  top: 0;
-  left: 0;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+}
+
+.button-text {
+  gap: 10px;
+  justify-content: center;
+  color: inherit;
+  font-size: 16px;
+}
+
+.button-links {
   opacity: 0;
-  visibility: hidden;
-  border-bottom: 0px solid white;
-  transition: 0.5s;
-}
-
-body.open .menu {
-  opacity: 1;
-  visibility: visible;
-}
-
-.menu nav {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+  transition: 0.2s;
+  padding-top: 3px;
 }
 
-.menu nav:hover a {
-  opacity: 0.25;
+.button-links a {
+  translate: 0 50px;
+  transition: 0.3s;
 }
 
-.menu nav a:hover {
+.button:hover {
+  border-radius: 6px;
+}
+
+.button:hover .button-links a:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.button:hover .button-links a:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.button:hover .button-links a:nth-child(3) {
+  transition-delay: 0.15s;
+}
+
+.button:hover .button-text {
+  translate: 0 -100%;
+}
+
+.button:hover .button-links {
   opacity: 1;
 }
 
-.menu a {
-  position: relative;
-  color: #f9f9f9;
-  font-size: 32px;
-  font-family: "Euclid Circular A";
-  padding: 20px 0;
-  width: 260px;
-  text-decoration: none;
-  transition: 0.4s;
+.button:hover .button-links a {
+  translate: 0;
 }
 
-.menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 10px;
-  width: 100%;
-  height: 2px;
-  border-radius: 2px;
-  background: #f7f7f7;
-  transform: scaleX(0);
-  transform-origin: 0% 50%;
-  transition: 0.4s;
-}
-
-.menu a:hover::after {
-  transform: scaleX(1);
-}
-
-.tituloSeccion {
-  color: white;
-}
-
-.pe-title {
-  font-family: 'Courier New', Courier, monospace;
-  color: white;
-  padding: 50px;
+.button-links i {
+  color: #f7f7f7;
 }

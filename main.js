@@ -1,24 +1,32 @@
-$("h2").lettering();
-      
-// hack to get animations to run again
-$("h2").click(function() { 
-  var el = $(this),  
-     newone = el.clone();
-  el.before(newone);
-  el.remove();
-}); 
-  
-  
-var text = $("#jquerybuddy"),
-numLetters = text.find("span").length;
+const sectionSM = document.getElementById("section-sm")
+const botonSM = document.getElementById("boton-sm")
+const sectionInicio = document.getElementById("inicio")
+const navInicio = document.getElementById("nav-inicio")
 
-function randomBlurize() {
-text.find("span:nth-child(" + (Math.floor(Math.random()*numLetters)+1) + ")")
-  .animate({
-    'textShadowBlur': Math.floor(Math.random()*25)+4,
-    'textShadowColor': 'rgba(0,100,0,' + (Math.floor(Math.random()*200)+55) + ')'
-  });
-// Call itself recurssively
-setTimeout(randomBlurize, 100);
-} // Call once
-randomBlurize();
+function EscucharBotones() {
+  sectionSM.style.display = "none"
+
+  botonSM.addEventListener("click", ()=> {
+    sectionInicio.style.display = "none"
+    sectionSM.style.display = "flex"
+  })
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+window.addEventListener("load", EscucharBotones(), {
+  
+})
