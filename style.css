@@ -7,30 +7,37 @@
   margin: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  padding: 0px;
+  margin: 0px;
   color: #f9f9f9;
-  width: 100%;
-  height: 100vh;
+  width: 101%;
+  min-height: 100vh;
   background-image: url("assets/bg-lacaida.png");
-  background-size: cover;
+  background-size: 101%;
   background-repeat: no-repeat;
   display: grid;
   align-items: start;
-  position: fixed;
   font-family: 'Montserrat', sans-serif;
   transition: all 1s linear;
   animation: shadow-inset-center 3s linear both;
-
+  grid-template-rows: 8% 100%;
+  overflow-x: hidden;
+  background-color: #000000;
 }
 
 
 @keyframes shadow-inset-center {
   0% {
-    box-shadow: inset 0 0 0 0 transparent
+    box-shadow: inset 0 0 0 0 transparent;
   }
 
   100% {
-    box-shadow: inset 0 0 130px 2px rgb(0, 0, 0)
+    box-shadow: inset 0 0 250px 50px rgb(0, 0, 0);
   }
 }
 
@@ -40,14 +47,13 @@ body {
   justify-content: space-between;
   padding: 5px;
   margin: 0px 15px;
-  border-bottom: 1px solid white;
   transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.div1:hover {
+  position: fixed;
   background: rgba(131, 113, 113, 0);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.2px);
+  width: 98%;
+  z-index: 1;
 }
 
 .nav {
@@ -55,21 +61,7 @@ body {
   flex-direction: row;
   gap: 40px;
   list-style: none;
-  animation-duration: 2s;
-  animation-name: slidein;
   padding-left: 10px;
-}
-
-@keyframes slidein {
-  from {
-    margin-top: 100%;
-    width: 100%;
-  }
-
-  to {
-    margin-top: 0%;
-    width: 100%;
-  }
 }
 
 .ancla-1 {
@@ -92,6 +84,10 @@ body {
 
 .ancla-1:hover::after {
   transform: scale(1, 1);
+}
+
+.ancla-1.seleccionada {
+  opacity: 50%;
 }
 
 
@@ -120,8 +116,9 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 240px;
   padding: 30px;
+  padding-top: 0px;
 }
 
 .div-texto {
@@ -130,27 +127,26 @@ body {
 
 .text-inicio {
   font-size: 41px;
-  animation-duration: 3s;
-  animation-name: slideinr;
   width: 600px;
   height: 252px;
   text-shadow: 1px 8px 5px rgba(0, 0, 0, 1);
   position: relative;
-  padding-bottom: 100px;
-  margin-bottom: 100px;
   transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   text-transform: uppercase;
   font-family: 'Prompt', sans-serif;
+  margin-top: 50px;
+  animation: slide-top 3s ease-in-out;
+  top: 60px;
 }
 
-@keyframes slideinr {
-  from {
-    margin-left: 500px;
+@keyframes slide-top {
+  0% {
+    transform: translateY(200px);
     opacity: 0%;
   }
 
-  to {
-    margin-left: 0px;
+  100% {
+    transform: translateY(0px);
     opacity: 100%;
   }
 }
@@ -163,32 +159,26 @@ body {
 
 .text-inicio-sec {
   font-family: 'Fjalla One', sans-serif;
-  position: absolute;
-  margin-left: 140px;
-  margin-top: 250px;
+  margin-left: 285px;
   padding: 15px 25px;
   border-radius: 100px;
   font-size: 180px;
   text-shadow: 3px 2px 5px #000000;
   text-transform: uppercase;
+  animation-name: fade;
+  animation-duration: 6s;
   transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.text-inicio-sec:hover {
-  animation: shadow-inset-center .5s linear both;
-}
-
-@keyframes shadow-inset-center {
-  0% {
-    box-shadow: inset 0 0 0 0 transparent
+@keyframes fade {
+  from {
+    opacity: 0%;
   }
 
-  100% {
-    box-shadow: inset 0 0 14px 10px rgba(0, 0, 0, 1)
+  to {
+    opacity: 100%;
   }
 }
-
-
 
 .span-1 {
   z-index: 0;
@@ -197,8 +187,8 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 300px;
-  left: 1220px;
-  bottom: 100px;
+  right: -140px;
+  bottom: 350px;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-duration: 20s;
@@ -213,8 +203,8 @@ body {
   width: 240px;
   height: 240px;
   border-radius: 300px;
-  left: -60px;
-  bottom: -70px;
+  left: -50px;
+  bottom: 190px;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-duration: 20s;
@@ -244,9 +234,9 @@ body {
   z-index: 1;
   position: absolute;
   font-family: 'Gilda Display';
-  left: 0;
+  left: 20px;
   font-size: 20px;
-  margin-top: 400px;
+  margin-top: 470px;
   width: 150px;
   margin-left: 10px;
   text-shadow: 7px 7px 8px #000000;
@@ -275,14 +265,38 @@ body {
 
 .text-creatividad {
   position: absolute;
-  margin-top: 215px;
-  right: 0;
-  margin-right: 170px;
+  right: 20px;
+  margin-right: 155px;
   font-family: 'Gilda Display', serif;
   font-size: 25px;
   text-shadow: 7px 7px 8px #000000;
   animation-duration: 5s;
   animation-name: fade;
+  top: 310px;
+  letter-spacing: 0.5px;
+}
+
+.text-disciplina {
+  position: absolute;
+  left: 205px;
+  margin-right: 155px;
+  font-family: 'Gilda Display', serif;
+  font-size: 25px;
+  text-shadow: 3px 1px 2px #000000;
+  animation-duration: 5s;
+  animation-name: fade;
+  bottom: 280px;
+  letter-spacing: 0.5px;
+}
+
+.text-disciplina::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: white;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform .5s;
 }
 
 .text-creatividad::after {
@@ -310,6 +324,10 @@ body {
   transform: scale(1, 1);
 }
 
+.text-disciplina:hover::after {
+  transform: scale(1, 1);
+}
+
 
 .button {
   position: absolute;
@@ -323,9 +341,10 @@ body {
   font-family: "Euclid Circular A", "Poppins";
   cursor: pointer;
   transition: 0.3s;
-  margin-left: 830px;
+  margin-left: 860px;
   box-shadow: inset 0 0 11px 2px rgba(0, 0, 0, 1);
-  margin-top: 28px;
+  margin-top: 50px;
+  top: 80px;
 }
 
 .button i {
@@ -396,3 +415,67 @@ body {
 .button-links i {
   color: #f7f7f7;
 }
+
+.textoSm {
+  font-size: 40px;
+  margin-bottom: 500px;
+  margin-left: 50px;
+  position: absolute;
+  right: 0px;
+  margin-right: 150px;
+}
+
+#section-sm {
+  display: flex;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 3.5s ease, transform 2s ease;
+}
+
+#section-sm.mostrar {
+  opacity: 1;
+  transform: translateY(80px);
+}
+
+.rombo {
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  position: relative;
+  transform: rotate(45deg);
+  /* Rotar el rombo en 45 grados */
+  margin: 50px;
+  /* Ajustar el margen para centrar el rombo */
+  border: 5px solid black;
+  /* Borde negro de 2px */
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra de desplazamiento */
+  background-color: black; /* Color de fondo de la barra */
+}
+
+/* Estilo del riel de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background-color: black; /* Color de fondo del riel */
+}
+
+/* Estilo del mango de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background-color: #232323; /* Color del mango de la barra */
+  border-radius: 5px; /* Borde redondeado para el mango */
+}
+
+/* Estilo del mango de la barra de desplazamiento cuando se mueve */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cccccc; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilo del fondo de la barra de desplazamiento cuando se arrastra */
+::-webkit-scrollbar-thumb:active {
+  background-color: #999999; /* Cambia el color cuando se arrastra */
+}
+
+
+

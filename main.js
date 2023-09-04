@@ -1,11 +1,21 @@
 const sectionSM = document.getElementById("section-sm")
-const botonSM = document.getElementById("boton-sm")
+const sectionPro = document.getElementById("section-proyectos")
+const sectionCon = document.getElementById("section-contacto")
 const sectionInicio = document.getElementById("inicio")
+
+const botonSM = document.getElementById("boton-sm")
+const botonPro = document.getElementById("boton-pro")
+const botonCon = document.getElementById("boton-con")
+
 const navInicio = document.getElementById("nav-inicio")
-const botonInicio = document.getElementById("nombre-inicio")
+
+
 
 let textoDiablo = document.getElementById("texto-diablo")
 let textoCaida = document.getElementById("texto-caida")
+let secciones = document.querySelectorAll(".ancla-1")
+
+
 
 
 function verTextoDiablo() {
@@ -34,22 +44,43 @@ function ocultarTextoCaida() {
 
 
 function EscucharBotones() {
-  sectionSM.style.display = "none"
 
-  botonSM.addEventListener("click", ()=> {
-    sectionInicio.style.display = "none"
-    sectionSM.style.display = "flex"
-  })
+  secciones.forEach(function (seccion) {
+    seccion.addEventListener('click', function () {
+      // Quitar la clase 'seleccionada' de todas las secciones
+      secciones.forEach(function (seccion) {
+        seccion.classList.remove('seleccionada');
+      });
 
-
-  botonInicio.addEventListener("click", () => {
-    sectionInicio.style.display = "flex"
-    sectionSM.style.display = "none"
-  })
-
+      // Agregar la clase 'seleccionada' solo a la sección actual
+      this.classList.add('seleccionada');
+    });
+  });
 }
 
+function inicio() {
+  location.reload()
+}
 
-window.addEventListener("load", EscucharBotones(), {
-  
-})
+function mostrarSeccionSobreMi() {
+  const sobreMiSection = document.getElementById('section-sm');
+  const windowHeight = window.innerHeight;
+  const scrollY = window.scrollY;
+
+  const sobreMiSectionTop = sobreMiSection.getBoundingClientRect().top;
+
+  if (sobreMiSectionTop < windowHeight / 1) {
+    sobreMiSection.classList.add('mostrar'); // Aplica la clase para mostrar la sección
+  } else {
+    sobreMiSection.classList.remove('mostrar'); // Oculta la sección si el usuario se desplaza hacia arriba
+  }
+}
+
+// Detectar el desplazamiento de la página
+window.addEventListener('scroll', mostrarSeccionSobreMi);
+
+// Asegúrate de que el evento 'load' esté configurado correctamente
+window.addEventListener("load", EscucharBotones);
+
+
+

@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link href="./style.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="./assets/F_F-removebg-preview-removebg-preview.png">
 </head>
 
 <body>
@@ -21,20 +22,22 @@
           <a id="boton-sm" class="nav-link ancla-1" aria-current="page" href="#section-sm">Sobre mi</a>
         </li>
         <li>
-          <a class="nav-link ancla-1" href="#">Proyectos</a>
+          <a id="boton-pro" class="nav-link ancla-1" href="#section-proyectos">Proyectos</a>
         </li>
         <li>
-          <a class="nav-link ancla-1" href="#">Contacto</a>
+          <a id="boton-con" class="nav-link ancla-1" href="#section-contacto">Contacto</a>
         </li>
       </ul>
     </div>
 
     <div>
-      <h1 class="nombre-inicio" id="nombre-inicio">Francisco Galeano Dev.</h1>
+      <h1 class="nombre-inicio" id="nombre-inicio" onclick="inicio()">Francisco Galeano</h1>
     </div>
   </div>
 
-  <div class="div2" id="inicio">
+
+
+  <section class="div2" id="inicio">
 
     <p class="texto-diablo" id="texto-diablo">“Un diablo bien vestido, por un ángel es tenido.”</p>
     <div class="span-1" onmouseover="verTextoDiablo()" onmouseout="ocultarTextoDiablo()">
@@ -45,12 +48,12 @@
     </div>
 
     <div class="div-texto">
-      <h2 class="text-inicio">Hola! mi nombre es Francisco, soy estudiante, tatuador y tambien...</h2>
+      <h2 class="text-inicio">Hola! soy desarrollador front-end, tatuador y tambien...</h2>
     </div>
 
-    <b class="text-creatividad">
-      Creatividad
-    </b>
+    <i class="text-creatividad">
+      Creatividad.
+    </i>
 
     <button class="button">
       <span class="button-text">
@@ -70,17 +73,24 @@
       </span>
     </button>
 
-    <h3 class="text-inicio-sec">web designer</h3>
+    <h3 class="text-inicio-sec">front-end <br>Developer</h3>
+    <i class="text-disciplina">
+      .Disciplina
+    </i>
 
-  </div>
+    <section id="section-sm">
+      <h2 class="textoSm">Mi nombre como podran ver es..</h2>
+    </section>
 
-  <section id="section-sm">
-      <h2>FRANCISCO GALEANO</h2>
   </section>
 
 
 
 
+
+
+  <section id="section-proyectos"></section>
+  <section id="section-contacto"></section>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="/main.js"></script>
