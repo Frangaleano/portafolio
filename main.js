@@ -2,6 +2,9 @@ const sectionSM = document.getElementById("section-sm")
 const sectionPro = document.getElementById("section-proyectos")
 const sectionCon = document.getElementById("section-contacto")
 const sectionInicio = document.getElementById("inicio")
+const contenedor = document.querySelector(".contenedor");
+const imagen = document.querySelector(".imagen");
+const info = document.querySelector(".info");
 
 const botonSM = document.getElementById("boton-sm")
 const botonPro = document.getElementById("boton-pro")
@@ -14,6 +17,7 @@ const navInicio = document.getElementById("nav-inicio")
 let textoDiablo = document.getElementById("texto-diablo")
 let textoCaida = document.getElementById("texto-caida")
 let secciones = document.querySelectorAll(".ancla-1")
+let isHovered = false;
 
 
 
@@ -56,6 +60,24 @@ function EscucharBotones() {
       this.classList.add('seleccionada');
     });
   });
+
+
+  contenedor.addEventListener("mouseenter", () => {
+    if (!isHovered) {
+      imagen.style.transform = "translateY(-15px)";
+      imagen.style.transition = "1s  cubic-bezier(0.68, -0.55, 0.27, 1.55)"
+      info.style.opacity = 1;
+      info.style.transform = "translateY(0%)";
+      isHovered = true;
+    }
+  });
+
+  contenedor.addEventListener("mouseleave", () => {
+    imagen.style.transform = "translateY(0)";
+    info.style.opacity = 0;
+    info.style.transform = "translateY(-15%)";
+    isHovered = false;
+  });
 }
 
 function inicio() {
@@ -69,12 +91,13 @@ function mostrarSeccionSobreMi() {
 
   const sobreMiSectionTop = sobreMiSection.getBoundingClientRect().top;
 
-  if (sobreMiSectionTop < windowHeight / 1) {
+  if (sobreMiSectionTop < windowHeight / 1.5) {
     sobreMiSection.classList.add('mostrar'); // Aplica la clase para mostrar la sección
   } else {
     sobreMiSection.classList.remove('mostrar'); // Oculta la sección si el usuario se desplaza hacia arriba
   }
 }
+
 
 // Detectar el desplazamiento de la página
 window.addEventListener('scroll', mostrarSeccionSobreMi);
