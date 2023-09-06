@@ -166,11 +166,14 @@ body {
   font-size: 170px;
   text-shadow: 3px 2px 5px #000000;
   text-transform: uppercase;
-  animation-name: fade;
-  animation-duration: 6s;
-  transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   margin-top: 50px;
 }
+
+.text-inicio-sec:hover {
+  animation: fade;
+  animation-duration: 3s;
+}
+
 
 @keyframes fade {
   from {
@@ -429,6 +432,7 @@ body {
   opacity: 0;
   transform: translateY(-30px);
   transition: opacity 1s ease, transform 4s ease;
+  height: 470px
 }
 
 #section-sm.mostrar {
@@ -461,9 +465,59 @@ body {
   font-size: 22px;
   line-height: 1.5em;
   width: 750px;
-  margin-top: 100px;
+  height: 308px;
+  margin-top: 120px;
   font-family: "Euclid Circular A", "Poppins";
+  transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 1;
+  background-color: black;
 }
+
+.text-sm:hover {
+  transform: scale(1.02);
+  transition-duration: 1s;
+  transform-origin: center;
+  letter-spacing: 0;
+}
+
+.span-3 {
+  border: dotted 4px rgba(255, 255, 255, 0.658);
+  width: 250px;
+  height: 250px;
+  border-radius: 300px;
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 60s;
+  animation-name: spinner-loading;
+  left: 40.9%;
+  margin-top: 20%;
+}
+
+.text-osadia {
+  position: absolute;
+  font-family: 'Gilda Display', serif;
+  font-size: 28px;
+  left: 47.2%;
+  margin-top: 39.8%;
+  transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  letter-spacing: 0.6px;
+}
+
+.text-osadia::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: white;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform .5s;
+}
+
+.text-osadia:hover::after {
+  transform: scale(1, 1);
+}
+
 
 .contenedor {
   width: 300px;
@@ -473,6 +527,7 @@ body {
   margin: 20px 140px;
   position: relative;
 }
+
 
 
 .imagen img {
