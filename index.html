@@ -19,16 +19,17 @@
     <div>
       <ul class="nav">
         <li>
-          <a id="boton-sm" class="nav-link ancla-1" aria-current="page" href="#section-sm">Sobre mi</a>
+          <a id="boton-sm" class="nav-link ancla-1" aria-current="page" href="#"
+            onclick="scrollSuave('section-sm')">Sobre mi</a>
         </li>
         <li>
-          <a id="boton-con" class="nav-link ancla-1" href="#section-educacion">Educacion</a>
+          <a id="boton-edu" class="nav-link ancla-1" href="#" onclick="scrollSuave('section-educacion')">Educacion</a>
         </li>
         <li>
-          <a id="boton-pro" class="nav-link ancla-1" href="#section-proyectos">Proyectos</a>
+          <a id="boton-pro" class="nav-link ancla-1" href="#" onclick="scrollSuave('section-proyectos')">Proyectos</a>
         </li>
         <li>
-          <a id="boton-con" class="nav-link ancla-1" href="#section-contacto">Contacto</a>
+          <a id="boton-con" class="nav-link ancla-1" href="#" onclick="scrollSuave('section-contacto')">Contacto</a>
         </li>
       </ul>
     </div>
@@ -42,48 +43,55 @@
 
   <section class="div2" id="inicio">
 
-    <p class="texto-diablo" id="texto-diablo">“Un diablo bien vestido, por un ángel es tenido.”</p>
-    <div class="span-1" onmouseover="verTextoDiablo()" onmouseout="ocultarTextoDiablo()">
+    <div id="section-inicio">
+      <p class="texto-diablo" id="texto-diablo">“Un diablo bien vestido, por un ángel es tenido.”</p>
+      <div class="span-1" onmouseover="verTextoDiablo()" onmouseout="ocultarTextoDiablo()">
+      </div>
+
+      <p class="texto-caida" id="texto-caida">"Cáete 3 veces, levántate 4."</p>
+      <div class="span-2" onmouseover="verTextoCaida()" onmouseout="ocultarTextoCaida()">
+      </div>
+
+      <div class="div-texto">
+        <h2 class="text-inicio">¡BIENVENIDOS A MI PORTAFOLIO! <br> Estudiante, Tatuador y tambien..</h2>
+      </div>
+
+      <div class="rombo" onmouseover="verAnclaRombo()" onmouseout="ocultarAnclaRombo()">
+        <a id="ancla-rombo" href="https://bepatrickdavid.com/" target="_blank"><b>Inspiración</b></a>
+      </div>
+
+      <i class="text-creatividad">
+        Creatividad.
+      </i>
+
+      <button class="button">
+        <span class="button-text">
+          <span>Socials</span>
+          <i class="fa-solid fa-share-nodes"></i>
+        </span>
+        <span class="button-links">
+          <a href="https://www.linkedin.com/in/franciscogaleano1/" target="_blank">
+            <img src="./linkedin.png" alt="linkedin">
+          </a>
+          <a href="https://github.com/Frangaleano" target="_blank">
+            <img src="./github (1).png" alt="github">
+          </a>
+          <a>
+            <img src="./gmail.png" alt="gmail">
+          </a>
+        </span>
+      </button>
+
+      <h3 class="text-inicio-sec">front-end <br>Developer</h3>
+      <i class="text-disciplina">
+        .Disciplina
+      </i>
+
+      <div class="rombo2" onmouseover="verAnclaRombo2()" onmouseout="ocultarAnclaRombo2()">
+        <a id="ancla-rombo2" href="#section-inicio"><b>volver</b></a>
+      </div>
+
     </div>
-
-    <p class="texto-caida" id="texto-caida">"Cáete 3 veces, levántate 4."</p>
-    <div class="span-2" onmouseover="verTextoCaida()" onmouseout="ocultarTextoCaida()">
-    </div>
-
-    <div class="div-texto">
-      <h2 class="text-inicio">¡BIENVENIDOS A MI PORTAFOLIO! <br> Estudiante, Tatuador y tambien..</h2>
-    </div>
-
-    <div class="rombo" onmouseover="verAnclaRombo()" onmouseout="ocultarAnclaRombo()">
-      <a id="ancla-rombo" href="https://bepatrickdavid.com/" target="_blank"><b>Inspiración</b></a>
-    </div>
-
-    <i class="text-creatividad">
-      Creatividad.
-    </i>
-
-    <button class="button">
-      <span class="button-text">
-        <span>Socials</span>
-        <i class="fa-solid fa-share-nodes"></i>
-      </span>
-      <span class="button-links">
-        <a href="https://www.linkedin.com/in/franciscogaleano1/" target="_blank">
-          <img src="./linkedin.png" alt="linkedin">
-        </a>
-        <a href="https://github.com/Frangaleano" target="_blank">
-          <img src="./github (1).png" alt="github">
-        </a>
-        <a>
-          <img src="./gmail.png" alt="gmail">
-        </a>
-      </span>
-    </button>
-
-    <h3 class="text-inicio-sec">front-end <br>Developer</h3>
-    <i class="text-disciplina">
-      .Disciplina
-    </i>
 
     <section id="section-sm">
       <h2 class="titulo-sm">Sobre mi</h2>
@@ -118,6 +126,7 @@
           </div>
         </div>
       </div>
+
     </section>
 
     <section id="section-educacion">
@@ -126,23 +135,33 @@
 
         <div class="div-text-curso" id="curso1">
           <img src="./assets/estrella.png" alt="estrella">
-          <p class="cursos" onmouseover="mostrarModal('curso1')" onmouseout="cerrarModal()">Desarrollo Web - CoderHouse</p>
+          <p class="cursos" onmouseover="mostrarModal('curso1')" onmouseout="cerrarModal()">Desarrollo Web - CoderHouse
+          </p>
         </div>
 
         <div class="div-text-curso" id="curso2">
-        <img src="./assets/estrella.png" alt="estrella">
-        <p class="cursos"  onmouseover="mostrarModal('curso2')" onmouseout="cerrarModal()">Programacion Basica - Platzi</p>
+          <img src="./assets/estrella.png" alt="estrella">
+          <p class="cursos" onmouseover="mostrarModal('curso2')" onmouseout="cerrarModal()">Programacion Basica - Platzi
+          </p>
         </div>
 
         <div class="div-text-curso" id="curso3">
-        <img src="./assets/estrella.png" alt="estrella">
-        <p class="cursos"  onmouseover="mostrarModal('curso3')" onmouseout="cerrarModal()">Argentina Programa - Programacion Python</p>
+          <img src="./assets/estrella.png" alt="estrella">
+          <p class="cursos" onmouseover="mostrarModal('curso3')" onmouseout="cerrarModal()">Argentina Programa -
+            Programacion Python</p>
         </div>
 
         <div class="div-text-curso" id="curso4">
-        <img src="./assets/estrella.png" alt="estrella">
-        <p class="cursos"  onmouseover="mostrarModal('curso4')" onmouseout="cerrarModal()">BA Multiplica - Habilidades Digitales</p>
-       </div>
+          <img src="./assets/estrella.png" alt="estrella">
+          <p class="cursos" onmouseover="mostrarModal('curso4')" onmouseout="cerrarModal()">Argentina Programa - A. y T
+            de Datos - python</p>
+        </div>
+
+        <div class="div-text-curso" id="curso5">
+          <img src="./assets/estrella.png" alt="estrella">
+          <p class="cursos" onmouseover="mostrarModal('curso5')" onmouseout="cerrarModal()">BA Multiplica - Habilidades
+            Digitales</p>
+        </div>
 
       </div>
 
@@ -150,8 +169,69 @@
         <img src="" alt="Certificado" id="imagen-modal">
       </div>
 
+      <div class="rombo3" onmouseover="dibujarLineas()" onmouseout="ocultarLineas()">
+        <b class="texto-rombo3">11:11</b>
+      </div>
+      <div class="linea derecha"></div>
+      <div class="linea izquierda"></div>
+
       <div class="div-skills">
         <h2 class="titulo-skills">Skills</h2>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/html-5.png" alt="html">
+          <p>Html</p>
+          <meter class="medidor" id="html-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+        </div>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/css-3.png" alt="css">
+          <p>Css</p>
+          <meter class="medidor" id="css-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+        </div>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/js.png" alt="js">
+          <p>javascript</p>
+          <meter class="medidor" id="js-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+        </div>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/python.png" alt="python">
+          <p>Python</p>
+          <meter class="medidor" id="py-medidor" min="0" max="100" value="0" data-valor-deseado="80"></meter>
+        </div>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/bootstrap.png" alt="bootstrap">
+          <p>Bootstrap</p>
+          <meter class="medidor" id="bt-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+        </div>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/sass.png" alt="sass">
+          <p>Sass</p>
+          <meter class="medidor" id="sass-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+        </div>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/git.png" alt="git">
+          <p>Git</p>
+          <meter class="medidor" id="git-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+        </div>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/canva.png" alt="canva">
+          <p>Canva</p>
+          <meter class="medidor" id="canva-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+        </div>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/nodo-js.png" alt="node.js">
+          <p>Node.js</p>
+          <meter class="medidor" id="node-medidor" min="0" max="100" value="0" data-valor-deseado="80"></meter>
+        </div>
+
       </div>
 
 
