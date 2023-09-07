@@ -22,6 +22,9 @@
           <a id="boton-sm" class="nav-link ancla-1" aria-current="page" href="#section-sm">Sobre mi</a>
         </li>
         <li>
+          <a id="boton-con" class="nav-link ancla-1" href="#section-educacion">Educacion</a>
+        </li>
+        <li>
           <a id="boton-pro" class="nav-link ancla-1" href="#section-proyectos">Proyectos</a>
         </li>
         <li>
@@ -48,7 +51,11 @@
     </div>
 
     <div class="div-texto">
-      <h2 class="text-inicio">Hola! soy un estudiante, tatuador y tambien..</h2>
+      <h2 class="text-inicio">¡BIENVENIDOS A MI PORTAFOLIO! <br> Estudiante, Tatuador y tambien..</h2>
+    </div>
+
+    <div class="rombo" onmouseover="verAnclaRombo()" onmouseout="ocultarAnclaRombo()">
+      <a id="ancla-rombo" href="https://bepatrickdavid.com/" target="_blank"><b>Inspiración</b></a>
     </div>
 
     <i class="text-creatividad">
@@ -80,22 +87,29 @@
 
     <section id="section-sm">
       <h2 class="titulo-sm">Sobre mi</h2>
-      <p class="text-sm">Soy un apasionado del desarrollo web con un enfoque creativo en el diseño Front-End. Encuentro inspiración en la unión del arte y la tecnología en línea, mi portafolio
+      <p class="text-sm">Soy un apasionado del desarrollo web con un enfoque creativo en el diseño Front-End. Encuentro
+        inspiración en la unión del arte y la tecnología en línea, mi portafolio
         refleja mi aprendizaje autodidacta, donde fusiono colores, formas y código para crear experiencias digitales
-        únicas. <br>Además de mi amor por la programación, soy un tatuador profesional y un estudiante ávido. Mi creatividad
+        únicas. <br>Además de mi amor por la programación, soy un tatuador profesional y un estudiante ávido. Mi
+        creatividad
         se nutre de esta diversidad de intereses. <br> Te invito a explorar mi portafolio y descubrir mis proyectos.
       </p>
 
       <span class="span-3"></span>
-     <i class="text-osadia">Osadía.</i>
+
+      <i class="popup-trigger">Osadia.</i>
+
+      <div class="popup-container" id="popup">
+        "Actitud valerosa, heroica o arriesgada"
+      </div>
 
       <div class="contenedor">
         <div class="imagen">
-            <img src="./assets/foto-sm.png" alt="Tu Foto">
+          <img src="./assets/foto-sm.png" alt="Tu Foto">
         </div>
         <div class="info">
           <div class="div-ubicacion">
-          <img src="./assets/marcador-de-posicion.png" alt="argentina">
+            <img src="./assets/marcador-de-posicion.png" alt="argentina">
             <p>Buenos Aires, Argentina</p>
           </div>
           <div class="div-edad">
@@ -103,17 +117,49 @@
             <p>27 años</p>
           </div>
         </div>
-    </div>
-
-      
+      </div>
     </section>
 
+    <section id="section-educacion">
+      <div class="div-educacion">
+        <h2 class="titulo-edu">Educacion</h2>
+
+        <div class="div-text-curso" id="curso1">
+          <img src="./assets/estrella.png" alt="estrella">
+          <p class="cursos" onmouseover="mostrarModal('curso1')" onmouseout="cerrarModal()">Desarrollo Web - CoderHouse</p>
+        </div>
+
+        <div class="div-text-curso" id="curso2">
+        <img src="./assets/estrella.png" alt="estrella">
+        <p class="cursos"  onmouseover="mostrarModal('curso2')" onmouseout="cerrarModal()">Programacion Basica - Platzi</p>
+        </div>
+
+        <div class="div-text-curso" id="curso3">
+        <img src="./assets/estrella.png" alt="estrella">
+        <p class="cursos"  onmouseover="mostrarModal('curso3')" onmouseout="cerrarModal()">Argentina Programa - Programacion Python</p>
+        </div>
+
+        <div class="div-text-curso" id="curso4">
+        <img src="./assets/estrella.png" alt="estrella">
+        <p class="cursos"  onmouseover="mostrarModal('curso4')" onmouseout="cerrarModal()">BA Multiplica - Habilidades Digitales</p>
+       </div>
+
+      </div>
+
+      <div id="modal" class="modal">
+        <img src="" alt="Certificado" id="imagen-modal">
+      </div>
+
+      <div class="div-skills">
+        <h2 class="titulo-skills">Skills</h2>
+      </div>
+
+
+    </section>
+
+
+
   </section>
-
-
-
-
-
 
   <section id="section-proyectos"></section>
   <section id="section-contacto"></section>

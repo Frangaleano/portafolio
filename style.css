@@ -28,6 +28,7 @@ body {
   grid-template-rows: 8% 100%;
   overflow-x: hidden;
   background-color: #000000;
+  padding-bottom: 100px;
 }
 
 
@@ -78,7 +79,7 @@ body {
   height: 1px;
   background-color: white;
   transform: scale(0, 1);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform .5s;
 }
 
@@ -116,7 +117,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 30px;
+  padding: 40px;
   padding-top: 0px;
   padding-bottom: 100px;
 }
@@ -136,7 +137,7 @@ body {
   font-family: 'Prompt', sans-serif;
   margin-top: 50px;
   animation: slide-top 3s ease-in-out;
-  top: 80px;
+  top: 20px;
   left: 50px;
 }
 
@@ -157,6 +158,39 @@ body {
   transition-duration: 1s;
 }
 
+.rombo {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  margin: 50px;
+  border: 3px solid black;
+  top: 102px;
+  right: 437px;
+  transition: .3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#ancla-rombo {
+  color: white;
+  text-decoration: none;
+  transform: rotate(313deg);
+  position: absolute;
+  font-family: 'Gilda Display';
+  font-style: italic;
+  visibility: hidden;
+  opacity: 0%;
+  text-shadow: 3px 1px 2px #000000;
+}
+
+.rombo:hover {
+  background-color: black;
+  top: 91px;
+}
 
 .text-inicio-sec {
   font-family: 'Fjalla One', sans-serif;
@@ -167,13 +201,9 @@ body {
   text-shadow: 3px 2px 5px #000000;
   text-transform: uppercase;
   margin-top: 50px;
+  animation-name: fade;
+  animation-duration: 5s;
 }
-
-.text-inicio-sec:hover {
-  animation: fade;
-  animation-duration: 3s;
-}
-
 
 @keyframes fade {
   from {
@@ -184,6 +214,7 @@ body {
     opacity: 100%;
   }
 }
+
 
 .span-1 {
   z-index: 0;
@@ -468,16 +499,8 @@ body {
   height: 308px;
   margin-top: 120px;
   font-family: "Euclid Circular A", "Poppins";
-  transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   z-index: 1;
   background-color: black;
-}
-
-.text-sm:hover {
-  transform: scale(1.02);
-  transition-duration: 1s;
-  transform-origin: center;
-  letter-spacing: 0;
 }
 
 .span-3 {
@@ -494,28 +517,34 @@ body {
   margin-top: 20%;
 }
 
-.text-osadia {
+.popup-trigger {
   position: absolute;
   font-family: 'Gilda Display', serif;
   font-size: 28px;
-  left: 47.2%;
-  margin-top: 39.8%;
-  transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   letter-spacing: 0.6px;
+  cursor: pointer;
+  text-decoration: none;
+  height: 50px;
+  z-index: 1;
+  top: 106%;
+  left: 37%
 }
 
-.text-osadia::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: white;
-  transform: scale(0, 1);
-  transform-origin: left;
-  transition: transform .5s;
-}
-
-.text-osadia:hover::after {
-  transform: scale(1, 1);
+.popup-container {
+  color: black;
+  font-size: 22px;
+  display: none;
+  position: absolute;
+  transform: translate(-50%, -50%) translateX(-50%);
+  background-color: rgba(129, 125, 125, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  top: 109%;
+  left: 30%;
+  font-family: "Euclid Circular A", "Poppins";
 }
 
 
@@ -524,7 +553,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 140px;
+  margin: 53px 140px;
   position: relative;
 }
 
@@ -563,6 +592,99 @@ body {
   gap: 5px;
 }
 
+#section-educacion {
+  display: flex;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 1s ease, transform 4s ease;
+  height: 470px
+}
+
+#section-educacion.mostrar {
+  opacity: 1;
+  transform: translateY(150px);
+}
+
+.div-educacion {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: 700px;
+  height: 220px;
+  gap: 22px;
+}
+
+.titulo-edu {
+  font-size: 40px;
+  font-family: 'Prompt', sans-serif;
+  text-shadow: 3px 4px 7px rgb(102, 101, 101);
+  left: 10%;
+}
+
+.div-text-curso {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.titulo-skills {
+  font-size: 40px;
+  position: absolute;
+  font-family: 'Prompt', sans-serif;
+  text-shadow: 3px 4px 7px rgb(102, 101, 101);
+  right: 10%;
+}
+
+.cursos {
+  font-family: "Euclid Circular A", "Poppins";
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 20px;
+  transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.modal img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Estilo para el fondo oscuro del modal */
+.modal::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.modal.abierto::before {
+  opacity: 1;
+}
+
+/* Estilo para el botón de cerrar (la "x") */
 
 
 
