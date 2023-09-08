@@ -41,9 +41,9 @@
 
 
 
-  <section class="div2" id="inicio">
+  <div class="div2" id="inicio">
 
-    <div id="section-inicio">
+    <section id="section-inicio">
       <p class="texto-diablo" id="texto-diablo">“Un diablo bien vestido, por un ángel es tenido.”</p>
       <div class="span-1" onmouseover="verTextoDiablo()" onmouseout="ocultarTextoDiablo()">
       </div>
@@ -91,7 +91,7 @@
         <a id="ancla-rombo2" href="#section-inicio"><b>volver</b></a>
       </div>
 
-    </div>
+    </section>
 
     <section id="section-sm">
       <h2 class="titulo-sm">Sobre mi</h2>
@@ -179,6 +179,24 @@
         <h2 class="titulo-skills">Skills</h2>
 
         <div class="habilidad">
+          <img class="iconos-skills" src="./assets/js.png" alt="js">
+          <p>javascript</p>
+          <meter class="medidor" id="js-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+        </div>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/nodo-js.png" alt="node.js">
+          <p>Node.js</p>
+          <meter class="medidor" id="node-medidor" min="0" max="100" value="0" data-valor-deseado="80"></meter>
+        </div>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/python.png" alt="python">
+          <p>Python</p>
+          <meter class="medidor" id="py-medidor" min="0" max="100" value="0" data-valor-deseado="80"></meter>
+        </div>
+
+        <div class="habilidad">
           <img class="iconos-skills" src="./assets/html-5.png" alt="html">
           <p>Html</p>
           <meter class="medidor" id="html-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
@@ -190,28 +208,17 @@
           <meter class="medidor" id="css-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
         </div>
 
-        <div class="habilidad">
-          <img class="iconos-skills" src="./assets/js.png" alt="js">
-          <p>javascript</p>
-          <meter class="medidor" id="js-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
-        </div>
 
         <div class="habilidad">
-          <img class="iconos-skills" src="./assets/python.png" alt="python">
-          <p>Python</p>
-          <meter class="medidor" id="py-medidor" min="0" max="100" value="0" data-valor-deseado="80"></meter>
+          <img class="iconos-skills" src="./assets/sass.png" alt="sass">
+          <p>Sass</p>
+          <meter class="medidor" id="sass-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
         </div>
 
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/bootstrap.png" alt="bootstrap">
           <p>Bootstrap</p>
           <meter class="medidor" id="bt-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
-        </div>
-
-        <div class="habilidad">
-          <img class="iconos-skills" src="./assets/sass.png" alt="sass">
-          <p>Sass</p>
-          <meter class="medidor" id="sass-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
         </div>
 
         <div class="habilidad">
@@ -227,21 +234,62 @@
         </div>
 
         <div class="habilidad">
-          <img class="iconos-skills" src="./assets/nodo-js.png" alt="node.js">
-          <p>Node.js</p>
-          <meter class="medidor" id="node-medidor" min="0" max="100" value="0" data-valor-deseado="80"></meter>
+          <img class="iconos-skills" src="./assets/balsamiq.png" alt="balsamiq">
+          <p>balsamiq</p>
+          <meter class="medidor" id="balsamiq-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+        </div>
+      </div>
+
+      <span class="span-4"></span>
+      <p class="text-consistencia">.Consistencia</p>
+    </section>
+
+    <section id="section-proyectos">
+      <h2 class="titulo-proyectos">Proyectos</h2>
+
+      <div class="div-proyectos">
+
+        <div class="div-contenido-proyectos">
+          <div class="div-img-proyecto">
+            <img src="./assets/imagen-proyecto1.png" alt="Proyecto 1" class="scale-image">
+          </div>
+          <a href="" class="titulo-sec-proyectos">Habia una vez</a>
+          <p class="descripcion-proyecto">descripcion del proyecto, tecnologias, tiempo de realizacion.</p>
+        </div>
+
+        <div class="div-contenido-proyectos">
+          <div class="div-img-proyecto">
+            <img src="./assets/imagen-proyecto2.png" alt="Proyecto 2" class="scale-image">
+          </div>
+          <a href="" class="titulo-sec-proyectos">Hecho a mano.</a>
+          <p class="descripcion-proyecto">descripcion del proyecto, tecnologias, tiempo de realizacion.</p>
+        </div>
+
+        <div class="div-contenido-proyectos">
+          <div class="div-img-proyecto">
+            <img src="./assets/imagen-proyecto1.png" alt="Proyecto 1" class="scale-image">
+          </div>
+          <a href="" class="titulo-sec-proyectos">Mokepon!</a>
+          <p class="descripcion-proyecto">descripcion del proyecto, tecnologias, tiempo de realizacion.</p>
+        </div>
+
+        <div class="div-contenido-proyectos">
+          <div class="div-img-proyecto">
+            <img src="./assets/imagen-proyecto1.png" alt="Proyecto 1" class="scale-image">
+          </div>
+          <a href="" class="titulo-sec-proyectos">Herraminetas.js</a>
+          <p class="descripcion-proyecto">descripcion del proyecto, tecnologias, tiempo de realizacion.</p>
         </div>
 
       </div>
-
 
     </section>
 
 
 
-  </section>
 
-  <section id="section-proyectos"></section>
+  </div>
+
   <section id="section-contacto"></section>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

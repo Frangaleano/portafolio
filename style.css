@@ -204,8 +204,8 @@ body {
   transform: rotate(45deg);
   margin: 50px;
   border: 3px solid white;
-  top: 90%;
-  right: 44.2%;
+  top: 96%;
+  left: 29%;
   transition: background-color .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   display: flex;
   align-items: center;
@@ -227,10 +227,12 @@ body {
   background-color: white;
   height: 2px;
   position: fixed;
-  top: 118.3%;
+  top: 124.3%;
   transition: width 1.5s ease-in-out, opacity 1.3s ease-in-out;
-  width: 0; /* Inicialmente sin ancho */
-  z-index: -1; /* Detrás del rombo */
+  width: 0;
+  /* Inicialmente sin ancho */
+  z-index: -1;
+  /* Detrás del rombo */
   opacity: 0;
 }
 
@@ -240,7 +242,7 @@ body {
 }
 
 .izquierda {
-  left: 53.4%;
+  left: 43.4%;
   transform-origin: left;
 }
 
@@ -679,7 +681,8 @@ body {
   opacity: 0;
   transform: translateY(80px);
   transition: opacity 1s ease, transform 4s ease;
-  height: 450px
+  height: 450px;
+  margin-bottom: 10em;
 }
 
 #section-educacion.mostrar {
@@ -729,6 +732,8 @@ body {
   font-family: "Euclid Circular A", "Poppins";
   font-size: 22px;
   cursor: pointer;
+  background-color: black;
+  z-index: 1;
 }
 
 /* Estilos para el modal */
@@ -751,6 +756,7 @@ body {
 .modal img {
   width: 450px;
   height: 350px;
+  opacity: 1;
 }
 
 /* Estilo para el fondo oscuro del modal */
@@ -771,6 +777,33 @@ body {
   opacity: 1;
 }
 
+.span-4 {
+  border: dotted 4px rgba(255, 255, 255, 0.658);
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 60s;
+  animation-name: spinner-loading;
+  right: 14%;
+  margin-top: 15%;
+}
+
+.text-consistencia {
+  position: absolute;
+  right: -8.5%;
+  margin-right: 155px;
+  font-family: 'Gilda Display', serif;
+  font-size: 25px;
+  text-shadow: 7px 7px 8px #000000;
+  animation-duration: 5s;
+  animation-name: fade;
+  top: 252px;
+  font-style: italic;
+}
+
 .div-skills {
   display: flex;
   flex-direction: column;
@@ -778,7 +811,7 @@ body {
   z-index: 2;
   gap: 15px;
   height: 500px;
-  padding-left: 10px;
+  padding-left: 43px;
   padding-bottom: 10px;
 }
 
@@ -808,11 +841,12 @@ body {
   display: flex;
   flex-direction: row;
   gap: 15px;
-  width: 350px;
+  width: 274px;
   align-items: center;
   z-index: 1;
   background-color: black;
 }
+
 
 .iconos-skills {
   width: 30px;
@@ -830,7 +864,7 @@ body {
   background-color: transparent;
   color: #333;
   transition: width 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  right: 27%;
+  right: 24%;
   position: absolute;
 }
 
@@ -848,6 +882,117 @@ body {
   width: 0;
   /* Ancho inicial de la parte verde */
 }
+
+#section-proyectos {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform: translateY(80px);
+  transition: opacity 1s ease, transform 4s ease;
+  height: 450px;
+  margin-top: 1em;
+}
+
+.titulo-proyectos {
+  font-size: 55px;
+  font-family: 'Prompt', sans-serif;
+  text-shadow: 3px 4px 7px rgb(102, 101, 101);
+  margin-bottom: 26px;
+  width: 259px;
+}
+
+.titulo-proyectos::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: white;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform .8s;
+}
+
+.titulo-proyectos:hover::after {
+  transform: scale(1, 1);
+}
+
+.div-proyectos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  margin-top: 3em;
+  row-gap: 1.5em;
+}
+
+.div-contenido-proyectos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centra el contenido verticalmente */
+  text-align: center;
+  /* Centra el contenido horizontalmente */
+  position: relative;
+  /* Para posicionamiento relativo */
+}
+
+.titulo-sec-proyectos {
+  font-family: "Euclid Circular A", "Poppins";
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  /* Cambia el cursor al puntero al hacer hover */
+  transition: color 0.5s;
+  /* Transición suave del color del texto */
+}
+
+.div-img-proyecto {
+  width: 22em;
+  height: 11em;
+  overflow: hidden;
+  position: relative;
+  margin-right: 11px;
+}
+
+.scale-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ajusta la imagen para que cubra el contenedor */
+  transition: transform .8s ease, opacity .8s ease;
+  /* Transición suave */
+  transform-origin: center bottom;
+  /* Escalar desde el centro hacia abajo */
+}
+
+.descripcion-proyecto {
+  position: absolute;
+  top: 0;
+  /* Cambiar de bottom a top para desplazamiento desde arriba */
+  left: 0;
+  width: 100%;
+  color: white;
+  /* Cambiar el color del texto a blanco */
+  opacity: 0;
+  transform: translateY(-100%);
+  /* Cambiar a translateY(-100%) para desplazamiento desde arriba */
+  transition: opacity 1s, transform 1s;
+}
+
+.div-contenido-proyectos:hover .scale-image {
+  transform: scale(1.1);
+  opacity: 30%;
+}
+
+.div-contenido-proyectos:hover .descripcion-proyecto {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
 
 
 ::-webkit-scrollbar {
