@@ -1,5 +1,5 @@
-const sectionPro = document.getElementById("section-proyectos")
 const sectionCon = document.getElementById("section-contacto")
+const sectionPro = document.getElementById("section-proyectos")
 const sectionEdu = document.getElementById("section-educacion")
 const sectionInicio = document.getElementById("inicio")
 const contenedor = document.querySelector(".contenedor");
@@ -55,7 +55,6 @@ function ocultarAnclaRombo2() {
   anclaRombo2.style.opacity = "0"
 }
 
-
 function dibujarLineas() {
   const lineas = document.querySelectorAll('.linea');
   lineas.forEach((linea) => {
@@ -100,8 +99,6 @@ function ocultarTextoCaida() {
 
 
 function EscucharBotones() {
-
-
   secciones.forEach(function (seccion) {
     seccion.addEventListener('click', function () {
       secciones.forEach(function (seccion) {
@@ -145,6 +142,7 @@ function EscucharBotones() {
   });
 }
 
+
 function scrollSuave(targetId) {
   const targetElement = document.getElementById(targetId);
 
@@ -160,9 +158,11 @@ function scrollSuave(targetId) {
   }
 }
 
+
 function inicio() {
   location.reload()
 }
+
 
 function mostrarSeccionSobreMi() {
   const sobreMiSection = document.getElementById('section-sm');
@@ -192,6 +192,21 @@ function mostrarSeccionEducacion() {
     sectionEdu.classList.remove('mostrar'); // Oculta la sección si el usuario se desplaza hacia arriba
   }
 }
+
+function mostrarSeccionProyectos() {
+  const sectionProyectos = document.getElementById('section-proyectos');
+  const windowHeight = window.innerHeight;
+  const scrollY = window.scrollY;
+
+  const sectionProyectosTop = sectionProyectos.getBoundingClientRect().top;
+
+  if (sectionProyectosTop < windowHeight / 1.5) {
+    sectionProyectos.classList.add('mostrar'); // Aplica la clase para mostrar la sección
+  } else {
+    sectionProyectos.classList.remove('mostrar'); // Oculta la sección si el usuario se desplaza hacia arriba
+  }
+}
+
 
 function animarMedidores() {
   // Obtener todos los medidores
@@ -282,6 +297,9 @@ function obtenerRutaImagen(idCurso) {
       return "";
   }
 }
+
+// Detectar el desplazamiento de la página en cada seccion
+window.addEventListener('scroll', mostrarSeccionProyectos);
 
 
 // Detectar el desplazamiento de la página en cada seccion

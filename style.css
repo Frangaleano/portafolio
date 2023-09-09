@@ -173,6 +173,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: inset 0px 0px 8px 2px rgba(0,0,0,0.75);
 }
 
 .rombo2 {
@@ -190,6 +191,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 999;
+  backdrop-filter: blur(2.2px);
 }
 
 .rombo2:hover {
@@ -211,6 +213,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
+  box-shadow: 0px 0px 20px 2px rgb(255 255 255 / 75%);
 }
 
 .texto-rombo3 {
@@ -466,6 +469,7 @@ body {
   top: 50px;
   right: 10px;
   z-index: 1;
+  backdrop-filter: blur(2.2px);
 }
 
 .button i {
@@ -614,12 +618,12 @@ body {
 }
 
 .popup-container {
-  color: black;
+  color: white;
   font-size: 22px;
   display: none;
   position: absolute;
   transform: translate(-50%, -50%) translateX(-50%);
-  background-color: rgba(129, 125, 125, 0.5);
+  background-color: transparent;
   backdrop-filter: blur(5px);
   padding: 10px;
   border: 1px solid #ccc;
@@ -787,7 +791,7 @@ body {
   animation-timing-function: linear;
   animation-duration: 60s;
   animation-name: spinner-loading;
-  right: 14%;
+  right: 15%;
   margin-top: 15%;
 }
 
@@ -802,6 +806,20 @@ body {
   animation-name: fade;
   top: 252px;
   font-style: italic;
+}
+
+.text-consistencia::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: white;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform .5s;
+}
+
+.text-consistencia:hover::after {
+  transform: scale(1, 1);
 }
 
 .div-skills {
@@ -887,10 +905,16 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  transform: translateY(80px);
+  transform: translateY(-20px);
   transition: opacity 1s ease, transform 4s ease;
   height: 450px;
   margin-top: 1em;
+  opacity: 0;
+}
+
+#section-proyectos.mostrar {
+  opacity: 1;
+  transform: translateY(100px);
 }
 
 .titulo-proyectos {
@@ -923,7 +947,40 @@ body {
   flex-wrap: wrap;
   margin-top: 3em;
   row-gap: 1.5em;
+  margin-right: 2em
 }
+
+.span-5 {
+  border: dotted 4px rgba(255, 255, 255, 0.658);
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 60s;
+  animation-name: spinner-loading;
+  left: -1%;
+  margin-top: 20%;
+}
+
+
+.f-proyectos {
+  position: absolute;
+  top: 3.8em;
+  font-family: 'Gilda Display', serif;
+  font-size: 5em;
+  left: 44%;
+}
+
+.g-proyectos {
+  position: absolute;
+  top: 4.7em;
+  font-family: 'Gilda Display', serif;
+  font-size: 4.5em;
+  left: 47%;
+}
+
 
 .div-contenido-proyectos {
   display: flex;
@@ -934,6 +991,7 @@ body {
   /* Centra el contenido horizontalmente */
   position: relative;
   /* Para posicionamiento relativo */
+  gap: 0.6em;
 }
 
 .titulo-sec-proyectos {
@@ -944,51 +1002,78 @@ body {
   cursor: pointer;
   /* Cambia el cursor al puntero al hacer hover */
   transition: color 0.5s;
-  /* Transición suave del color del texto */
+  margin-right: 21px;
 }
 
 .div-img-proyecto {
   width: 22em;
-  height: 11em;
+  height: 12em;
   overflow: hidden;
   position: relative;
   margin-right: 11px;
+  border-radius: 1em;
 }
 
 .scale-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Ajusta la imagen para que cubra el contenedor */
-  transition: transform .8s ease, opacity .8s ease;
-  /* Transición suave */
+  opacity: 1;
   transform-origin: center bottom;
-  /* Escalar desde el centro hacia abajo */
+  animation: scaleAnimation 2.5s ease infinite;
+  /* Repetir cada 2 segundos */
+  transition: filter 1s ease;
+}
+
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .descripcion-proyecto {
   position: absolute;
-  top: 0;
-  /* Cambiar de bottom a top para desplazamiento desde arriba */
-  left: 0;
-  width: 100%;
+  top: 5%;
+  left: 1%;
+  width: 21em;
   color: white;
-  /* Cambiar el color del texto a blanco */
   opacity: 0;
-  transform: translateY(-100%);
-  /* Cambiar a translateY(-100%) para desplazamiento desde arriba */
+  transform: translateY(10%);
   transition: opacity 1s, transform 1s;
+  margin-left: 7px;
 }
 
-.div-contenido-proyectos:hover .scale-image {
-  transform: scale(1.1);
-  opacity: 30%;
+.descripcion-proyecto-letras {
+  font-family: "Euclid Circular A", "Poppins";
+  text-shadow: 3px 1px 2px #000000;
+  margin-bottom: 10px;
 }
+
+.icono-proyectos {
+  width: 25px;
+  height: 25px;
+}
+
 
 .div-contenido-proyectos:hover .descripcion-proyecto {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(30%);
 }
+
+.div-contenido-proyectos:hover .scale-image{
+  filter: blur(5px) brightness(0.5);
+}
+
+
 
 
 
