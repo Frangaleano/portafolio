@@ -24,11 +24,12 @@ let textoDiablo = document.getElementById("texto-diablo")
 let textoCaida = document.getElementById("texto-caida")
 let secciones = document.querySelectorAll(".ancla-1")
 let anclaRombo = document.getElementById("ancla-rombo")
-let anclaRombo2 = document.getElementById("ancla-rombo2")
 let isHovered = false;
 let modal = document.querySelector("#modal");
 let imagenModal = document.getElementById("imagen-modal");
 let modalTimer;
+
+
 
 
 function verAnclaRombo() {
@@ -43,17 +44,6 @@ function ocultarAnclaRombo() {
   anclaRombo.style.opacity = "0"
 }
 
-function verAnclaRombo2() {
-  anclaRombo2.style.transition = "opacity 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), visibility 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)"
-  anclaRombo2.style.visibility = "visible"
-  anclaRombo2.style.opacity = "1"
-}
-
-function ocultarAnclaRombo2() {
-  anclaRombo2.style.transition = "opacity 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), visibility 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)"
-  anclaRombo2.style.visibility = "hidden"
-  anclaRombo2.style.opacity = "0"
-}
 
 function dibujarLineas() {
   const lineas = document.querySelectorAll('.linea');
@@ -297,6 +287,36 @@ function obtenerRutaImagen(idCurso) {
       return "";
   }
 }
+
+function validarFormulario() {
+  var nombre = document.getElementById("nombre").value;
+  var email = document.getElementById("email").value;
+  var mensaje = document.getElementById("mensaje").value;
+  var mensajeError = document.getElementById("mensajeError");
+
+  console.log(nombre)
+  console.log(email)
+  console.log(mensaje)
+
+  mensajeError.innerHTML = "";
+
+  if (nombre === "" || email === "" || mensaje === "") {
+      mensajeError.innerHTML = "El formulario no está completo. Por favor, complete todos los campos.";
+      return false;
+  }
+
+  // Validar el formato del correo electrónico
+  var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  if (!emailPattern.test(email)) {
+      mensajeError.innerHTML = "El correo electrónico ingresado no es válido.";
+      return false;
+  }
+
+  // Otras validaciones específicas, si las necesitas
+
+  return true; // Envía el formulario si pasa todas las validaciones
+}
+
 
 // Detectar el desplazamiento de la página en cada seccion
 window.addEventListener('scroll', mostrarSeccionProyectos);

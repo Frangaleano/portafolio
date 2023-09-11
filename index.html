@@ -5,13 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>FG - Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link href="./style.css" rel="stylesheet" />
-  <link rel="shortcut icon" href="./assets/F_F-removebg-preview-removebg-preview.png">
+  <link rel="shortcut icon" href="./assets/icono-pagina.png">
 </head>
 
 <body>
@@ -57,7 +57,7 @@
       </div>
 
       <div class="rombo" onmouseover="verAnclaRombo()" onmouseout="ocultarAnclaRombo()">
-        <a id="ancla-rombo" href="https://bepatrickdavid.com/" target="_blank"><b>Inspiración</b></a>
+        <a id="ancla-rombo" href="https://bepatrickdavid.com/" target="_blank">Inspiración</a>
       </div>
 
       <i class="text-creatividad">
@@ -71,13 +71,13 @@
         </span>
         <span class="button-links">
           <a href="https://www.linkedin.com/in/franciscogaleano1/" target="_blank">
-            <img src="./linkedin.png" alt="linkedin">
+            <img src="./assets/linkedin.png" alt="linkedin">
           </a>
           <a href="https://github.com/Frangaleano" target="_blank">
-            <img src="./github (1).png" alt="github">
+            <img src="./assets/github.png" alt="github">
           </a>
           <a>
-            <img src="./gmail.png" alt="gmail">
+            <img src="./assets/gmail.png" alt="gmail">
           </a>
         </span>
       </button>
@@ -87,7 +87,7 @@
         .Disciplina
       </i>
 
-      <div class="rombo2" onmouseover="verAnclaRombo2()" onmouseout="ocultarAnclaRombo2()">
+      <div class="rombo2">
         <a id="ancla-rombo2" href="#section-inicio"><b>volver</b></a>
       </div>
 
@@ -180,14 +180,20 @@
 
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/js.png" alt="js">
-          <p>javascript</p>
-          <meter class="medidor" id="js-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+          <p>Javascript</p>
+          <meter class="medidor" id="js-medidor" min="0" max="100" value="0" data-valor-deseado="80"></meter>
         </div>
 
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/nodo-js.png" alt="node.js">
           <p>Node.js</p>
-          <meter class="medidor" id="node-medidor" min="0" max="100" value="0" data-valor-deseado="80"></meter>
+          <meter class="medidor" id="node-medidor" min="0" max="100" value="0" data-valor-deseado="50"></meter>
+        </div>
+
+        <div class="habilidad">
+          <img class="iconos-skills" src="./assets/express.png" alt="express.js">
+          <p>Express.js</p>
+          <meter class="medidor" id="express-medidor" min="0" max="100" value="0" data-valor-deseado="50"></meter>
         </div>
 
         <div class="habilidad">
@@ -235,7 +241,7 @@
 
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/balsamiq.png" alt="balsamiq">
-          <p>balsamiq</p>
+          <p>Balsamiq</p>
           <meter class="medidor" id="balsamiq-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
         </div>
       </div>
@@ -259,12 +265,14 @@
           </div>
           <a href="" class="titulo-sec-proyectos">Habia una vez</a>
           <div class="descripcion-proyecto">
-          <p class="descripcion-proyecto-letras">descripcion del proyecto, tecnologias, tiempo de realizacion.
-          </p>
-          <img class="icono-proyectos" src="./assets/html-5.png" alt="html">
-          <img class="icono-proyectos" src="./assets/css-3.png" alt="css">
-          <img class="icono-proyectos" src="./assets/bootstrap.png" alt="bt">
-          <img class="icono-proyectos" src="./assets/sass.png" alt="sass">
+            <p class="descripcion-proyecto-letras">descripcion del proyecto, tecnologias, tiempo de realizacion.
+            </p>
+            <img class="icono-proyectos" src="./assets/html-5.png" alt="html">
+            <img class="icono-proyectos" src="./assets/css-3.png" alt="css">
+            <img class="icono-proyectos" src="./assets/bootstrap.png" alt="bt">
+            <img class="icono-proyectos" src="./assets/sass.png" alt="sass">
+            <img class="icono-proyectos" src="./assets/balsamiq.png" alt="balsamiq">
+
           </div>
         </div>
 
@@ -278,7 +286,15 @@
             </a>
           </div>
           <a href="" class="titulo-sec-proyectos">Hecho a mano.</a>
-          <p class="descripcion-proyecto">descripcion del proyecto, tecnologias, tiempo de realizacion.</p>
+          <div class="descripcion-proyecto">
+            <p class="descripcion-proyecto-letras">descripcion del proyecto, tecnologias, tiempo de realizacion.
+            </p>
+            <img class="icono-proyectos" src="./assets/html-5.png" alt="html">
+            <img class="icono-proyectos" src="./assets/css-3.png" alt="css">
+            <img class="icono-proyectos" src="./assets/js.png" alt="js">
+            <img class="icono-proyectos" src="./assets/bootstrap.png" alt="bt">
+            <img class="icono-proyectos" src="./assets/canva.png" alt="canva">
+          </div>
         </div>
 
         <div class="div-contenido-proyectos">
@@ -288,7 +304,15 @@
             </a>
           </div>
           <a href="" class="titulo-sec-proyectos">Mokepon!</a>
-          <p class="descripcion-proyecto">descripcion del proyecto, tecnologias, tiempo de realizacion.</p>
+          <div class="descripcion-proyecto">
+            <p class="descripcion-proyecto-letras">descripcion del proyecto, tecnologias, tiempo de realizacion.
+            </p>
+            <img class="icono-proyectos" src="./assets/html-5.png" alt="html">
+            <img class="icono-proyectos" src="./assets/css-3.png" alt="css">
+            <img class="icono-proyectos" src="./assets/js.png" alt="js">
+            <img class="icono-proyectos" src="./assets/nodo-js.png" alt="node">
+            <img class="icono-proyectos" src="./assets/canva.png" alt="canva">
+          </div>
         </div>
 
         <div class="div-contenido-proyectos">
@@ -298,19 +322,47 @@
             </a>
           </div>
           <a href="" class="titulo-sec-proyectos">Herramientas.js</a>
-          <p class="descripcion-proyecto">descripcion del proyecto, tecnologias, tiempo de realizacion.</p>
+          <div class="descripcion-proyecto">
+            <p class="descripcion-proyecto-letras">descripcion del proyecto, tecnologias, tiempo de realizacion.
+            </p>
+            <img class="icono-proyectos" src="./assets/html-5.png" alt="html">
+            <img class="icono-proyectos" src="./assets/css-3.png" alt="css">
+            <img class="icono-proyectos" src="./assets/js.png" alt="js">
+          </div>
         </div>
 
       </div>
 
     </section>
 
+    <section id="section-contacto">
+
+      
+      <h2 class="titulo-contacto">Contacto</h2>
+
+      <div>
+        <form action="/enviar" method="post">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+  
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+  
+          <input type="submit" value="Enviar">
+      </form>
+      <p id="mensajeError" style="color: red; font-size: small;"></p>
+      </div>
+
+
+    </section>
 
 
 
   </div>
 
-  <section id="section-contacto"></section>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="/main.js"></script>
