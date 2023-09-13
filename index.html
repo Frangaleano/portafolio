@@ -16,14 +16,17 @@
 
 <body>
   <div class="div1" id="nav-inicio">
-    <div>
+    <div class="menu-btn">
+      <span class="menu-icon"></span>
+    </div>
+    <div class="div-ul">
       <ul class="nav">
         <li>
           <a id="boton-sm" class="nav-link ancla-1" aria-current="page" href="#"
-            onclick="scrollSuave('section-sm')">Sobre mi</a>
+            onclick="scrollSuave('section-sm')">Sobre mí</a>
         </li>
         <li>
-          <a id="boton-edu" class="nav-link ancla-1" href="#" onclick="scrollSuave('section-educacion')">Educacion</a>
+          <a id="boton-edu" class="nav-link ancla-1" href="#" onclick="scrollSuave('section-educacion')">Educación</a>
         </li>
         <li>
           <a id="boton-pro" class="nav-link ancla-1" href="#" onclick="scrollSuave('section-proyectos')">Proyectos</a>
@@ -44,16 +47,14 @@
   <div class="div2" id="inicio">
 
     <section id="section-inicio">
-      <p class="texto-diablo" id="texto-diablo">“Un diablo bien vestido, por un ángel es tenido.”</p>
-      <div class="span-1" onmouseover="verTextoDiablo()" onmouseout="ocultarTextoDiablo()">
+      <div class="span-1">
       </div>
 
-      <p class="texto-caida" id="texto-caida">"Cáete 3 veces, levántate 4."</p>
-      <div class="span-2" onmouseover="verTextoCaida()" onmouseout="ocultarTextoCaida()">
+      <div class="span-2">
       </div>
 
       <div class="div-texto">
-        <h2 class="text-inicio">¡BIENVENIDOS A MI PORTAFOLIO! <br> Estudiante, Tatuador y tambien..</h2>
+        <h2 class="text-inicio">¡BIENVENIDOS A MI PORTAFOLIO! <br> Estudiante, Tatuador y también..</h2>
       </div>
 
       <div class="rombo" onmouseover="verAnclaRombo()" onmouseout="ocultarAnclaRombo()">
@@ -76,7 +77,7 @@
           <a href="https://github.com/Frangaleano" target="_blank">
             <img src="./assets/github.png" alt="github">
           </a>
-          <a>
+          <a href="mailto:Fmagaleano@Gmail.com">
             <img src="./assets/gmail.png" alt="gmail">
           </a>
         </span>
@@ -94,7 +95,7 @@
     </section>
 
     <section id="section-sm">
-      <h2 class="titulo-sm">Sobre mi</h2>
+      <h2 class="titulo-sm">Sobre mí</h2>
       <p class="text-sm">Soy un apasionado del desarrollo web con un enfoque creativo en el diseño Front-End. Encuentro
         inspiración en la unión del arte y la tecnología en línea, mi portafolio
         refleja mi aprendizaje autodidacta, donde fusiono colores, formas y código para crear experiencias digitales
@@ -105,7 +106,7 @@
 
       <span class="span-3"></span>
 
-      <i class="popup-trigger">Osadia.</i>
+      <i class="popup-trigger">Osadía.</i>
 
       <div class="popup-container" id="popup">
         "Actitud valerosa, heroica o arriesgada"
@@ -131,7 +132,7 @@
 
     <section id="section-educacion">
       <div class="div-educacion">
-        <h2 class="titulo-edu">Educacion</h2>
+        <h2 class="titulo-edu">Educación</h2>
 
         <div class="div-text-curso" id="curso1">
           <img src="./assets/estrella.png" alt="estrella">
@@ -141,19 +142,19 @@
 
         <div class="div-text-curso" id="curso2">
           <img src="./assets/estrella.png" alt="estrella">
-          <p class="cursos" onmouseover="mostrarModal('curso2')" onmouseout="cerrarModal()">Programacion Basica - Platzi
+          <p class="cursos" onmouseover="mostrarModal('curso2')" onmouseout="cerrarModal()">Programación Básica - Platzi
           </p>
         </div>
 
         <div class="div-text-curso" id="curso3">
           <img src="./assets/estrella.png" alt="estrella">
           <p class="cursos" onmouseover="mostrarModal('curso3')" onmouseout="cerrarModal()">Argentina Programa -
-            Programacion Python</p>
+            Programación Python</p>
         </div>
 
         <div class="div-text-curso" id="curso4">
           <img src="./assets/estrella.png" alt="estrella">
-          <p class="cursos" onmouseover="mostrarModal('curso4')" onmouseout="cerrarModal()">Argentina Programa - A. y T
+          <p class="cursos" onmouseover="mostrarModal('curso4')" onmouseout="cerrarModal()">Argentina Programa - A. y T.
             de Datos - python</p>
         </div>
 
@@ -173,7 +174,6 @@
         <b class="texto-rombo3">11:11</b>
       </div>
       <div class="linea derecha"></div>
-      <div class="linea izquierda"></div>
 
       <div class="div-skills">
         <h2 class="titulo-skills">Skills</h2>
@@ -255,17 +255,18 @@
 
       <div class="div-proyectos">
 
+        <p class="text-idea">idea.</p>
         <span class="span-5"></span>
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-            <a href="" target="_blank">
+            <a href="https://habiaunavezsalon.netlify.app/index.html" target="_blank">
               <img src="./assets/imagen-proyecto1.png" alt="Proyecto 1" class="scale-image">
             </a>
           </div>
-          <a href="" class="titulo-sec-proyectos">Habia una vez</a>
+          <a href="https://github.com/Frangaleano/PreEntrega2Galeano" class="titulo-sec-proyectos" target="_blank">Había una vez</a>
           <div class="descripcion-proyecto">
-            <p class="descripcion-proyecto-letras">descripcion del proyecto, tecnologias, tiempo de realizacion.
+            <p class="descripcion-proyecto-letras">Sitio web - Coderhouse <br>Salón de fiestas
             </p>
             <img class="icono-proyectos" src="./assets/html-5.png" alt="html">
             <img class="icono-proyectos" src="./assets/css-3.png" alt="css">
@@ -281,13 +282,13 @@
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-            <a href="" target="_blank">
+            <a href="https://hechoamanottt.netlify.app/index.html" target="_blank">
               <img src="./assets/imagen-proyecto2.png" alt="Proyecto 2" class="scale-image">
             </a>
           </div>
-          <a href="" class="titulo-sec-proyectos">Hecho a mano.</a>
+          <a href="https://github.com/Frangaleano/Hechoamano" class="titulo-sec-proyectos" target="_blank">Hecho a mano.</a>
           <div class="descripcion-proyecto">
-            <p class="descripcion-proyecto-letras">descripcion del proyecto, tecnologias, tiempo de realizacion.
+            <p class="descripcion-proyecto-letras">Sitio web<br>Tatuador
             </p>
             <img class="icono-proyectos" src="./assets/html-5.png" alt="html">
             <img class="icono-proyectos" src="./assets/css-3.png" alt="css">
@@ -299,13 +300,13 @@
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-            <a href="" target="_blank">
+            <a href="https://mokeponjs.netlify.app/" target="_blank">
               <img src="./assets/imagen-proyecto3.png" alt="Proyecto 3" class="scale-image">
             </a>
           </div>
-          <a href="" class="titulo-sec-proyectos">Mokepon!</a>
+          <a href="https://github.com/Frangaleano/mokepon" class="titulo-sec-proyectos" target="_blank">Mokepon!</a>
           <div class="descripcion-proyecto">
-            <p class="descripcion-proyecto-letras">descripcion del proyecto, tecnologias, tiempo de realizacion.
+            <p class="descripcion-proyecto-letras">Juego online - Platzi
             </p>
             <img class="icono-proyectos" src="./assets/html-5.png" alt="html">
             <img class="icono-proyectos" src="./assets/css-3.png" alt="css">
@@ -317,13 +318,13 @@
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-            <a href="" target="_blank">
+            <a href="https://contadordospuntocero.netlify.app/" target="_blank">
               <img src="./assets/imagen-proyecto4.png" alt="Proyecto 4" class="scale-image">
             </a>
           </div>
-          <a href="" class="titulo-sec-proyectos">Herramientas.js</a>
+          <a href="https://github.com/Frangaleano/contador-inicial" class="titulo-sec-proyectos" target="_blank">Contador 2.0</a>
           <div class="descripcion-proyecto">
-            <p class="descripcion-proyecto-letras">descripcion del proyecto, tecnologias, tiempo de realizacion.
+            <p class="descripcion-proyecto-letras">Contador<br>suma-resta
             </p>
             <img class="icono-proyectos" src="./assets/html-5.png" alt="html">
             <img class="icono-proyectos" src="./assets/css-3.png" alt="css">
@@ -336,29 +337,65 @@
     </section>
 
     <section id="section-contacto">
-
-      
       <h2 class="titulo-contacto">Contacto</h2>
 
-      <div>
-        <form action="/enviar" method="post">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
-  
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" required>
-  
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-  
-          <input type="submit" value="Enviar">
-      </form>
-      <p id="mensajeError" style="color: red; font-size: small;"></p>
-      </div>
 
+      <div class="div-contacto">
+
+        <div class="contenido-contacto">
+          <div class="divs-contenido">
+            <a href="https://api.whatsapp.com/send/?phone=%2B5401125204181" class="ancla-icon-con" target="_blank">
+              <img class="icono-contacto-w" src="./assets/whatsapp.png" alt="whatsapp">
+              <p class="texto-icono">WhatsApp</p>
+            </a>
+          </div>
+
+          <div class="divs-contenido">
+            <a href="mailto:Fmagaleano@Gmail.com" class="ancla-icon-con" target="_blank">
+              <img class="icono-contacto" src="./assets/gmail-contacto.png" alt="Gmail">
+              <p class="texto-icono">Gmail</p>
+            </a>
+          </div>
+
+          <div class="divs-contenido">
+            <a href="https://www.linkedin.com/in/franciscogaleano1/" class="ancla-icon-con" target="_blank">
+              <img class="icono-contacto" src="./assets/linkedin-contacto.png" alt="linkedin">
+              <p class="texto-icono">linkedin</p>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <form id="miFormulario" method="get" novalidate>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required class="campo">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required class="campo">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required class="campo"></textarea>
+
+            <input type="submit" value="Enviar" onclick="enviarFormulario(event)">
+          </form>
+          <div id="mensajeError"></div>
+
+          <div class="div-msj">
+            <p class="Mensaje" id="check">Gracias por comunicarte conmigo.</p>
+            <img id="img-msj" src="./assets/marca-de-verificacion.png" alt="check">
+          </div>
+        </div>
+        <p class="text-com">Comunicación.</p>
+        <span class="span-6"></span>
+
+      </div>
 
     </section>
 
+    <footer>
+      <p class="fg-proyectos">FG</p>
+      <span class="span-7"></span>
+    </footer>
 
 
   </div>
@@ -366,6 +403,65 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="/main.js"></script>
+
+  <script>
+
+    function enviarFormulario(event) {
+      event.preventDefault(); // Evita la recarga de la página por defecto
+
+      var campos = document.querySelectorAll(".campo");
+      var mensajeError = document.getElementById("mensajeError");
+      var formCompleto = true;
+
+      // Validación del campo Nombre: debe contener solo letras
+      var regexNombre = /^[A-Za-z]+$/;
+      var nombre = document.getElementById("nombre");
+      if (!regexNombre.test(nombre.value)) {
+        nombre.style.border = "1px solid red";
+        formCompleto = false;
+      } else {
+        nombre.classList.remove("campo-invalido");
+      }
+
+      // Validación del campo Correo Electrónico: debe tener "@" y ".com"
+      var regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+      var email = document.getElementById("email");
+      if (!regexEmail.test(email.value)) {
+        email.style.border = "1px solid red";
+        formCompleto = false;
+      } else {
+        email.classList.remove("campo-invalido");
+      }
+
+      if (!formCompleto) {
+        mensajeError.innerHTML = "Fíjate si completaste bien todo!";
+        mensajeError.style.left = "38%";
+
+        // Ocultar el formulario después de mostrar el mensaje de error
+      } else {
+        // Ocultar el formulario
+        document.getElementById("miFormulario").style.display = "none";
+
+        // Mostrar el mensaje de agradecimiento y la imagen con una animación suave
+        var mensajeAgradecimiento = document.getElementById("check");
+        var imgMensaje = document.getElementById("img-msj");
+
+
+        mensajeAgradecimiento.style.display = "block"
+        imgMensaje.style.display = "block";
+        setTimeout(function () {
+          imgMensaje.style.opacity = "1";
+          mensajeAgradecimiento.style.opacity = "1";
+        }, 100); // Retraso para mostrar la imagen después de un breve momento
+      }
+    }
+
+
+
+
+
+  </script>
+
 </body>
 
 </html>

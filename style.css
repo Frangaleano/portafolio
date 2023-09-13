@@ -11,6 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   padding: 0px;
   margin: 0px;
@@ -63,6 +64,10 @@ body {
   gap: 40px;
   list-style: none;
   padding-left: 10px;
+}
+
+.div-ul {
+  position: absolute;
 }
 
 .ancla-1 {
@@ -191,6 +196,7 @@ body {
   justify-content: center;
   z-index: 999;
   backdrop-filter: blur(2.2px);
+  margin-top: 2.8em;
 }
 
 .rombo2:hover {
@@ -277,13 +283,13 @@ body {
 
 .text-inicio-sec {
   font-family: 'Fjalla One', sans-serif;
-  margin-left: 295px;
+  margin-left: 320px;
   padding: 15px 25px;
   border-radius: 100px;
   font-size: 170px;
   text-shadow: 3px 2px 5px #000000;
   text-transform: uppercase;
-  margin-top: 50px;
+  margin-top: 60px;
   animation-name: fade;
   animation-duration: 5s;
 }
@@ -302,7 +308,7 @@ body {
 .span-1 {
   z-index: 0;
   position: absolute;
-  border: dotted 4px rgba(255, 255, 255, 0.658);
+  border: dotted 4px rgba(255, 255, 255, 1);
   width: 300px;
   height: 300px;
   border-radius: 300px;
@@ -319,7 +325,7 @@ body {
 .span-2 {
   z-index: 0;
   position: absolute;
-  border: dotted 4px rgba(255, 255, 255, 0.658);
+  border: dotted 4px rgba(255, 255, 255, 1);
   width: 240px;
   height: 240px;
   border-radius: 300px;
@@ -332,19 +338,6 @@ body {
   transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.span-1:hover {
-  background: rgba(131, 113, 113, 0);
-  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.2px);
-  transition-duration: .7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-.span-2:hover {
-  background: rgba(131, 113, 113, 0);
-  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.2px);
-  transition-duration: .7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
 
 
 @keyframes spinner-loading {
@@ -357,32 +350,6 @@ body {
   }
 }
 
-.texto-caida {
-  visibility: hidden;
-  z-index: 1;
-  position: absolute;
-  font-family: 'Gilda Display';
-  left: 10px;
-  font-size: 20px;
-  margin-top: 510px;
-  width: 150px;
-  margin-left: 10px;
-  text-shadow: 7px 7px 8px #000000;
-}
-
-.texto-diablo {
-  visibility: hidden;
-  z-index: 1;
-  position: absolute;
-  font-family: 'Gilda Display';
-  margin-top: 275px;
-  right: 0;
-  font-size: 19px;
-  width: 100px;
-  text-align: right;
-  margin-right: 20px;
-  text-shadow: 7px 7px 8px #000000;
-}
 
 .text-creatividad {
   position: absolute;
@@ -548,7 +515,7 @@ body {
   transform: translateY(-30px);
   transition: opacity 1s ease, transform 4s ease;
   height: 470px;
-  padding-top: 2em;
+  padding-top: 1em;
   padding-left: 28px;
 }
 
@@ -559,7 +526,7 @@ body {
 }
 
 .titulo-sm {
-  font-size: 40px;
+  font-size: 50px;
   position: absolute;
   font-family: 'Prompt', sans-serif;
   text-shadow: 3px 4px 7px rgb(102, 101, 101);
@@ -591,7 +558,7 @@ body {
 }
 
 .span-3 {
-  border: dotted 4px rgba(255, 255, 255, 0.658);
+  border: dotted 4px rgba(255, 255, 255, 1);
   width: 250px;
   height: 250px;
   border-radius: 300px;
@@ -687,6 +654,7 @@ body {
   transition: opacity 1s ease, transform 4s ease;
   height: 450px;
   margin-bottom: 10em;
+  margin-top: 1em;
 }
 
 #section-educacion.mostrar {
@@ -701,11 +669,11 @@ body {
   width: 700px;
   height: 220px;
   gap: 26px;
-  margin-left: 25px;
+  margin-left: 3em;
 }
 
 .titulo-edu {
-  font-size: 40px;
+  font-size: 50px;
   font-family: 'Prompt', sans-serif;
   text-shadow: 3px 4px 7px rgb(102, 101, 101);
   margin-bottom: 26px;
@@ -783,7 +751,7 @@ body {
 }
 
 .span-4 {
-  border: dotted 4px rgba(255, 255, 255, 0.658);
+  border: dotted 4px rgba(255, 255, 255, 1);
   width: 250px;
   height: 250px;
   border-radius: 100%;
@@ -792,7 +760,7 @@ body {
   animation-timing-function: linear;
   animation-duration: 60s;
   animation-name: spinner-loading;
-  right: 15%;
+  right: 13%;
   margin-top: 15%;
 }
 
@@ -835,7 +803,7 @@ body {
 }
 
 .titulo-skills {
-  font-size: 40px;
+  font-size: 50px;
   font-family: 'Prompt', sans-serif;
   text-shadow: 3px 4px 7px rgb(102, 101, 101);
   margin-bottom: 35px;
@@ -883,7 +851,7 @@ body {
   background-color: transparent;
   color: #333;
   transition: width 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  right: 24%;
+  right: 21.5%;
   position: absolute;
 }
 
@@ -906,23 +874,24 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  transform: translateY(-20px);
+  transform: translateY(0px);
   transition: opacity 1s ease, transform 4s ease;
   height: 450px;
-  margin-top: 1em;
+  margin-top: 7em;
   opacity: 0;
+  margin-left: 4%;
 }
 
 #section-proyectos.mostrar {
   opacity: 1;
-  transform: translateY(100px);
+  transform: translateY(80px);
 }
 
 .titulo-proyectos {
   font-size: 55px;
   font-family: 'Prompt', sans-serif;
   text-shadow: 3px 4px 7px rgb(102, 101, 101);
-  margin-bottom: 26px;
+  margin-bottom: 8px;
   width: 259px;
 }
 
@@ -951,8 +920,21 @@ body {
   margin-right: 2em
 }
 
+.text-idea {
+  position: absolute;
+  left: -27px;
+  margin-right: 155px;
+  font-family: 'Gilda Display', serif;
+  font-size: 30px;
+  text-shadow: 7px 7px 8px #000000;
+  animation-duration: 5s;
+  animation-name: fade;
+  top: 90%;
+  font-style: italic;
+}
+
 .span-5 {
-  border: dotted 4px rgba(255, 255, 255, 0.658);
+  border: dotted 4px rgba(255, 255, 255, 1);
   width: 250px;
   height: 250px;
   border-radius: 100%;
@@ -968,18 +950,18 @@ body {
 
 .f-proyectos {
   position: absolute;
-  top: 3.8em;
+  top: 4.3em;
   font-family: 'Gilda Display', serif;
-  font-size: 5em;
-  left: 44%;
+  font-size: 4em;
+  left: 45%;
 }
 
 .g-proyectos {
   position: absolute;
-  top: 4.7em;
+  top: 5.45em;
   font-family: 'Gilda Display', serif;
-  font-size: 4.5em;
-  left: 47%;
+  font-size: 3.5em;
+  left: 47.5%;
 }
 
 
@@ -1007,8 +989,8 @@ body {
 }
 
 .div-img-proyecto {
-  width: 22em;
-  height: 12em;
+  width: 21em;
+  height: 10em;
   overflow: hidden;
   position: relative;
   margin-right: 11px;
@@ -1079,9 +1061,11 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  transform: translateY(-10px);
+  opacity: 0;
   transition: opacity 1s ease, transform 4s ease;
-  height: 809px;
-  margin-top: 25em;
+  height: 700px;
+  margin-top: 20em;
   background-image: url(assets/bg-expulsion.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -1089,40 +1073,65 @@ body {
   padding-top: 2em;
 }
 
+#section-contacto.mostrar {
+  opacity: 1;
+  transform: translateY(60px);
+}
+
 .titulo-contacto {
   font-size: 60px;
   font-family: 'Prompt', sans-serif;
   text-shadow: 3px 4px 7px rgb(102, 101, 101);
-  left: 41%;
+  left: 42%;
   position: absolute;
   top: -1%;
+}
+
+.titulo-contacto::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: white;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform .5s;
+}
+
+.titulo-contacto:hover::after {
+  transform: scale(1, 1);
+}
+
+.div-contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 form {
   display: flex;
   flex-direction: column;
   width: 371px;
-  height: 580px;
+  height: 470px;
   background-color: transparent;
   padding: 5px 20px;
   border: 2px solid #ccc;
   border-radius: 10px;
   backdrop-filter: blur(4px);
   position: absolute;
-  left: 5%;
-  top: 18%;
+  left: 37%;
+  top: 16%;
 }
 
 /* Estilo para las etiquetas */
 form label {
   font-weight: bold;
   font-family: "Euclid Circular A", "Poppins";
-  font-size: 25px;
+  font-size: 20px;
   text-shadow: 3px 4px 7px rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 15px;
+  padding: 10px;
 }
 
 /* Estilo para los campos de entrada (input y textarea) */
@@ -1134,23 +1143,24 @@ form input[type="email"] {
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: transparent;
-  font-size: 23px;
+  font-size: 20px;
   color: #f7f7f7;
-  padding: 10px;
+  padding: 5px;
   font-family: "Euclid Circular A", "Poppins";
   margin-bottom: 10px;
   text-shadow: 3px 4px 7px rgb(0 0 0);
 }
 
+
 form textarea {
   width: 350px;
-  height: 150px;
+  height: 120px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: transparent;
-  font-size: 23px;
+  font-size: 20px;
   color: #f7f7f7;
-  padding: 10px;
+  padding: 5px;
   font-family: "Euclid Circular A", "Poppins";
   margin-bottom: 10px;
   text-shadow: 3px 4px 7px rgb(0 0 0);
@@ -1164,7 +1174,7 @@ form input[type="submit"] {
   background-color: #000000a3;
   color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   cursor: pointer;
   margin-left: 22%;
   transition: 1s ease;
@@ -1179,6 +1189,203 @@ form input[type="submit"]:hover {
   background-color: #000000;
   /* Cambia el color al pasar el ratón por encima (puedes cambiarlo) */
 }
+
+.campo-invalido {
+  border: 2px solid red;
+  /* Borde rojo cuando no está completo */
+}
+
+#mensajeError {
+  color: white;
+  font-size: 20px;
+  font-family: "Euclid Circular A", "Poppins";
+  position: absolute;
+  left: -100%;
+  /* Fuera del área visible inicialmente */
+  top: 11%;
+  transition: left .8s ease;
+  border-bottom: 1px solid red;
+}
+
+.div-msj {
+  margin-top: 13em;
+  margin-left: .5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#check {
+  opacity: 0;
+  display: none;
+  color: white;
+  font-family: "Euclid Circular A", "Poppins";
+  font-size: 26px;
+  transition: opacity 0.8s ease-in-out;
+  text-shadow: 3px 1px 2px #000000;
+}
+
+#img-msj {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  width: 95px;
+}
+
+.contenido-contacto {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  row-gap: 4em;
+  margin-top: 4.1em;
+  left: 10%;
+}
+
+.divs-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icono-contacto {
+  width: 70px;
+}
+
+.icono-contacto-w {
+  width: 70px;
+  margin-left: 22px;
+}
+
+.ancla-icon-con {
+  text-decoration: none;
+}
+
+.texto-icono {
+  color: white;
+  font-family: "Euclid Circular A", "Poppins";
+  font-size: 22px;
+  text-shadow: 3px 1px 2px #000000;
+}
+
+.text-com {
+  position: absolute;
+  right: -14px;
+  margin-right: 155px;
+  font-family: 'Gilda Display', serif;
+  font-size: 25px;
+  text-shadow: 7px 7px 8px #000000;
+  animation-duration: 5s;
+  animation-name: fade;
+  top: 17em;
+  font-style: italic;
+}
+
+.text-com::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: white;
+  transform: scale(0, 1);
+  transform-origin: right;
+  transition: transform .5s;
+}
+
+.text-com:hover::after {
+  transform: scale(1, 1);
+}
+
+
+.span-6 {
+  z-index: 0;
+  position: absolute;
+  border: dotted 4px rgba(255, 255, 255, 1);
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  right: -140px;
+  top: 180px;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 60s;
+  animation-name: spinner-loading;
+  transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: rgba(131, 113, 113, 0);
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.2px);
+  width: 99.5%;
+  z-index: 1;
+  animation: slide-top 3s ease-in-out;
+  height: 56px;
+  border-top: 1px solid white;
+  align-items: center;
+}
+
+.fg-proyectos {
+  position: absolute;
+  font-family: 'Gilda Display', serif;
+  font-size: 2.5em;
+  left: 2%;
+}
+
+.span-7 {
+  z-index: 0;
+  position: absolute;
+  border: dotted 4px rgba(255, 255, 255, 1);
+  width: 40px;
+  height: 40px;
+  border-radius: 300px;
+  right: 46%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 60s;
+  animation-name: spinner-loading;
+  transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@media (min-width: 320px) {
+  /* Estilo para el botón de menú */
+.menu-btn {
+  display: block;
+  cursor: pointer;
+}
+
+/* Estilo para el ícono de menú (las tres líneas) */
+.menu-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+/* Estilo para ocultar la lista en pantallas pequeñas */
+.menu {
+  list-style: none;
+  display: none; /* Oculta la lista inicialmente */
+}
+
+/* Estilo para mostrar la lista cuando la casilla de verificación está marcada */
+#menu-toggle:checked + .menu {
+  display: block;
+}
+
+/* Estilo para rotar el ícono del menú cuando se muestra el menú */
+#menu-toggle:checked + .menu-btn .menu-icon {
+  transform: rotate(45deg);
+}
+}
+
+
+
 
 
 

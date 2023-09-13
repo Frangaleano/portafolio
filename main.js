@@ -63,30 +63,6 @@ function ocultarLineas() {
   textRombo3.style.opacity = "0"
 }
 
-function verTextoDiablo() {
-  textoDiablo.style.transition = "opacity 2s cubic-bezier(0.68, -0.55, 0.27, 1.55), visibility 2s cubic-bezier(0.68, -0.55, 0.27, 1.55)"
-  textoDiablo.style.visibility = "visible"
-  textoDiablo.style.opacity = "1"
-}
-
-function ocultarTextoDiablo() {
-  textoDiablo.style.transition = "opacity 3s cubic-bezier(0.68, -0.55, 0.27, 1.55), visibility 3s cubic-bezier(0.68, -0.55, 0.27, 1.55)"
-  textoDiablo.style.visibility = "hidden"
-  textoDiablo.style.opacity = "0"
-}
-
-function verTextoCaida() {
-  textoCaida.style.transition = "opacity 2s cubic-bezier(0.68, -0.55, 0.27, 1.55), visibility 2s cubic-bezier(0.68, -0.55, 0.27, 1.55)"
-  textoCaida.style.visibility = "visible"
-  textoCaida.style.opacity = "1"
-}
-
-function ocultarTextoCaida() {
-  textoCaida.style.transition = "opacity 3s cubic-bezier(0.68, -0.55, 0.27, 1.55), visibility 3s cubic-bezier(0.68, -0.55, 0.27, 1.55)"
-  textoCaida.style.visibility = "hidden"
-  textoCaida.style.opacity = "0"
-}
-
 
 function EscucharBotones() {
   secciones.forEach(function (seccion) {
@@ -152,7 +128,6 @@ function scrollSuave(targetId) {
 function inicio() {
   location.reload()
 }
-
 
 function mostrarSeccionSobreMi() {
   const sobreMiSection = document.getElementById('section-sm');
@@ -249,6 +224,21 @@ function animarMedidor(medidor, valorDeseado) {
 // Llamar a la función para animar los medidores cuando se hace scroll
 window.addEventListener('scroll', animarMedidores);
 
+
+function mostrarSeccionContacto() {
+  const sectionContacto = document.getElementById('section-contacto');
+  const windowHeight = window.innerHeight;
+  const scrollY = window.scrollY;
+
+  const sectionContactoTop = sectionContacto.getBoundingClientRect().top;
+
+  if (sectionContactoTop < windowHeight / 1.5) {
+    sectionContacto.classList.add('mostrar'); // Aplica la clase para mostrar la sección
+  } else {
+    sectionContacto.classList.remove('mostrar'); // Oculta la sección si el usuario se desplaza hacia arriba
+  }
+}
+
 function mostrarModal(idCurso) {
   clearTimeout(modalTimer); // Limpiar el temporizador anterior
   modal.style.display = "block";
@@ -288,45 +278,15 @@ function obtenerRutaImagen(idCurso) {
   }
 }
 
-function validarFormulario() {
-  var nombre = document.getElementById("nombre").value;
-  var email = document.getElementById("email").value;
-  var mensaje = document.getElementById("mensaje").value;
-  var mensajeError = document.getElementById("mensajeError");
-
-  console.log(nombre)
-  console.log(email)
-  console.log(mensaje)
-
-  mensajeError.innerHTML = "";
-
-  if (nombre === "" || email === "" || mensaje === "") {
-      mensajeError.innerHTML = "El formulario no está completo. Por favor, complete todos los campos.";
-      return false;
-  }
-
-  // Validar el formato del correo electrónico
-  var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  if (!emailPattern.test(email)) {
-      mensajeError.innerHTML = "El correo electrónico ingresado no es válido.";
-      return false;
-  }
-
-  // Otras validaciones específicas, si las necesitas
-
-  return true; // Envía el formulario si pasa todas las validaciones
-}
-
+// Detectar el desplazamiento de la página en cada seccion
+window.addEventListener('scroll', mostrarSeccionSobreMi);
 
 // Detectar el desplazamiento de la página en cada seccion
 window.addEventListener('scroll', mostrarSeccionProyectos);
 
+window.addEventListener('scroll', mostrarSeccionEducacion);
 
-// Detectar el desplazamiento de la página en cada seccion
-window.addEventListener('scroll', mostrarSeccionSobreMi);
-
-window.addEventListener('scroll', mostrarSeccionEducacion)
-
+window.addEventListener('scroll', mostrarSeccionContacto);
 //iniciar la pagina
 
 window.addEventListener("load", EscucharBotones);
