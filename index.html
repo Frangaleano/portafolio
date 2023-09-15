@@ -10,37 +10,53 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="./style.css" rel="stylesheet" />
   <link rel="shortcut icon" href="./assets/icono-pagina.png">
 </head>
 
 <body>
-  <div class="div1" id="nav-inicio">
-    <div class="menu-btn">
-      <span class="menu-icon"></span>
-    </div>
-    <div class="div-ul">
-      <ul class="nav">
-        <li>
-          <a id="boton-sm" class="nav-link ancla-1" aria-current="page" href="#"
-            onclick="scrollSuave('section-sm')">Sobre mí</a>
-        </li>
-        <li>
-          <a id="boton-edu" class="nav-link ancla-1" href="#" onclick="scrollSuave('section-educacion')">Educación</a>
-        </li>
-        <li>
-          <a id="boton-pro" class="nav-link ancla-1" href="#" onclick="scrollSuave('section-proyectos')">Proyectos</a>
-        </li>
-        <li>
-          <a id="boton-con" class="nav-link ancla-1" href="#" onclick="scrollSuave('section-contacto')">Contacto</a>
-        </li>
-      </ul>
-    </div>
 
-    <div>
-      <h1 class="nombre-inicio" id="nombre-inicio" onclick="inicio()">Francisco Galeano</h1>
-    </div>
-  </div>
+  <header class="div1" id="nav-inicio">
+
+    <nav class="navbar">
+
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+        <span class="material-icons"> 
+          <img class="menu-icono" src="./assets/menu.png" alt="menu">
+        </span>
+      </button>
+
+      <a href="index.html" class="nombre-inicio">Francisco Galeano.</a>
+
+
+      <nav class="navbar-menu">
+        <div>
+          <a id="boton-sm" class="nav-link ancla-1" aria-current="page" href="#">
+            <button type=" button" class="active">Sobre mi</button>
+          </a>
+
+          <a id="boton-edu" class="nav-link ancla-1" href="#">
+            <button type="button" class="active">Educación</button>
+          </a>
+
+          <a id="boton-pro" class="nav-link ancla-1" href="#">
+
+            <button type="button" class="active">Proyectos</button>
+          </a>
+
+          <a id="boton-con" class="nav-link ancla-1" href="#">
+            <button type="button" class="active">Contacto</button>
+          </a>
+        </div>
+      </nav>
+
+    </nav>
+
+  </header>
+
 
 
 
@@ -264,7 +280,8 @@
               <img src="./assets/imagen-proyecto1.png" alt="Proyecto 1" class="scale-image">
             </a>
           </div>
-          <a href="https://github.com/Frangaleano/PreEntrega2Galeano" class="titulo-sec-proyectos" target="_blank">Había una vez</a>
+          <a href="https://github.com/Frangaleano/PreEntrega2Galeano" class="titulo-sec-proyectos" target="_blank">Había
+            una vez</a>
           <div class="descripcion-proyecto">
             <p class="descripcion-proyecto-letras">Sitio web - Coderhouse <br>Salón de fiestas
             </p>
@@ -286,7 +303,8 @@
               <img src="./assets/imagen-proyecto2.png" alt="Proyecto 2" class="scale-image">
             </a>
           </div>
-          <a href="https://github.com/Frangaleano/Hechoamano" class="titulo-sec-proyectos" target="_blank">Hecho a mano.</a>
+          <a href="https://github.com/Frangaleano/Hechoamano" class="titulo-sec-proyectos" target="_blank">Hecho a
+            mano.</a>
           <div class="descripcion-proyecto">
             <p class="descripcion-proyecto-letras">Sitio web<br>Tatuador
             </p>
@@ -322,7 +340,8 @@
               <img src="./assets/imagen-proyecto4.png" alt="Proyecto 4" class="scale-image">
             </a>
           </div>
-          <a href="https://github.com/Frangaleano/contador-inicial" class="titulo-sec-proyectos" target="_blank">Contador 2.0</a>
+          <a href="https://github.com/Frangaleano/contador-inicial" class="titulo-sec-proyectos"
+            target="_blank">Contador 2.0</a>
           <div class="descripcion-proyecto">
             <p class="descripcion-proyecto-letras">Contador<br>suma-resta
             </p>
@@ -400,6 +419,11 @@
 
   </div>
 
+  <script type="text/javascript">
+    const toggleMenuOpen = () => {
+      document.body.classList.toggle("open");
+    };
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="/main.js"></script>

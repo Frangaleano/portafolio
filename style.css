@@ -11,7 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
-
+/*
 body {
   padding: 0px;
   margin: 0px;
@@ -30,1362 +30,1485 @@ body {
   overflow-x: hidden;
   background-color: #000000;
   scroll-behavior: smooth;
-}
+}*/
 
+@media (min-width: 100px) {
 
-@keyframes shadow-inset-center {
-  0% {
-    box-shadow: inset 0 0 0 0 transparent;
+  body {
+    padding: 0px;
+    margin: 0px;
+    color: #f9f9f9;
+    width: 101%;
+    min-height: 100vh;
+    background-image: url("assets/bg-lacaida.png");
+    background-size: 101%;
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: start;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 1s linear;
+    animation: shadow-inset-center 3s linear both;
+    grid-template-rows: 8% 100%;
+    overflow-x: hidden;
+    background-color: #000000;
+    scroll-behavior: smooth;
   }
 
-  100% {
-    box-shadow: inset 0 0 250px 50px rgb(0, 0, 0);
+
+  @keyframes shadow-inset-center {
+    0% {
+      box-shadow: inset 0 0 0 0 transparent;
+    }
+
+    100% {
+      box-shadow: inset 0 0 250px 50px rgb(0, 0, 0);
+    }
   }
-}
 
-.div1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 5px;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: fixed;
-  background: rgba(131, 113, 113, 0);
-  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.2px);
-  width: 99.5%;
-  z-index: 1;
-  animation: slide-top 3s ease-in-out;
-}
+  .div1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: fixed;
+    background: transparent;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    width: 107vh;
+    z-index: 1;
+    animation: slide-top 3s ease-in-out;
+  }
 
-.nav {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  list-style: none;
-  padding-left: 10px;
-}
+  .navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    height: 48px;
+    color: #f9f9f9;
+    font-family: "Poppins";
+    box-sizing: border-box;
+    padding: 10px 4px;
+  }
 
-.div-ul {
-  position: absolute;
-}
+  .ancla-1 {
+    font-family: "Euclid Circular A", "Poppins";
+    text-decoration: none;
+    text-shadow: 3px 2px 5px #000000;
+    color: white;
+    font-size: 18px;
+  }
 
-.ancla-1 {
-  font-family: "Euclid Circular A", "Poppins";
-  text-decoration: none;
-  text-shadow: 3px 2px 5px #000000;
-  color: white;
-  font-size: 18px;
-}
+  .ancla-1::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform .5s;
+  }
 
-.ancla-1::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: white;
-  transform: scale(0, 1);
-  transform-origin: right;
-  transition: transform .5s;
-}
+  .ancla-1:hover::after {
+    transform: scale(1, 1);
+  }
 
-.ancla-1:hover::after {
-  transform: scale(1, 1);
-}
-
-.ancla-1.seleccionada {
-  opacity: 50%;
-}
-
-
-.nombre-inicio {
-  font-family: 'Gilda Display', serif;
-  text-shadow: 3px 2px 5px #000000;
-  font-size: 20px;
-  color: white;
-  animation-duration: 10s;
-  animation-name: fade;
-  cursor: pointer;
-}
+  .ancla-1.seleccionada {
+    opacity: 50%;
+  }
 
 
-@keyframes fade {
-  from {
+  .nombre-inicio {
+    font-family: 'Gilda Display', serif;
+    text-shadow: 3px 2px 5px #000000;
+    font-size: 20px;
+    color: white;
+    animation-duration: 10s;
+    animation-name: fade;
+    cursor: pointer;
+  }
+
+
+  @keyframes fade {
+    from {
+      opacity: 0%;
+    }
+
+    to {
+      opacity: 100%;
+    }
+  }
+
+  .div2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 0px 29px 12px rgb(0 0 0 / 70%) inset;
+  }
+
+
+  .div-texto {
+    width: 108vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-inicio {
+    font-size: 20px;
+    width: 300px;
+    text-shadow: 1px 8px 5px rgba(0, 0, 0, 1);
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    text-transform: uppercase;
+    font-family: 'Prompt', sans-serif;
+    margin-top: 50px;
+    animation: slide-top 3s ease-in-out;
+    position: relative;
+    top: 20px;
+    left: 20px;
+  }
+
+  @keyframes slide-top {
+    0% {
+      transform: translateY(200px);
+      opacity: 0%;
+    }
+
+    100% {
+      transform: translateY(0px);
+      opacity: 100%;
+    }
+  }
+
+  .text-inicio:hover {
+    transform: scale(1.05);
+    transition-duration: 1s;
+  }
+
+  .rombo {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    margin: 50px;
+    border: 3px solid black;
+    top: 18px;
+    transition: .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, .5);
+    left: 15%;
+  }
+
+  .rombo2 {
+    width: 33px;
+    height: 33px;
+    background: transparent;
+    position: fixed;
+    transform: rotate(45deg);
+    margin: 50px;
+    border: 2px solid white;
+    top: 84%;
+    right: -20px;
+    transition: .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    backdrop-filter: blur(2.2px);
+    margin-top: 2.8em;
+  }
+
+  .rombo2:hover {
+    background-color: white;
+  }
+
+  .rombo3 {
+    width: 150px;
+    height: 150px;
+    background: black;
+    position: fixed;
+    transform: rotate(45deg);
+    margin: 50px;
+    border: 3px solid white;
+    top: 96%;
+    left: 29%;
+    transition: background-color .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: 0px 0px 20px 2px rgb(255 255 255 / 75%);
+  }
+
+  .texto-rombo3 {
+    font-family: 'Gilda Display', serif;
+    font-size: 35px;
+    color: white;
+    z-index: 4;
+    transform: rotate(-45deg);
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .linea {
+    background-color: white;
+    height: 2px;
+    position: fixed;
+    top: 124.3%;
+    transition: width 1.5s ease-in-out, opacity 1.3s ease-in-out;
+    width: 0;
+    /* Inicialmente sin ancho */
+    z-index: -1;
+    /* Detrás del rombo */
+    opacity: 0;
+  }
+
+  .derecha {
+    right: 61.3%;
+    transform-origin: right;
+  }
+
+  .izquierda {
+    left: 43.4%;
+    transform-origin: left;
+  }
+
+  #ancla-rombo2 {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transform: rotate(313deg);
+    position: absolute;
+    font-family: 'Gilda Display';
+    font-size: 15px;
+  }
+
+
+  #ancla-rombo {
+    color: white;
+    text-decoration: none;
+    transform: rotate(313deg);
+    position: absolute;
+    font-family: 'Gilda Display';
+    font-style: italic;
+    visibility: hidden;
     opacity: 0%;
+    text-shadow: 3px 1px 2px #000000;
   }
 
-  to {
-    opacity: 100%;
-  }
-}
-
-.div2 {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
-  box-shadow: 0px 0px 123px 153px rgb(0 0 0 / 70%) inset;
-}
-
-
-.div-texto {
-  text-align: center;
-}
-
-.text-inicio {
-  font-size: 41px;
-  width: 600px;
-  height: 200px;
-  text-shadow: 1px 8px 5px rgba(0, 0, 0, 1);
-  position: relative;
-  transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  text-transform: uppercase;
-  font-family: 'Prompt', sans-serif;
-  margin-top: 50px;
-  animation: slide-top 3s ease-in-out;
-  top: 20px;
-  left: 50px;
-}
-
-@keyframes slide-top {
-  0% {
-    transform: translateY(200px);
-    opacity: 0%;
+  .rombo:hover {
+    background-color: black;
   }
 
-  100% {
+  .text-inicio-sec {
+    font-family: 'Fjalla One', sans-serif;
+    border-radius: 100px;
+    font-size: 56px;
+    text-shadow: 3px 2px 5px #000000;
+    text-transform: uppercase;
+    margin-top: 44px;
+    animation-name: fade;
+    animation-duration: 5s;
+    position: relative;
+    left: 6%;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0%;
+    }
+
+    to {
+      opacity: 100%;
+    }
+  }
+
+
+  .span-1 {
+    z-index: 0;
+    position: absolute;
+    border: dotted 2px rgba(255, 255, 255, 1);
+    width: 100px;
+    height: 100px;
+    border-radius: 300px;
+    top: 180px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+    animation-name: spinner-loading;
+    transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    left: -44px;
+  }
+
+
+  .span-2 {
+    z-index: 0;
+    position: absolute;
+    border: dotted 4px rgba(255, 255, 255, 1);
+    width: 240px;
+    height: 240px;
+    border-radius: 300px;
+    left: -50px;
+    top: 400px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+    animation-name: spinner-loading;
+    transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+
+
+
+  @keyframes spinner-loading {
+    0% {
+      transform: rotate(0deg)
+    }
+
+    to {
+      transform: rotate(1turn)
+    }
+  }
+
+
+  .text-creatividad {
+    display: none;
+  }
+
+  .text-disciplina {
+    position: absolute;
+    left: 205px;
+    margin-right: 155px;
+    font-family: 'Gilda Display', serif;
+    font-size: 25px;
+    text-shadow: 3px 1px 2px #000000;
+    animation-duration: 5s;
+    animation-name: fade;
+    top: 515px;
+    letter-spacing: 0.5px;
+  }
+
+  .text-disciplina::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform .5s;
+  }
+
+  .text-creatividad::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform .5s;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0%;
+    }
+
+    100% {
+      opacity: 100%;
+    }
+  }
+
+
+  .text-creatividad:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .text-disciplina:hover::after {
+    transform: scale(1, 1);
+  }
+
+
+  .button {
+    position: fixed;
+    overflow: hidden;
+    width: 90px;
+    height: 40px;
+    border-radius: 25px;
+    border: 0;
+    color: #f7f7f7;
+    background: transparent;
+    font-family: "Euclid Circular A", "Poppins";
+    cursor: pointer;
+    transition: 0.3s;
+    /* margin-left: 860px; */
+    box-shadow: inset 0 0 11px 2px rgba(109, 80, 80);
+    top: 50px;
+    left: 17.9%;
+    z-index: 1;
+    backdrop-filter: blur(2.2px);
+  }
+
+  .button i {
+    font-size: 18px;
+  }
+
+  .button-text,
+  .button-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+  }
+
+  .button-text {
+    gap: 10px;
+    justify-content: center;
+    color: inherit;
+    font-size: 13px;
+    margin-left: 4px;
+  }
+
+  .button-links {
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s;
+    padding-top: 3px;
+  }
+
+  .button-links a {
+    translate: 0 50px;
+    transition: 0.3s;
+  }
+
+  .button-links a img {
+    width: 16px;
+  }
+
+
+
+  .button:hover {
+    border-radius: 6px;
+    box-shadow: inset 0 0 11px 25px rgba(109, 80, 80);
+
+  }
+
+  .button:hover .button-links a:nth-child(1) {
+    transition-delay: 0.05s;
+  }
+
+  .button:hover .button-links a:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+
+  .button:hover .button-links a:nth-child(3) {
+    transition-delay: 0.15s;
+  }
+
+  .button:hover .button-text {
+    translate: 0 -100%;
+  }
+
+  .button:hover .button-links {
+    opacity: 1;
+  }
+
+  .button:hover .button-links a {
+    translate: 0;
+  }
+
+  .button-links i {
+    color: #f7f7f7;
+  }
+
+
+  #section-sm {
+    display: flex;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 1s ease, transform 4s ease;
+    height: 470px;
+    padding-top: 1em;
+    padding-left: 28px;
+  }
+
+
+  #section-sm.mostrar {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+
+  .titulo-sm {
+    font-size: 50px;
+    position: absolute;
+    font-family: 'Prompt', sans-serif;
+    text-shadow: 3px 4px 7px rgb(102, 101, 101);
+  }
+
+  .titulo-sm::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform .8s;
+  }
+
+  .titulo-sm:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .text-sm {
+    font-size: 22px;
+    line-height: 1.5em;
+    width: 750px;
+    height: 308px;
+    margin-top: 120px;
+    font-family: "Euclid Circular A", "Poppins";
+    z-index: 1;
+    background-color: black;
+  }
+
+  .span-3 {
+    border: dotted 4px rgba(255, 255, 255, 1);
+    width: 250px;
+    height: 250px;
+    border-radius: 300px;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+    animation-name: spinner-loading;
+    left: 40.9%;
+    margin-top: 20%;
+  }
+
+  .popup-trigger {
+    position: absolute;
+    font-family: 'Gilda Display', serif;
+    font-size: 28px;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    text-decoration: none;
+    height: 50px;
+    z-index: 1;
+    top: 106%;
+    left: 37%
+  }
+
+  .popup-container {
+    color: white;
+    font-size: 22px;
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -50%) translateX(-50%);
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    top: 109%;
+    left: 30%;
+    font-family: "Euclid Circular A", "Poppins";
+  }
+
+
+  .contenedor {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 53px 140px;
+    position: relative;
+  }
+
+
+
+  .imagen img {
+    width: 100%;
+    height: 400px;
+  }
+
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55), transform 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    line-height: 30px;
+  }
+
+  .info p {
+    font-size: 20px;
+    font-family: "Euclid Circular A", "Poppins";
+  }
+
+  .div-ubicacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .div-edad {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+  }
+
+  #section-educacion {
+    display: flex;
+    position: relative;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease, transform 4s ease;
+    height: 450px;
+    margin-bottom: 10em;
+    margin-top: 1em;
+  }
+
+  #section-educacion.mostrar {
+    opacity: 1;
+    transform: translateY(150px);
+  }
+
+  .div-educacion {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 700px;
+    height: 220px;
+    gap: 26px;
+    margin-left: 3em;
+  }
+
+  .titulo-edu {
+    font-size: 50px;
+    font-family: 'Prompt', sans-serif;
+    text-shadow: 3px 4px 7px rgb(102, 101, 101);
+    margin-bottom: 26px;
+  }
+
+  .titulo-edu::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform .8s;
+  }
+
+  .titulo-edu:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .div-text-curso {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .cursos {
+    font-family: "Euclid Circular A", "Poppins";
+    font-size: 22px;
+    cursor: pointer;
+    background-color: black;
+    z-index: 1;
+  }
+
+  /* Estilos para el modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
+    transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    object-fit: cover;
+  }
+
+  .modal img {
+    width: 450px;
+    height: 350px;
+    opacity: 1;
+  }
+
+  /* Estilo para el fondo oscuro del modal */
+  .modal::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .modal.abierto::before {
+    opacity: 1;
+  }
+
+  .span-4 {
+    border: dotted 4px rgba(255, 255, 255, 1);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+    animation-name: spinner-loading;
+    right: 13%;
+    margin-top: 15%;
+  }
+
+  .text-consistencia {
+    position: absolute;
+    right: -8.5%;
+    margin-right: 155px;
+    font-family: 'Gilda Display', serif;
+    font-size: 25px;
+    text-shadow: 7px 7px 8px #000000;
+    animation-duration: 5s;
+    animation-name: fade;
+    top: 252px;
+    font-style: italic;
+  }
+
+  .text-consistencia::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform .5s;
+  }
+
+  .text-consistencia:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .div-skills {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    z-index: 2;
+    gap: 15px;
+    height: 500px;
+    padding-left: 43px;
+    padding-bottom: 10px;
+  }
+
+  .titulo-skills {
+    font-size: 50px;
+    font-family: 'Prompt', sans-serif;
+    text-shadow: 3px 4px 7px rgb(102, 101, 101);
+    margin-bottom: 35px;
+    width: 93px;
+  }
+
+  .titulo-skills::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform .8s;
+  }
+
+  .titulo-skills:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .habilidad {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 274px;
+    align-items: center;
+    z-index: 1;
+    background-color: black;
+  }
+
+
+  .iconos-skills {
+    width: 30px;
+    height: 30px;
+  }
+
+  .habilidad p {
+    font-family: "Euclid Circular A", "Poppins";
+  }
+
+  .medidor {
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #333;
+    transition: width 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    right: 21.5%;
+    position: absolute;
+  }
+
+  .medidor::-webkit-meter-bar {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+
+  .medidor::-webkit-meter-optimum-value,
+  .medidor::-webkit-meter-suboptimum-value,
+  .medidor::-webkit-meter-even-less-good-value {
+    border-radius: 5px;
+    background-color: #59f042;
+    /* Cambia el color de la parte verde de la barra de progreso */
+    width: 0;
+    /* Ancho inicial de la parte verde */
+  }
+
+  #section-proyectos {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     transform: translateY(0px);
-    opacity: 100%;
-  }
-}
-
-.text-inicio:hover {
-  transform: scale(1.05);
-  transition-duration: 1s;
-}
-
-.rombo {
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  position: absolute;
-  transform: rotate(45deg);
-  margin: 50px;
-  border: 5px solid black;
-  top: 102px;
-  right: 362px;
-  transition: .3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
-}
-
-.rombo2 {
-  width: 33px;
-  height: 33px;
-  background: transparent;
-  position: fixed;
-  transform: rotate(45deg);
-  margin: 50px;
-  border: 2px solid white;
-  top: 84%;
-  right: -20px;
-  transition: .3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  backdrop-filter: blur(2.2px);
-  margin-top: 2.8em;
-}
-
-.rombo2:hover {
-  background-color: white;
-}
-
-.rombo3 {
-  width: 150px;
-  height: 150px;
-  background: black;
-  position: fixed;
-  transform: rotate(45deg);
-  margin: 50px;
-  border: 3px solid white;
-  top: 96%;
-  left: 29%;
-  transition: background-color .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  box-shadow: 0px 0px 20px 2px rgb(255 255 255 / 75%);
-}
-
-.texto-rombo3 {
-  font-family: 'Gilda Display', serif;
-  font-size: 35px;
-  color: white;
-  z-index: 4;
-  transform: rotate(-45deg);
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
-}
-
-.linea {
-  background-color: white;
-  height: 2px;
-  position: fixed;
-  top: 124.3%;
-  transition: width 1.5s ease-in-out, opacity 1.3s ease-in-out;
-  width: 0;
-  /* Inicialmente sin ancho */
-  z-index: -1;
-  /* Detrás del rombo */
-  opacity: 0;
-}
-
-.derecha {
-  right: 61.3%;
-  transform-origin: right;
-}
-
-.izquierda {
-  left: 43.4%;
-  transform-origin: left;
-}
-
-#ancla-rombo2 {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  transform: rotate(313deg);
-  position: absolute;
-  font-family: 'Gilda Display';
-  font-size: 15px;
-}
-
-
-#ancla-rombo {
-  color: white;
-  text-decoration: none;
-  transform: rotate(313deg);
-  position: absolute;
-  font-family: 'Gilda Display';
-  font-style: italic;
-  visibility: hidden;
-  opacity: 0%;
-  text-shadow: 3px 1px 2px #000000;
-}
-
-.rombo:hover {
-  background-color: black;
-}
-
-.text-inicio-sec {
-  font-family: 'Fjalla One', sans-serif;
-  margin-left: 320px;
-  padding: 15px 25px;
-  border-radius: 100px;
-  font-size: 170px;
-  text-shadow: 3px 2px 5px #000000;
-  text-transform: uppercase;
-  margin-top: 60px;
-  animation-name: fade;
-  animation-duration: 5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0%;
+    transition: opacity 1s ease, transform 4s ease;
+    height: 450px;
+    margin-top: 7em;
+    opacity: 0;
+    margin-left: 4%;
   }
 
-  to {
-    opacity: 100%;
-  }
-}
-
-
-.span-1 {
-  z-index: 0;
-  position: absolute;
-  border: dotted 4px rgba(255, 255, 255, 1);
-  width: 300px;
-  height: 300px;
-  border-radius: 300px;
-  right: -140px;
-  top: 180px;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 60s;
-  animation-name: spinner-loading;
-  transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-
-.span-2 {
-  z-index: 0;
-  position: absolute;
-  border: dotted 4px rgba(255, 255, 255, 1);
-  width: 240px;
-  height: 240px;
-  border-radius: 300px;
-  left: -50px;
-  top: 400px;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 60s;
-  animation-name: spinner-loading;
-  transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-
-
-@keyframes spinner-loading {
-  0% {
-    transform: rotate(0deg)
+  #section-proyectos.mostrar {
+    opacity: 1;
+    transform: translateY(80px);
   }
 
-  to {
-    transform: rotate(1turn)
-  }
-}
-
-
-.text-creatividad {
-  position: absolute;
-  right: 20px;
-  margin-right: 155px;
-  font-family: 'Gilda Display', serif;
-  font-size: 25px;
-  text-shadow: 7px 7px 8px #000000;
-  animation-duration: 5s;
-  animation-name: fade;
-  top: 310px;
-}
-
-.text-disciplina {
-  position: absolute;
-  left: 205px;
-  margin-right: 155px;
-  font-family: 'Gilda Display', serif;
-  font-size: 25px;
-  text-shadow: 3px 1px 2px #000000;
-  animation-duration: 5s;
-  animation-name: fade;
-  top: 515px;
-  letter-spacing: 0.5px;
-}
-
-.text-disciplina::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: white;
-  transform: scale(0, 1);
-  transform-origin: left;
-  transition: transform .5s;
-}
-
-.text-creatividad::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: white;
-  transform: scale(0, 1);
-  transform-origin: right;
-  transition: transform .5s;
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0%;
+  .titulo-proyectos {
+    font-size: 55px;
+    font-family: 'Prompt', sans-serif;
+    text-shadow: 3px 4px 7px rgb(102, 101, 101);
+    margin-bottom: 8px;
+    width: 259px;
   }
 
-  100% {
-    opacity: 100%;
-  }
-}
-
-
-.text-creatividad:hover::after {
-  transform: scale(1, 1);
-}
-
-.text-disciplina:hover::after {
-  transform: scale(1, 1);
-}
-
-
-.button {
-  position: fixed;
-  overflow: hidden;
-  width: 140px;
-  height: 50px;
-  border-radius: 25px;
-  border: 0;
-  color: #f7f7f7;
-  background: transparent;
-  font-family: "Euclid Circular A", "Poppins";
-  cursor: pointer;
-  transition: 0.3s;
-  margin-left: 860px;
-  box-shadow: inset 0 0 11px 2px rgba(109, 80, 80);
-  top: 50px;
-  right: 10px;
-  z-index: 1;
-  backdrop-filter: blur(2.2px);
-}
-
-.button i {
-  font-size: 18px;
-}
-
-.button-text,
-.button-links {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
-}
-
-.button-text {
-  gap: 10px;
-  justify-content: center;
-  color: inherit;
-  font-size: 16px;
-}
-
-.button-links {
-  opacity: 0;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  transition: 0.2s;
-  padding-top: 3px;
-}
-
-.button-links a {
-  translate: 0 50px;
-  transition: 0.3s;
-}
-
-.button:hover {
-  border-radius: 6px;
-  box-shadow: inset 0 0 11px 25px rgba(109, 80, 80);
-
-}
-
-.button:hover .button-links a:nth-child(1) {
-  transition-delay: 0.05s;
-}
-
-.button:hover .button-links a:nth-child(2) {
-  transition-delay: 0.1s;
-}
-
-.button:hover .button-links a:nth-child(3) {
-  transition-delay: 0.15s;
-}
-
-.button:hover .button-text {
-  translate: 0 -100%;
-}
-
-.button:hover .button-links {
-  opacity: 1;
-}
-
-.button:hover .button-links a {
-  translate: 0;
-}
-
-.button-links i {
-  color: #f7f7f7;
-}
-
-
-#section-sm {
-  display: flex;
-  position: relative;
-  opacity: 0;
-  transform: translateY(-30px);
-  transition: opacity 1s ease, transform 4s ease;
-  height: 470px;
-  padding-top: 1em;
-  padding-left: 28px;
-}
-
-
-#section-sm.mostrar {
-  opacity: 1;
-  transform: translateY(20px);
-}
-
-.titulo-sm {
-  font-size: 50px;
-  position: absolute;
-  font-family: 'Prompt', sans-serif;
-  text-shadow: 3px 4px 7px rgb(102, 101, 101);
-}
-
-.titulo-sm::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: white;
-  transform: scale(0, 1);
-  transform-origin: left;
-  transition: transform .8s;
-}
-
-.titulo-sm:hover::after {
-  transform: scale(1, 1);
-}
-
-.text-sm {
-  font-size: 22px;
-  line-height: 1.5em;
-  width: 750px;
-  height: 308px;
-  margin-top: 120px;
-  font-family: "Euclid Circular A", "Poppins";
-  z-index: 1;
-  background-color: black;
-}
-
-.span-3 {
-  border: dotted 4px rgba(255, 255, 255, 1);
-  width: 250px;
-  height: 250px;
-  border-radius: 300px;
-  position: absolute;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 60s;
-  animation-name: spinner-loading;
-  left: 40.9%;
-  margin-top: 20%;
-}
-
-.popup-trigger {
-  position: absolute;
-  font-family: 'Gilda Display', serif;
-  font-size: 28px;
-  letter-spacing: 0.6px;
-  cursor: pointer;
-  text-decoration: none;
-  height: 50px;
-  z-index: 1;
-  top: 106%;
-  left: 37%
-}
-
-.popup-container {
-  color: white;
-  font-size: 22px;
-  display: none;
-  position: absolute;
-  transform: translate(-50%, -50%) translateX(-50%);
-  background-color: transparent;
-  backdrop-filter: blur(5px);
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  top: 109%;
-  left: 30%;
-  font-family: "Euclid Circular A", "Poppins";
-}
-
-
-.contenedor {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 53px 140px;
-  position: relative;
-}
-
-
-
-.imagen img {
-  width: 100%;
-  height: 400px;
-}
-
-
-.info {
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  transition: opacity 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55), transform 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  line-height: 30px;
-}
-
-.info p {
-  font-size: 20px;
-  font-family: "Euclid Circular A", "Poppins";
-}
-
-.div-ubicacion {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5px;
-}
-
-.div-edad {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5px;
-}
-
-#section-educacion {
-  display: flex;
-  position: relative;
-  opacity: 0;
-  transform: translateY(80px);
-  transition: opacity 1s ease, transform 4s ease;
-  height: 450px;
-  margin-bottom: 10em;
-  margin-top: 1em;
-}
-
-#section-educacion.mostrar {
-  opacity: 1;
-  transform: translateY(150px);
-}
-
-.div-educacion {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  width: 700px;
-  height: 220px;
-  gap: 26px;
-  margin-left: 3em;
-}
-
-.titulo-edu {
-  font-size: 50px;
-  font-family: 'Prompt', sans-serif;
-  text-shadow: 3px 4px 7px rgb(102, 101, 101);
-  margin-bottom: 26px;
-}
-
-.titulo-edu::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: white;
-  transform: scale(0, 1);
-  transform-origin: left;
-  transition: transform .8s;
-}
-
-.titulo-edu:hover::after {
-  transform: scale(1, 1);
-}
-
-.div-text-curso {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-}
-
-.cursos {
-  font-family: "Euclid Circular A", "Poppins";
-  font-size: 22px;
-  cursor: pointer;
-  background-color: black;
-  z-index: 1;
-}
-
-/* Estilos para el modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 4;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 400px;
-  background-color: rgba(0, 0, 0, 0.7);
-  text-align: center;
-  padding: 20px;
-  transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  object-fit: cover;
-}
-
-.modal img {
-  width: 450px;
-  height: 350px;
-  opacity: 1;
-}
-
-/* Estilo para el fondo oscuro del modal */
-.modal::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  pointer-events: none;
-  transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.modal.abierto::before {
-  opacity: 1;
-}
-
-.span-4 {
-  border: dotted 4px rgba(255, 255, 255, 1);
-  width: 250px;
-  height: 250px;
-  border-radius: 100%;
-  position: absolute;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 60s;
-  animation-name: spinner-loading;
-  right: 13%;
-  margin-top: 15%;
-}
-
-.text-consistencia {
-  position: absolute;
-  right: -8.5%;
-  margin-right: 155px;
-  font-family: 'Gilda Display', serif;
-  font-size: 25px;
-  text-shadow: 7px 7px 8px #000000;
-  animation-duration: 5s;
-  animation-name: fade;
-  top: 252px;
-  font-style: italic;
-}
-
-.text-consistencia::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: white;
-  transform: scale(0, 1);
-  transform-origin: left;
-  transition: transform .5s;
-}
-
-.text-consistencia:hover::after {
-  transform: scale(1, 1);
-}
-
-.div-skills {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  z-index: 2;
-  gap: 15px;
-  height: 500px;
-  padding-left: 43px;
-  padding-bottom: 10px;
-}
-
-.titulo-skills {
-  font-size: 50px;
-  font-family: 'Prompt', sans-serif;
-  text-shadow: 3px 4px 7px rgb(102, 101, 101);
-  margin-bottom: 35px;
-  width: 93px;
-}
-
-.titulo-skills::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: white;
-  transform: scale(0, 1);
-  transform-origin: left;
-  transition: transform .8s;
-}
-
-.titulo-skills:hover::after {
-  transform: scale(1, 1);
-}
-
-.habilidad {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  width: 274px;
-  align-items: center;
-  z-index: 1;
-  background-color: black;
-}
-
-
-.iconos-skills {
-  width: 30px;
-  height: 30px;
-}
-
-.habilidad p {
-  font-family: "Euclid Circular A", "Poppins";
-}
-
-.medidor {
-  height: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: transparent;
-  color: #333;
-  transition: width 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  right: 21.5%;
-  position: absolute;
-}
-
-.medidor::-webkit-meter-bar {
-  background-color: #f0f0f0;
-  border-radius: 5px;
-}
-
-.medidor::-webkit-meter-optimum-value,
-.medidor::-webkit-meter-suboptimum-value,
-.medidor::-webkit-meter-even-less-good-value {
-  border-radius: 5px;
-  background-color: #59f042;
-  /* Cambia el color de la parte verde de la barra de progreso */
-  width: 0;
-  /* Ancho inicial de la parte verde */
-}
-
-#section-proyectos {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  transform: translateY(0px);
-  transition: opacity 1s ease, transform 4s ease;
-  height: 450px;
-  margin-top: 7em;
-  opacity: 0;
-  margin-left: 4%;
-}
-
-#section-proyectos.mostrar {
-  opacity: 1;
-  transform: translateY(80px);
-}
-
-.titulo-proyectos {
-  font-size: 55px;
-  font-family: 'Prompt', sans-serif;
-  text-shadow: 3px 4px 7px rgb(102, 101, 101);
-  margin-bottom: 8px;
-  width: 259px;
-}
-
-.titulo-proyectos::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: white;
-  transform: scale(0, 1);
-  transform-origin: left;
-  transition: transform .8s;
-}
-
-.titulo-proyectos:hover::after {
-  transform: scale(1, 1);
-}
-
-.div-proyectos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 0.5em;
-  flex-wrap: wrap;
-  margin-top: 3em;
-  row-gap: 1.5em;
-  margin-right: 2em
-}
-
-.text-idea {
-  position: absolute;
-  left: -27px;
-  margin-right: 155px;
-  font-family: 'Gilda Display', serif;
-  font-size: 30px;
-  text-shadow: 7px 7px 8px #000000;
-  animation-duration: 5s;
-  animation-name: fade;
-  top: 90%;
-  font-style: italic;
-}
-
-.span-5 {
-  border: dotted 4px rgba(255, 255, 255, 1);
-  width: 250px;
-  height: 250px;
-  border-radius: 100%;
-  position: absolute;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 60s;
-  animation-name: spinner-loading;
-  left: -1%;
-  margin-top: 20%;
-}
-
-
-.f-proyectos {
-  position: absolute;
-  top: 4.3em;
-  font-family: 'Gilda Display', serif;
-  font-size: 4em;
-  left: 45%;
-}
-
-.g-proyectos {
-  position: absolute;
-  top: 5.45em;
-  font-family: 'Gilda Display', serif;
-  font-size: 3.5em;
-  left: 47.5%;
-}
-
-
-.div-contenido-proyectos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Centra el contenido verticalmente */
-  text-align: center;
-  /* Centra el contenido horizontalmente */
-  position: relative;
-  /* Para posicionamiento relativo */
-  gap: 0.6em;
-}
-
-.titulo-sec-proyectos {
-  font-family: "Euclid Circular A", "Poppins";
-  font-size: 25px;
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  /* Cambia el cursor al puntero al hacer hover */
-  transition: color 0.5s;
-  margin-right: 21px;
-}
-
-.div-img-proyecto {
-  width: 21em;
-  height: 10em;
-  overflow: hidden;
-  position: relative;
-  margin-right: 11px;
-  border-radius: 1em;
-}
-
-.scale-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 1;
-  transform-origin: center bottom;
-  animation: scaleAnimation 2.5s ease infinite;
-  /* Repetir cada 2 segundos */
-  transition: filter 1s ease;
-}
-
-
-@keyframes scaleAnimation {
-  0% {
-    transform: scale(1);
+  .titulo-proyectos::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform .8s;
   }
 
-  50% {
-    transform: scale(1.1);
+  .titulo-proyectos:hover::after {
+    transform: scale(1, 1);
   }
 
-  100% {
-    transform: scale(1);
+  .div-proyectos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    margin-top: 3em;
+    row-gap: 1.5em;
+    margin-right: 2em
+  }
+
+  .text-idea {
+    position: absolute;
+    left: -27px;
+    margin-right: 155px;
+    font-family: 'Gilda Display', serif;
+    font-size: 30px;
+    text-shadow: 7px 7px 8px #000000;
+    animation-duration: 5s;
+    animation-name: fade;
+    top: 90%;
+    font-style: italic;
+  }
+
+  .span-5 {
+    border: dotted 4px rgba(255, 255, 255, 1);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+    animation-name: spinner-loading;
+    left: -1%;
+    margin-top: 20%;
+  }
+
+
+  .f-proyectos {
+    position: absolute;
+    top: 4.3em;
+    font-family: 'Gilda Display', serif;
+    font-size: 4em;
+    left: 45%;
+  }
+
+  .g-proyectos {
+    position: absolute;
+    top: 5.45em;
+    font-family: 'Gilda Display', serif;
+    font-size: 3.5em;
+    left: 47.5%;
+  }
+
+
+  .div-contenido-proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    text-align: center;
+    /* Centra el contenido horizontalmente */
+    position: relative;
+    /* Para posicionamiento relativo */
+    gap: 0.6em;
+  }
+
+  .titulo-sec-proyectos {
+    font-family: "Euclid Circular A", "Poppins";
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    /* Cambia el cursor al puntero al hacer hover */
+    transition: color 0.5s;
+    margin-right: 21px;
+  }
+
+  .div-img-proyecto {
+    width: 21em;
+    height: 10em;
+    overflow: hidden;
+    position: relative;
+    margin-right: 11px;
+    border-radius: 1em;
+  }
+
+  .scale-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transform-origin: center bottom;
+    animation: scaleAnimation 2.5s ease infinite;
+    /* Repetir cada 2 segundos */
+    transition: filter 1s ease;
+  }
+
+
+  @keyframes scaleAnimation {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .descripcion-proyecto {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    width: 21em;
+    color: white;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 1s, transform 1s;
+    margin-left: 7px;
+  }
+
+  .descripcion-proyecto-letras {
+    font-family: "Euclid Circular A", "Poppins";
+    text-shadow: 3px 1px 2px #000000;
+    margin-bottom: 10px;
+  }
+
+  .icono-proyectos {
+    width: 25px;
+    height: 25px;
+  }
+
+
+  .div-contenido-proyectos:hover .descripcion-proyecto {
+    opacity: 1;
+    transform: translateY(30%);
+  }
+
+  .div-contenido-proyectos:hover .scale-image {
+    filter: blur(5px) brightness(0.5);
+  }
+
+
+  #section-contacto {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: opacity 1s ease, transform 4s ease;
+    height: 700px;
+    margin-top: 20em;
+    background-image: url(assets/bg-expulsion.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 123px 153px rgb(0 0 0 / 97%) inset;
+    padding-top: 2em;
+  }
+
+  #section-contacto.mostrar {
+    opacity: 1;
+    transform: translateY(60px);
+  }
+
+  .titulo-contacto {
+    font-size: 60px;
+    font-family: 'Prompt', sans-serif;
+    text-shadow: 3px 4px 7px rgb(102, 101, 101);
+    left: 42%;
+    position: absolute;
+    top: -1%;
+  }
+
+  .titulo-contacto::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform .5s;
+  }
+
+  .titulo-contacto:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .div-contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 371px;
+    height: 470px;
+    background-color: transparent;
+    padding: 5px 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    position: absolute;
+    left: 37%;
+    top: 16%;
+  }
+
+  /* Estilo para las etiquetas */
+  form label {
+    font-weight: bold;
+    font-family: "Euclid Circular A", "Poppins";
+    font-size: 20px;
+    text-shadow: 3px 4px 7px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  /* Estilo para los campos de entrada (input y textarea) */
+  form input[type="text"],
+  form input[type="email"] {
+    width: 350px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 20px;
+    color: #f7f7f7;
+    padding: 5px;
+    font-family: "Euclid Circular A", "Poppins";
+    margin-bottom: 10px;
+    text-shadow: 3px 4px 7px rgb(0 0 0);
+  }
+
+
+  form textarea {
+    width: 350px;
+    height: 120px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 20px;
+    color: #f7f7f7;
+    padding: 5px;
+    font-family: "Euclid Circular A", "Poppins";
+    margin-bottom: 10px;
+    text-shadow: 3px 4px 7px rgb(0 0 0);
+    resize: none;
+  }
+
+  /* Estilo para el botón de enviar */
+  form input[type="submit"] {
+    width: 220px;
+    height: 60px;
+    background-color: #000000a3;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 22%;
+    transition: 1s ease;
+    font-size: 20px;
+    color: #f7f7f7;
+    font-family: "Euclid Circular A", "Poppins";
+    margin-top: 5px;
+  }
+
+  /* Estilo para el botón de enviar al pasar el ratón por encima */
+  form input[type="submit"]:hover {
+    background-color: #000000;
+    /* Cambia el color al pasar el ratón por encima (puedes cambiarlo) */
+  }
+
+  .campo-invalido {
+    border: 2px solid red;
+    /* Borde rojo cuando no está completo */
+  }
+
+  #mensajeError {
+    color: white;
+    font-size: 20px;
+    font-family: "Euclid Circular A", "Poppins";
+    position: absolute;
+    left: -100%;
+    /* Fuera del área visible inicialmente */
+    top: 11%;
+    transition: left .8s ease;
+    border-bottom: 1px solid red;
+  }
+
+  .div-msj {
+    margin-top: 13em;
+    margin-left: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #check {
+    opacity: 0;
+    display: none;
+    color: white;
+    font-family: "Euclid Circular A", "Poppins";
+    font-size: 26px;
+    transition: opacity 0.8s ease-in-out;
+    text-shadow: 3px 1px 2px #000000;
+  }
+
+  #img-msj {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    width: 95px;
+  }
+
+  .contenido-contacto {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    row-gap: 4em;
+    margin-top: 4.1em;
+    left: 10%;
+  }
+
+  .divs-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .icono-contacto {
+    width: 70px;
+  }
+
+  .icono-contacto-w {
+    width: 70px;
+    margin-left: 22px;
+  }
+
+  .ancla-icon-con {
+    text-decoration: none;
+  }
+
+  .texto-icono {
+    color: white;
+    font-family: "Euclid Circular A", "Poppins";
+    font-size: 22px;
+    text-shadow: 3px 1px 2px #000000;
+  }
+
+  .text-com {
+    position: absolute;
+    right: -14px;
+    margin-right: 155px;
+    font-family: 'Gilda Display', serif;
+    font-size: 25px;
+    text-shadow: 7px 7px 8px #000000;
+    animation-duration: 5s;
+    animation-name: fade;
+    top: 17em;
+    font-style: italic;
+  }
+
+  .text-com::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform .5s;
+  }
+
+  .text-com:hover::after {
+    transform: scale(1, 1);
+  }
+
+
+  .span-6 {
+    z-index: 0;
+    position: absolute;
+    border: dotted 4px rgba(255, 255, 255, 1);
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    right: -140px;
+    top: 180px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+    animation-name: spinner-loading;
+    transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: rgba(131, 113, 113, 0);
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    width: 99.5%;
+    z-index: 1;
+    animation: slide-top 3s ease-in-out;
+    height: 56px;
+    border-top: 1px solid white;
+    align-items: center;
+  }
+
+  .fg-proyectos {
+    position: absolute;
+    font-family: 'Gilda Display', serif;
+    font-size: 2.5em;
+    left: 2%;
+  }
+
+  .span-7 {
+    z-index: 0;
+    position: absolute;
+    border: dotted 4px rgba(255, 255, 255, 1);
+    width: 40px;
+    height: 40px;
+    border-radius: 300px;
+    right: 46%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+    animation-name: spinner-loading;
+    transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+
+
+  button {
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+
+
+  button .navbar-burger {
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    box-sizing: border-box;
+  }
+
+  .menu-icono {
+    width: 32px;
+    margin-left: 5px;
+  }
+
+
+
+
+
+  .nombre-inicio {
+    font-family: 'Gilda Display', serif;
+    text-shadow: 3px 2px 5px #000000;
+    font-size: 20px;
+    color: white;
+    animation-duration: 10s;
+    animation-name: fade;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .navbar-title {
+    font-size: 14.1px;
+    color: white;
+    margin-bottom: 0px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-left: 2px;
+  }
+
+  .active {
+    font-size: 16.2px;
+  }
+
+  .navbar-overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  body.open .navbar-overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar-menu>button {
+    color: rgba(255, 255, 255, 0.5);
+    background: transparent;
+    padding: 0 8px;
+  }
+
+  .navbar-menu>button.active {
+    color: inherit;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    translate: -100% 0;
+    width: 146px;
+    height: 100%;
+    padding: 12px 20px;
+    display: flex;
+    gap: 1px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #000000;
+    visibility: hidden;
+    transition: translate 0.3s;
+    padding-left: 5px;
+    justify-content: space-between;
+
+  }
+
+  body.open .navbar-menu {
+    translate: 0 0;
+    visibility: visible;
   }
 }
-
-.descripcion-proyecto {
-  position: absolute;
-  top: 5%;
-  left: 1%;
-  width: 21em;
-  color: white;
-  opacity: 0;
-  transform: translateY(10%);
-  transition: opacity 1s, transform 1s;
-  margin-left: 7px;
-}
-
-.descripcion-proyecto-letras {
-  font-family: "Euclid Circular A", "Poppins";
-  text-shadow: 3px 1px 2px #000000;
-  margin-bottom: 10px;
-}
-
-.icono-proyectos {
-  width: 25px;
-  height: 25px;
-}
-
-
-.div-contenido-proyectos:hover .descripcion-proyecto {
-  opacity: 1;
-  transform: translateY(30%);
-}
-
-.div-contenido-proyectos:hover .scale-image {
-  filter: blur(5px) brightness(0.5);
-}
-
-
-#section-contacto {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  transform: translateY(-10px);
-  opacity: 0;
-  transition: opacity 1s ease, transform 4s ease;
-  height: 700px;
-  margin-top: 20em;
-  background-image: url(assets/bg-expulsion.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  box-shadow: 0px 0px 123px 153px rgb(0 0 0 / 97%) inset;
-  padding-top: 2em;
-}
-
-#section-contacto.mostrar {
-  opacity: 1;
-  transform: translateY(60px);
-}
-
-.titulo-contacto {
-  font-size: 60px;
-  font-family: 'Prompt', sans-serif;
-  text-shadow: 3px 4px 7px rgb(102, 101, 101);
-  left: 42%;
-  position: absolute;
-  top: -1%;
-}
-
-.titulo-contacto::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: white;
-  transform: scale(0, 1);
-  transform-origin: left;
-  transition: transform .5s;
-}
-
-.titulo-contacto:hover::after {
-  transform: scale(1, 1);
-}
-
-.div-contacto {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 371px;
-  height: 470px;
-  background-color: transparent;
-  padding: 5px 20px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  backdrop-filter: blur(4px);
-  position: absolute;
-  left: 37%;
-  top: 16%;
-}
-
-/* Estilo para las etiquetas */
-form label {
-  font-weight: bold;
-  font-family: "Euclid Circular A", "Poppins";
-  font-size: 20px;
-  text-shadow: 3px 4px 7px rgb(0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px;
-}
-
-/* Estilo para los campos de entrada (input y textarea) */
-form input[type="text"],
-form input[type="email"] {
-  width: 350px;
-  height: 30px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: transparent;
-  font-size: 20px;
-  color: #f7f7f7;
-  padding: 5px;
-  font-family: "Euclid Circular A", "Poppins";
-  margin-bottom: 10px;
-  text-shadow: 3px 4px 7px rgb(0 0 0);
-}
-
-
-form textarea {
-  width: 350px;
-  height: 120px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: transparent;
-  font-size: 20px;
-  color: #f7f7f7;
-  padding: 5px;
-  font-family: "Euclid Circular A", "Poppins";
-  margin-bottom: 10px;
-  text-shadow: 3px 4px 7px rgb(0 0 0);
-  resize: none;
-}
-
-/* Estilo para el botón de enviar */
-form input[type="submit"] {
-  width: 220px;
-  height: 60px;
-  background-color: #000000a3;
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-left: 22%;
-  transition: 1s ease;
-  font-size: 20px;
-  color: #f7f7f7;
-  font-family: "Euclid Circular A", "Poppins";
-  margin-top: 5px;
-}
-
-/* Estilo para el botón de enviar al pasar el ratón por encima */
-form input[type="submit"]:hover {
-  background-color: #000000;
-  /* Cambia el color al pasar el ratón por encima (puedes cambiarlo) */
-}
-
-.campo-invalido {
-  border: 2px solid red;
-  /* Borde rojo cuando no está completo */
-}
-
-#mensajeError {
-  color: white;
-  font-size: 20px;
-  font-family: "Euclid Circular A", "Poppins";
-  position: absolute;
-  left: -100%;
-  /* Fuera del área visible inicialmente */
-  top: 11%;
-  transition: left .8s ease;
-  border-bottom: 1px solid red;
-}
-
-.div-msj {
-  margin-top: 13em;
-  margin-left: .5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#check {
-  opacity: 0;
-  display: none;
-  color: white;
-  font-family: "Euclid Circular A", "Poppins";
-  font-size: 26px;
-  transition: opacity 0.8s ease-in-out;
-  text-shadow: 3px 1px 2px #000000;
-}
-
-#img-msj {
-  opacity: 0;
-  display: none;
-  transition: opacity 0.5s ease-in-out;
-  width: 95px;
-}
-
-.contenido-contacto {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  row-gap: 4em;
-  margin-top: 4.1em;
-  left: 10%;
-}
-
-.divs-contenido {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.icono-contacto {
-  width: 70px;
-}
-
-.icono-contacto-w {
-  width: 70px;
-  margin-left: 22px;
-}
-
-.ancla-icon-con {
-  text-decoration: none;
-}
-
-.texto-icono {
-  color: white;
-  font-family: "Euclid Circular A", "Poppins";
-  font-size: 22px;
-  text-shadow: 3px 1px 2px #000000;
-}
-
-.text-com {
-  position: absolute;
-  right: -14px;
-  margin-right: 155px;
-  font-family: 'Gilda Display', serif;
-  font-size: 25px;
-  text-shadow: 7px 7px 8px #000000;
-  animation-duration: 5s;
-  animation-name: fade;
-  top: 17em;
-  font-style: italic;
-}
-
-.text-com::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: white;
-  transform: scale(0, 1);
-  transform-origin: right;
-  transition: transform .5s;
-}
-
-.text-com:hover::after {
-  transform: scale(1, 1);
-}
-
-
-.span-6 {
-  z-index: 0;
-  position: absolute;
-  border: dotted 4px rgba(255, 255, 255, 1);
-  width: 300px;
-  height: 300px;
-  border-radius: 300px;
-  right: -140px;
-  top: 180px;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 60s;
-  animation-name: spinner-loading;
-  transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 5px;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  background: rgba(131, 113, 113, 0);
-  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.2px);
-  width: 99.5%;
-  z-index: 1;
-  animation: slide-top 3s ease-in-out;
-  height: 56px;
-  border-top: 1px solid white;
-  align-items: center;
-}
-
-.fg-proyectos {
-  position: absolute;
-  font-family: 'Gilda Display', serif;
-  font-size: 2.5em;
-  left: 2%;
-}
-
-.span-7 {
-  z-index: 0;
-  position: absolute;
-  border: dotted 4px rgba(255, 255, 255, 1);
-  width: 40px;
-  height: 40px;
-  border-radius: 300px;
-  right: 46%;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 60s;
-  animation-name: spinner-loading;
-  transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-@media (min-width: 320px) {
-  /* Estilo para el botón de menú */
-.menu-btn {
-  display: block;
-  cursor: pointer;
-}
-
-/* Estilo para el ícono de menú (las tres líneas) */
-.menu-icon {
-  width: 30px;
-  height: 3px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: transform 0.3s ease; /* Agrega una transición suave */
-}
-
-/* Estilo para ocultar la lista en pantallas pequeñas */
-.menu {
-  list-style: none;
-  display: none; /* Oculta la lista inicialmente */
-}
-
-/* Estilo para mostrar la lista cuando la casilla de verificación está marcada */
-#menu-toggle:checked + .menu {
-  display: block;
-}
-
-/* Estilo para rotar el ícono del menú cuando se muestra el menú */
-#menu-toggle:checked + .menu-btn .menu-icon {
-  transform: rotate(45deg);
-}
-}
-
-
-
 
 
 
