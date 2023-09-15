@@ -109,21 +109,6 @@ function EscucharBotones() {
 }
 
 
-function scrollSuave(targetId) {
-  const targetElement = document.getElementById(targetId);
-
-  if (targetElement) {
-    // Calcula la posición del elemento objetivo
-    const offset = targetElement.getBoundingClientRect().top + window.scrollY;
-
-    // Realiza el desplazamiento suave
-    window.scrollTo({
-      top: offset,
-      behavior: 'smooth' // Activa el desplazamiento suave
-    });
-  }
-}
-
 
 function inicio() {
   location.reload()

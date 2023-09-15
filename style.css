@@ -320,7 +320,7 @@ body {
     animation-name: fade;
     animation-duration: 5s;
     position: relative;
-    left: 6%;
+    left: 5.5%;
   }
 
   @keyframes fade {
@@ -354,12 +354,12 @@ body {
   .span-2 {
     z-index: 0;
     position: absolute;
-    border: dotted 4px rgba(255, 255, 255, 1);
-    width: 240px;
-    height: 240px;
+    border: dotted 2px rgba(255, 255, 255, 1);
+    width: 80px;
+    height: 80px;
     border-radius: 300px;
-    left: -50px;
-    top: 400px;
+    left: 22%;
+    top: 119px;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 60s;
@@ -385,16 +385,7 @@ body {
   }
 
   .text-disciplina {
-    position: absolute;
-    left: 205px;
-    margin-right: 155px;
-    font-family: 'Gilda Display', serif;
-    font-size: 25px;
-    text-shadow: 3px 1px 2px #000000;
-    animation-duration: 5s;
-    animation-name: fade;
-    top: 515px;
-    letter-spacing: 0.5px;
+    display: none;
   }
 
   .text-disciplina::after {
@@ -538,104 +529,68 @@ body {
 
   #section-sm {
     display: flex;
+    flex-direction: column;
     position: relative;
-    opacity: 0;
-    transform: translateY(-30px);
     transition: opacity 1s ease, transform 4s ease;
-    height: 470px;
-    padding-top: 1em;
+    height: 201px;
     padding-left: 28px;
-  }
-
-
-  #section-sm.mostrar {
-    opacity: 1;
-    transform: translateY(20px);
+    padding-top: 20px;
   }
 
   .titulo-sm {
-    font-size: 50px;
+    font-size: 30px;
     position: absolute;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
   }
 
-  .titulo-sm::after {
-    content: "";
-    display: block;
-    height: 1px;
-    background-color: white;
-    transform: scale(0, 1);
-    transform-origin: left;
-    transition: transform .8s;
-  }
-
-  .titulo-sm:hover::after {
-    transform: scale(1, 1);
-  }
 
   .text-sm {
-    font-size: 22px;
+    font-size: 12px;
     line-height: 1.5em;
-    width: 750px;
+    width: 246px;
     height: 308px;
-    margin-top: 120px;
+    margin-top: 55px;
     font-family: "Euclid Circular A", "Poppins";
     z-index: 1;
     background-color: black;
+    padding-top: 3px;
   }
 
+  .text-sm-none {
+    display: none;
+  }
+
+
+
   .span-3 {
-    border: dotted 4px rgba(255, 255, 255, 1);
-    width: 250px;
-    height: 250px;
+    border: dotted 2px rgba(255, 255, 255, 1);
+    width: 80px;
+    height: 80px;
     border-radius: 300px;
     position: absolute;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 60s;
     animation-name: spinner-loading;
-    left: 40.9%;
-    margin-top: 20%;
+    left: 21%;
+    margin-top: 0%;
   }
 
   .popup-trigger {
-    position: absolute;
-    font-family: 'Gilda Display', serif;
-    font-size: 28px;
-    letter-spacing: 0.6px;
-    cursor: pointer;
-    text-decoration: none;
-    height: 50px;
-    z-index: 1;
-    top: 106%;
-    left: 37%
+    display: none;
   }
 
   .popup-container {
-    color: white;
-    font-size: 22px;
     display: none;
-    position: absolute;
-    transform: translate(-50%, -50%) translateX(-50%);
-    background-color: transparent;
-    backdrop-filter: blur(5px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    top: 109%;
-    left: 30%;
-    font-family: "Euclid Circular A", "Poppins";
   }
 
 
   .contenedor {
     width: 300px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
-    margin: 53px 140px;
     position: relative;
   }
 
@@ -643,7 +598,7 @@ body {
 
   .imagen img {
     width: 100%;
-    height: 400px;
+    height: 170px;
   }
 
 
@@ -1430,7 +1385,7 @@ body {
   .nombre-inicio {
     font-family: 'Gilda Display', serif;
     text-shadow: 3px 2px 5px #000000;
-    font-size: 20px;
+    font-size: 17px;
     color: white;
     animation-duration: 10s;
     animation-name: fade;
