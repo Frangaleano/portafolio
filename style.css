@@ -716,7 +716,7 @@ body {
     background-color: transparent;
     color: #333;
     transition: width 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    left: 43.5%;
+    left: 29.5%;
     position: absolute;
   }
 
@@ -744,6 +744,8 @@ body {
     height: 450px;
     margin-top: 19em;
     opacity: 0;
+    width: 46%;
+
   }
 
   #section-proyectos.mostrar {
