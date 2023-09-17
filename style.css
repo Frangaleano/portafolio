@@ -91,7 +91,7 @@ body {
     align-items: center;
     justify-content: space-between;
     align-content: center;
-    width: 100%;
+    width: 42%;
     height: 48px;
     color: #f9f9f9;
     font-family: "Poppins";
@@ -1047,9 +1047,9 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    row-gap: 4em;
+    row-gap: 0em;
     margin-top: 4.1em;
-    left: 10%;
+    left: 1%;
   }
 
   .divs-contenido {
@@ -1060,12 +1060,12 @@ body {
   }
 
   .icono-contacto {
-    width: 70px;
+    width: 40px;
   }
 
   .icono-contacto-w {
-    width: 70px;
-    margin-left: 22px;
+    width: 40px;
+    margin-left: 21px;
   }
 
   .ancla-icon-con {
@@ -1075,7 +1075,7 @@ body {
   .texto-icono {
     color: white;
     font-family: "Euclid Circular A", "Poppins";
-    font-size: 22px;
+    font-size: 15px;
     text-shadow: 3px 1px 2px #000000;
   }
 
