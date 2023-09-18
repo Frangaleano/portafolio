@@ -38,7 +38,6 @@ body {
     padding: 0px;
     margin: 0px;
     color: #f9f9f9;
-    width: 101%;
     min-height: 100vh;
     background-image: url("assets/bg-lacaida.png");
     background-size: 101%;
@@ -152,6 +151,8 @@ body {
     flex-direction: column;
     position: relative;
     box-shadow: 0px 0px 29px 12px rgb(0 0 0 / 70%) inset;
+    width: 57vh;
+    overflow: hidden;
   }
 
 
@@ -744,8 +745,7 @@ body {
     height: 450px;
     margin-top: 19em;
     opacity: 0;
-    width: 46%;
-
+    width: 58vh;
   }
 
   #section-proyectos.mostrar {
@@ -775,9 +775,9 @@ body {
   }
 
   .span-5 {
-    border: dotted 4px rgba(255, 255, 255, 1);
-    width: 250px;
-    height: 250px;
+    border: dotted 2px rgba(255, 255, 255, 1);
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
     position: absolute;
     animation-iteration-count: infinite;
@@ -851,13 +851,13 @@ body {
   .descripcion-proyecto {
     position: absolute;
     top: 5%;
-    left: 1%;
-    width: 21em;
+    left: 0%;
+    width: 9em;
     color: white;
     opacity: 0;
     transform: translateY(10%);
     transition: opacity 1s, transform 1s;
-    margin-left: 7px;
+
   }
 
   .descripcion-proyecto-letras {
@@ -889,15 +889,15 @@ body {
     transform: translateY(-10px);
     opacity: 0;
     transition: opacity 1s ease, transform 4s ease;
-    height: 300px;
     margin-top: 21em;
     background-image: url(assets/bg-expulsion.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 0px 0px 123px 153px rgb(0 0 0 / 97%) inset;
+    box-shadow: 0px 0px 12px 15px rgb(0 0 0 / 97%) inset;
     padding-top: 2em;
     /* align-content: center; */
-    align-items: center;
+    align-items: flex-start;
+    width: 57.5vh;
   }
 
   #section-contacto.mostrar {
@@ -909,9 +909,9 @@ body {
     font-size: 30px;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
-    left: 42%;
+    left: 14.2%;
     position: absolute;
-    top: -1%;
+    top: -3%;
   }
 
 
@@ -919,25 +919,28 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    height: 591px;
   }
 
   form {
+
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 470px;
+    width: 200px;
+    height: 385px;
     background-color: transparent;
     padding: 5px 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
     backdrop-filter: blur(4px);
+    margin-left: 35%;
   }
 
   /* Estilo para las etiquetas */
   form label {
     font-weight: bold;
     font-family: "Euclid Circular A", "Poppins";
-    font-size: 20px;
+    font-size: 15px;
     text-shadow: 3px 4px 7px rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
@@ -948,7 +951,7 @@ body {
   /* Estilo para los campos de entrada (input y textarea) */
   form input[type="text"],
   form input[type="email"] {
-    width: 350px;
+    width: 150px;
     height: 30px;
     padding: 5px;
     border: 1px solid #ccc;
@@ -964,8 +967,8 @@ body {
 
 
   form textarea {
-    width: 350px;
-    height: 120px;
+    width: 150px;
+    height: 87px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: transparent;
@@ -976,20 +979,21 @@ body {
     margin-bottom: 10px;
     text-shadow: 3px 4px 7px rgb(0 0 0);
     resize: none;
+
   }
 
   /* Estilo para el botón de enviar */
   form input[type="submit"] {
-    width: 220px;
-    height: 60px;
+    width: 100px;
+    height: 53px;
     background-color: #000000a3;
     color: #fff;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    margin-left: 22%;
+    margin-left: 19%;
     transition: 1s ease;
-    font-size: 20px;
+    font-size: 15px;
     color: #f7f7f7;
     font-family: "Euclid Circular A", "Poppins";
     margin-top: 5px;
@@ -1008,7 +1012,7 @@ body {
 
   #mensajeError {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-family: "Euclid Circular A", "Poppins";
     position: absolute;
     left: -100%;
@@ -1040,16 +1044,17 @@ body {
     opacity: 0;
     display: none;
     transition: opacity 0.5s ease-in-out;
-    width: 95px;
+    width: 50px;
   }
 
   .contenido-contacto {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: absolute;
-    row-gap: 0em;
-    margin-top: 4.1em;
-    left: 1%;
+    column-gap: 3em;
+    margin-top: 22.1em;
+    left: 2%;
+
   }
 
   .divs-contenido {
@@ -1060,11 +1065,11 @@ body {
   }
 
   .icono-contacto {
-    width: 40px;
+    width: 30px;
   }
 
   .icono-contacto-w {
-    width: 40px;
+    width: 30px;
     margin-left: 21px;
   }
 
@@ -1080,16 +1085,7 @@ body {
   }
 
   .text-com {
-    position: absolute;
-    right: -14px;
-    margin-right: 155px;
-    font-family: 'Gilda Display', serif;
-    font-size: 25px;
-    text-shadow: 7px 7px 8px #000000;
-    animation-duration: 5s;
-    animation-name: fade;
-    top: 17em;
-    font-style: italic;
+    display: none;
   }
 
   .text-com::after {
@@ -1110,11 +1106,10 @@ body {
   .span-6 {
     z-index: 0;
     position: absolute;
-    border: dotted 4px rgba(255, 255, 255, 1);
-    width: 300px;
-    height: 300px;
+    border: dotted 2px rgba(255, 255, 255, 1);
+    width: 80px;
+    height: 80px;
     border-radius: 300px;
-    right: -140px;
     top: 180px;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -1132,7 +1127,6 @@ body {
     background: rgba(131, 113, 113, 0);
     box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.2px);
-    width: 99.5%;
     z-index: 1;
     animation: slide-top 3s ease-in-out;
     height: 56px;
@@ -1143,18 +1137,17 @@ body {
   .fg-proyectos {
     position: absolute;
     font-family: 'Gilda Display', serif;
-    font-size: 2.5em;
+    font-size: 1em;
     left: 2%;
   }
 
   .span-7 {
     z-index: 0;
     position: absolute;
-    border: dotted 4px rgba(255, 255, 255, 1);
-    width: 40px;
-    height: 40px;
+    border: dotted 2px rgba(255, 255, 255, 1);
+    width: 20px;
+    height: 20px;
     border-radius: 300px;
-    right: 46%;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 60s;
@@ -1242,7 +1235,6 @@ body {
     z-index: 2;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     visibility: hidden;
@@ -1271,7 +1263,6 @@ body {
     top: 0;
     left: 0;
     translate: -100% 0;
-    width: 146px;
     height: 100%;
     padding: 12px 20px;
     display: flex;
