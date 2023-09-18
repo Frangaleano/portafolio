@@ -573,12 +573,10 @@ body {
     gap: 40px;
   }
 
-
   .div-educacion {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    width: 350px;
     height: 220px;
   }
 
