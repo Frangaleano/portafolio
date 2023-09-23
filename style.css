@@ -748,7 +748,7 @@ body {
 
   #section-proyectos.mostrar {
     opacity: 1;
-    transform: translateY(80px);
+    transform: translateY(150px);
   }
 
   .titulo-proyectos {
