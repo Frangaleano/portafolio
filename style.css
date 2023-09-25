@@ -74,10 +74,10 @@ body {
     background: transparent;
     box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.2px);
-    width: 107vh;
+    width: 159%;
     z-index: 3;
     animation: slide-top 3s ease-in-out;
-    height: 44px;
+    height: 40px;
   }
 
   .navbar {
@@ -91,8 +91,8 @@ body {
     align-items: center;
     justify-content: space-between;
     align-content: center;
-    width: 51%;
-    height: 45px;
+    width: 63%;
+    height: 40px;
     color: #f9f9f9;
     font-family: "Poppins";
     box-sizing: border-box;
