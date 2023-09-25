@@ -73,15 +73,16 @@ body {
     position: fixed;
     background: transparent;
     box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.2px);
+    backdrop-filter: blur(5.2px);
     width: 107vh;
-    z-index: 1;
+    z-index: 3;
     animation: slide-top 3s ease-in-out;
+    height: 44px;
   }
 
   .navbar {
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 0;
     display: flex;
@@ -90,12 +91,13 @@ body {
     align-items: center;
     justify-content: space-between;
     align-content: center;
-    width: 42%;
-    height: 48px;
+    width: 51%;
+    height: 45px;
     color: #f9f9f9;
     font-family: "Poppins";
     box-sizing: border-box;
     padding: 10px 4px;
+    border-bottom: 1px solid white;
   }
 
   .ancla-1 {
@@ -234,14 +236,14 @@ body {
   .text-inicio-sec {
     font-family: 'Fjalla One', sans-serif;
     border-radius: 100px;
-    font-size: 56px;
+    font-size: 62px;
     text-shadow: 3px 2px 5px #000000;
     text-transform: uppercase;
     margin-top: 44px;
     animation-name: fade;
     animation-duration: 5s;
     position: relative;
-    left: 5.5%;
+    left: 20%;
   }
 
   @keyframes fade {
@@ -279,7 +281,7 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 300px;
-    left: 22%;
+    left: 86%;
     top: 119px;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -362,10 +364,10 @@ body {
     cursor: pointer;
     transition: 0.3s;
     /* margin-left: 860px; */
-    box-shadow: inset 0 0 11px 2px rgba(109, 80, 80);
-    top: 50px;
-    left: 17.9%;
-    z-index: 1;
+    box-shadow: inset 0 0 11px 2px rgba(121, 120, 120, 0.346);
+    top: 57px;
+    left: 74%;
+    z-index: 2;
     backdrop-filter: blur(2.2px);
   }
 
@@ -467,13 +469,13 @@ body {
 
 
   .text-sm {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.5em;
-    width: 246px;
+    width: 310px;
     height: 308px;
     margin-top: 55px;
     font-family: "Euclid Circular A", "Poppins";
-    z-index: 1;
+    z-index: 0;
     background-color: black;
     padding-top: 3px;
   }
@@ -494,7 +496,7 @@ body {
     animation-timing-function: linear;
     animation-duration: 60s;
     animation-name: spinner-loading;
-    left: 21%;
+    left: 57%;
     margin-top: 0%;
   }
 
@@ -508,11 +510,14 @@ body {
 
 
   .contenedor {
-    width: 300px;
+    width: 311px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+    z-index: 1;
   }
 
   .imagen {
@@ -568,12 +573,13 @@ body {
     transform: translateY(48%);
     transition: opacity 1s ease, transform 4s ease;
     height: 450px;
-    margin-top: 1em;
+    margin-top: 5em;
     gap: 40px;
     opacity: 0;
+    margin-left: 14px;
   }
 
-  
+
 
   #section-educacion.mostrar {
     opacity: 1;
@@ -604,7 +610,7 @@ body {
 
   .cursos {
     font-family: "Euclid Circular A", "Poppins";
-    font-size: 12px;
+    font-size: 15px;
     cursor: pointer;
     background-color: black;
     z-index: 1;
@@ -617,20 +623,21 @@ body {
     position: fixed;
     z-index: 4;
     left: 26%;
-    top: 29%;
+    top: 33%;
     transform: translate(-50%, -50%);
-    width: 287px;
-    height: 190px;
+    width: 313px;
+    height: 221px;
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
     padding: 20px;
     transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     object-fit: cover;
+    margin-left: 86px;
   }
 
   .modal img {
-    width: 250px;
-    height: 150px;
+    width: 267px;
+    height: 179px;
     opacity: 1;
   }
 
@@ -658,16 +665,16 @@ body {
 
   .span-4 {
     border: dotted 2px rgba(255, 255, 255, 1);
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
     position: absolute;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 60s;
     animation-name: spinner-loading;
-    left: 32%;
-    margin-top: 50%;
+    left: 65%;
+    top: -65px;
   }
 
   .text-consistencia {
@@ -679,16 +686,17 @@ body {
     display: flex;
     flex-direction: column;
     background-color: black;
-    gap: 5px;
+    gap: 8px;
     height: 500px;
     padding-left: 15px;
+    margin-top: 60px;
   }
 
   .titulo-skills {
     font-size: 30px;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
 
@@ -700,6 +708,7 @@ body {
     align-items: center;
     z-index: 1;
     background-color: black;
+    margin-left: 10px;
   }
 
 
@@ -711,17 +720,17 @@ body {
   .habilidad p {
     font-family: "Euclid Circular A", "Poppins";
     margin-bottom: 0px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .medidor {
-    height: 20px;
+    height: 23px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: transparent;
     color: #333;
     transition: width 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    left: 29.5%;
+    left: 60.5%;
     position: absolute;
   }
 
@@ -744,23 +753,25 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    transform: translateY(0px);
-    transition: opacity 1s ease, transform 4s ease;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 2s ease;
     height: 450px;
-    margin-top: 19em;
+    margin-top: 22em;
     opacity: 0;
     width: 58vh;
+    margin-left: 30px;
   }
 
   #section-proyectos.mostrar {
     opacity: 1;
-    transform: translateY(150px);
+    transform: translateY(130px);
   }
 
   .titulo-proyectos {
     font-size: 30px;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
+    margin-left: 86px;
   }
 
   .div-proyectos {
@@ -772,6 +783,7 @@ body {
     margin-top: 1.5em;
     row-gap: 1em;
     align-content: center;
+    width: 315px;
   }
 
   .text-idea {
@@ -788,8 +800,8 @@ body {
     animation-timing-function: linear;
     animation-duration: 60s;
     animation-name: spinner-loading;
-    left: 4%;
-    margin-top: -17%;
+    left: -6%;
+    margin-top: -24%;
   }
 
 
@@ -815,7 +827,6 @@ body {
     color: white;
     cursor: pointer;
     transition: color 0.5s;
-    margin-right: 21px;
   }
 
   .div-img-proyecto {
@@ -854,14 +865,13 @@ body {
 
   .descripcion-proyecto {
     position: absolute;
-    top: 5%;
-    left: 0%;
-    width: 9em;
+    top: -11%;
+    left: 8%;
+    width: 12em;
     color: white;
     opacity: 0;
     transform: translateY(10%);
     transition: opacity 1s, transform 1s;
-
   }
 
   .descripcion-proyecto-letras {
@@ -890,10 +900,10 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    transform: translateY(-10px);
+    transform: translateY(20px);
     opacity: 0;
     transition: opacity 1s ease, transform 4s ease;
-    margin-top: 21em;
+    margin-top: 23em;
     background-image: url(assets/bg-expulsion.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -901,7 +911,7 @@ body {
     padding-top: 2em;
     /* align-content: center; */
     align-items: flex-start;
-    width: 57.5vh;
+    width: 53.8vh;
   }
 
   #section-contacto.mostrar {
@@ -913,7 +923,7 @@ body {
     font-size: 30px;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
-    left: 14.2%;
+    left: 33%;
     position: absolute;
     top: -3%;
   }
@@ -927,7 +937,6 @@ body {
   }
 
   form {
-
     display: flex;
     flex-direction: column;
     width: 200px;
@@ -937,7 +946,7 @@ body {
     border: 2px solid #ccc;
     border-radius: 10px;
     backdrop-filter: blur(4px);
-    margin-left: 35%;
+    margin-left: 44.5%;
   }
 
   /* Estilo para las etiquetas */
@@ -1057,8 +1066,7 @@ body {
     position: absolute;
     column-gap: 3em;
     margin-top: 22.1em;
-    left: 2%;
-
+    left: 10%;
   }
 
   .divs-contenido {
@@ -1111,8 +1119,8 @@ body {
     z-index: 0;
     position: absolute;
     border: dotted 2px rgba(255, 255, 255, 1);
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 300px;
     top: 180px;
     animation-iteration-count: infinite;
@@ -1120,7 +1128,9 @@ body {
     animation-duration: 60s;
     animation-name: spinner-loading;
     transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    left: -29px;
   }
+
 
   footer {
     display: flex;
@@ -1199,13 +1209,9 @@ body {
   }
 
   .menu-icono {
-    width: 32px;
+    width: 30px;
     margin-left: 5px;
   }
-
-
-
-
 
   .nombre-inicio {
     font-family: 'Gilda Display', serif;
