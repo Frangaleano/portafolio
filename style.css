@@ -159,7 +159,6 @@ body {
 
 
   .div-texto {
-    width: 108vh;
     display: flex;
     flex-direction: column;
   }
