@@ -164,7 +164,7 @@ body {
   }
 
   .text-inicio {
-    font-size: 6vw;
+    font-size: 20px;
     width: 300px;
     text-shadow: 1px 8px 5px rgba(0, 0, 0, 1);
     transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
