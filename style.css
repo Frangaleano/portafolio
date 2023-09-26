@@ -154,6 +154,7 @@ body {
     position: relative;
     box-shadow: 0px 0px 29px 12px rgb(0 0 0 / 70%) inset;
     overflow: hidden;
+    align-items: center;
   }
 
 
@@ -576,7 +577,6 @@ body {
     margin-top: 5em;
     gap: 40px;
     opacity: 0;
-    margin-left: 14px;
   }
 
 
@@ -758,8 +758,6 @@ body {
     height: 450px;
     margin-top: 22em;
     opacity: 0;
-    width: 58vh;
-    margin-left: 39px;
   }
 
   #section-proyectos.mostrar {
@@ -830,8 +828,8 @@ body {
   }
 
   .div-img-proyecto {
-    width: 14em;
-    height: 6em;
+    width: 11em;
+    height: 5em;
     overflow: hidden;
     position: relative;
     border-radius: 1em;
