@@ -33,22 +33,22 @@
 
 
       <nav class="navbar-menu">
-        <div>
-          <a id="boton-sm" class="nav-link ancla-1" aria-current="page" href="#">
-            <button type=" button" class="active">Sobre mi</button>
+        <div class="div-anclas-nav">
+          <a id="boton-sm" class="nav-link ancla-1" href="#section-sm">
+            Sobre mi
           </a>
 
-          <a id="boton-edu" class="nav-link ancla-1" href="#">
-            <button type="button" class="active">Educación</button>
+          <a id="boton-edu" class="nav-link ancla-1" href="#section-edu">
+            Educación
           </a>
 
-          <a id="boton-pro" class="nav-link ancla-1" href="#">
+          <a id="boton-pro" class="nav-link ancla-1" href="#section-proyectos">
 
-            <button type="button" class="active">Proyectos</button>
+            Proyectos
           </a>
 
-          <a id="boton-con" class="nav-link ancla-1" href="#">
-            <button type="button" class="active">Contacto</button>
+          <a id="boton-con" class="nav-link ancla-1" href="#section-contacto">
+            Contacto
           </a>
         </div>
       </nav>
@@ -144,7 +144,7 @@
 
     </section>
 
-    <section id="section-educacion">
+    <section id="section-edu">
       <div class="div-educacion">
         <h2 class="titulo-edu">Educación</h2>
 
@@ -274,11 +274,9 @@
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-            <a href="https://habiaunavezsalon.netlify.app/index.html" target="_blank">
               <img src="./assets/imagen-proyecto1.png" alt="Proyecto 1" class="scale-image">
-            </a>
           </div>
-          <a href="https://github.com/Frangaleano/PreEntrega2Galeano" class="titulo-sec-proyectos" target="_blank">Había
+          <a href="https://habiaunavezsalon.netlify.app/index.html" class="titulo-sec-proyectos" target="_blank">Había
             una vez</a>
           <div class="descripcion-proyecto">
             <p class="descripcion-proyecto-letras">Sitio web - Coderhouse <br>Salón de fiestas
@@ -297,11 +295,9 @@
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-            <a href="https://hechoamanottt.netlify.app/index.html" target="_blank">
               <img src="./assets/imagen-proyecto2.png" alt="Proyecto 2" class="scale-image">
-            </a>
           </div>
-          <a href="https://github.com/Frangaleano/Hechoamano" class="titulo-sec-proyectos" target="_blank">Hecho a
+          <a href="https://hechoamanottt.netlify.app/index.html" class="titulo-sec-proyectos" target="_blank">Hecho a
             mano.</a>
           <div class="descripcion-proyecto">
             <p class="descripcion-proyecto-letras">Sitio web<br>Tatuador
@@ -316,11 +312,9 @@
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-            <a href="https://mokeponjs.netlify.app/" target="_blank">
               <img src="./assets/imagen-proyecto3.png" alt="Proyecto 3" class="scale-image">
-            </a>
           </div>
-          <a href="https://github.com/Frangaleano/mokepon" class="titulo-sec-proyectos" target="_blank">Mokepon!</a>
+          <a href="https://mokeponjs.netlify.app/" class="titulo-sec-proyectos" target="_blank">Mokepon!</a>
           <div class="descripcion-proyecto">
             <p class="descripcion-proyecto-letras">Juego online - Platzi
             </p>
@@ -334,11 +328,9 @@
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-            <a href="https://contadordospuntocero.netlify.app/" target="_blank">
               <img src="./assets/imagen-proyecto4.png" alt="Proyecto 4" class="scale-image">
-            </a>
           </div>
-          <a href="https://github.com/Frangaleano/contador-inicial" class="titulo-sec-proyectos"
+          <a href="https://contadordospuntocero.netlify.app/" class="titulo-sec-proyectos"
             target="_blank">Contador 2.0</a>
           <div class="descripcion-proyecto">
             <p class="descripcion-proyecto-letras">Contador<br>suma-resta
@@ -362,7 +354,7 @@
         <div class="contenido-contacto">
           <div class="divs-contenido">
             <a href="https://api.whatsapp.com/send/?phone=%2B5401125204181" class="ancla-icon-con" target="_blank">
-              <img class="icono-contacto-w" src="./assets/whatsapp.png" alt="whatsapp">
+              <img class="icono-contacto" src="./assets/whatsapp.png" alt="whatsapp">
               <p class="texto-icono">WhatsApp</p>
             </a>
           </div>
@@ -454,12 +446,17 @@
 
       if (!formCompleto) {
         mensajeError.innerHTML = "Fíjate si completaste bien todo!";
-        mensajeError.style.left = "38%";
+        mensajeError.style.left = "20%";
 
-        // Ocultar el formulario después de mostrar el mensaje de error
+        setTimeout(function () {
+          mensajeError.style.opacity = "0"
+        }, 3000);
+      
+
       } else {
         // Ocultar el formulario
         document.getElementById("miFormulario").style.display = "none";
+        mensajeError.style.display = "none"
 
         // Mostrar el mensaje de agradecimiento y la imagen con una animación suave
         var mensajeAgradecimiento = document.getElementById("check");

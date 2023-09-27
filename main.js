@@ -1,6 +1,3 @@
-const sectionCon = document.getElementById("section-contacto")
-const sectionPro = document.getElementById("section-proyectos")
-const sectionEdu = document.getElementById("section-educacion")
 const sectionInicio = document.getElementById("inicio")
 const contenedor = document.querySelector(".contenedor");
 const imagen = document.querySelector(".imagen");
@@ -9,6 +6,7 @@ const info = document.querySelector(".info");
 const botonSM = document.getElementById("boton-sm")
 const botonPro = document.getElementById("boton-pro")
 const botonCon = document.getElementById("boton-con")
+const botonEdu = document.getElementById("boton-edu")
 
 const navInicio = document.getElementById("nav-inicio")
 
@@ -77,23 +75,6 @@ function EscucharBotones() {
     });
   });
 
-  contenedor.addEventListener("mouseenter", () => {
-    if (!isHovered) {
-      imagen.style.transform = "translateY(-15px)";
-      imagen.style.transition = "1s  cubic-bezier(0.68, -0.55, 0.27, 1.55)"
-      info.style.opacity = 1;
-      info.style.transform = "translateY(0%)";
-      isHovered = true;
-    }
-  });
-
-  contenedor.addEventListener("mouseleave", () => {
-    imagen.style.transform = "translateY(0)";
-    info.style.opacity = 0;
-    info.style.transform = "translateY(-15%)";
-    isHovered = false;
-  });
-
   // Agrega un evento para mostrar la ventana emergente cuando el mouse esté encima de la palabra
   popupTrigger.addEventListener('mouseover', () => {
     popup.style.opacity = '1';
@@ -129,7 +110,7 @@ function mostrarSeccionSobreMi() {
 }
 
 function mostrarSeccionEducacion() {
-  const sectionEdu = document.getElementById('section-educacion');
+  const sectionEdu = document.getElementById('section-edu');
   const windowHeight = window.innerHeight;
   const scrollY = window.scrollY;
 
@@ -167,7 +148,7 @@ function animarMedidores() {
     const valorDeseado = parseFloat(medidor.getAttribute('data-valor-deseado'));
 
     // Verificar si la sección de educación está visible en la pantalla
-    const sectionEdu = document.getElementById('section-educacion');
+    const sectionEdu = document.getElementById('section-edu');
     const windowHeight = window.innerHeight;
     const sectionEduTop = sectionEdu.getBoundingClientRect().top;
     const isVisible = sectionEduTop < windowHeight / 1.5;
@@ -262,6 +243,35 @@ function obtenerRutaImagen(idCurso) {
       return "";
   }
 }
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const offset = section.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth" // Esto habilita el desplazamiento suave
+    });
+  }
+}
+
+// Luego, agrega eventos de clic a tus botones de navegación para llamar a esta función:
+botonSM.addEventListener("click", function () {
+  scrollToSection("section-sm");
+});
+
+botonEdu.addEventListener("click", function () {
+  scrollToSection("section-edu");
+});
+
+botonPro.addEventListener("click", function () {
+  scrollToSection("section-proyectos");
+});
+
+botonCon.addEventListener("click", function () {
+  scrollToSection("section-contacto");
+});
+
 
 // Detectar el desplazamiento de la página en cada seccion
 window.addEventListener('scroll', mostrarSeccionSobreMi);

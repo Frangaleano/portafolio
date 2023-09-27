@@ -106,6 +106,7 @@ body {
     text-shadow: 3px 2px 5px #000000;
     color: white;
     font-size: 18px;
+    padding: 5px;
   }
 
   .ancla-1::after {
@@ -159,12 +160,12 @@ body {
 
 
   .text-inicio {
-    font-size: 18px;
+    font-size: 19px;
     text-shadow: 1px 8px 5px rgba(0, 0, 0, 1);
     transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     text-transform: uppercase;
     font-family: 'Prompt', sans-serif;
-    margin-top: 82px;
+    margin-top: 90px;
     animation: slide-top 3s ease-in-out;
     position: relative;
     left: -22px;
@@ -229,10 +230,10 @@ body {
   .text-inicio-sec {
         font-family: 'Fjalla One', sans-serif;
     border-radius: 100px;
-    font-size: 50px;
+    font-size: 60px;
     text-shadow: 3px 2px 5px #000000;
     text-transform: uppercase;
-    margin-top: 45px;
+    margin-top: 40px;
     animation-name: fade;
     animation-duration: 5s;
     position: relative;
@@ -453,7 +454,15 @@ body {
     height: 201px;
     padding-left: 21px;
     padding-top: 20px;
+    opacity: 0;
+    transform: translateY(-5em);
   }
+
+  #section-sm.mostrar {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
 
   .titulo-sm {
     font-size: 30px;
@@ -530,6 +539,7 @@ body {
     transition: opacity 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55), transform 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     line-height: 30px;
     margin-top: 30px;
+    opacity: 1;
   }
 
   .info p {
@@ -558,7 +568,7 @@ body {
     gap: 5px;
   }
 
-  #section-educacion {
+  #section-edu {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -573,7 +583,7 @@ body {
 
 
 
-  #section-educacion.mostrar {
+  #section-edu.mostrar {
     opacity: 1;
     transform: translateY(48%);
   }
@@ -858,7 +868,7 @@ body {
     position: absolute;
     top: -11%;
     left: 8%;
-    width: 12em;
+    width: 9.3em;
     color: white;
     opacity: 0;
     transform: translateY(10%);
@@ -869,6 +879,9 @@ body {
     font-family: "Euclid Circular A", "Poppins";
     text-shadow: 3px 1px 2px #000000;
     margin-bottom: 10px;
+    font-family: "Euclid Circular A", "Poppins";
+    text-shadow: 3px 1px 2px #000000;
+    font-size: 15px;
   }
 
   .icono-proyectos {
@@ -890,56 +903,51 @@ body {
   #section-contacto {
     display: flex;
     flex-direction: column;
-    position: relative;
-    transform: translateY(20px);
+    transform: translateY(0px);
     opacity: 0;
-    transition: opacity 1s ease, transform 4s ease;
-    margin-top: 27em;
+    transition: opacity 1s ease, transform 2s ease;
+    margin-top: 22em;
     background-image: url(assets/bg-expulsion.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0px 0px 12px 15px rgb(0 0 0 / 97%) inset;
-    padding-top: 2em;
-    align-items: flex-start;
-    width: 98.8vw;
+    align-items: center;
+    height: 533px;
+    width: 100%;
   }
 
   #section-contacto.mostrar {
     opacity: 1;
-    transform: translateY(60px);
+    transform: translateY(80px);
   }
 
   .titulo-contacto {
     font-size: 30px;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
-    left: 33%;
-    position: absolute;
-    top: -3%;
   }
 
 
   .div-contacto {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 591px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
   }
 
   form {
     display: flex;
     flex-direction: column;
     width: 200px;
-    height: 385px;
+    height: 324px;
     background-color: transparent;
-    padding: 5px 20px;
+    padding: 5px 11px;
     border: 2px solid #ccc;
     border-radius: 10px;
     backdrop-filter: blur(4px);
-    margin-left: 92.5%;
+    align-items: center;
   }
 
-  /* Estilo para las etiquetas */
   form label {
     font-weight: bold;
     font-family: "Euclid Circular A", "Poppins";
@@ -948,34 +956,33 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
+    
+    padding: 6px;
   }
 
-  /* Estilo para los campos de entrada (input y textarea) */
   form input[type="text"],
   form input[type="email"] {
-    width: 150px;
-    height: 30px;
+    width: 170px;
+    height: 25px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 16px;
     color: #f7f7f7;
     padding: 5px;
     font-family: "Euclid Circular A", "Poppins";
-    margin-bottom: 10px;
     text-shadow: 3px 4px 7px rgb(0 0 0);
   }
 
 
   form textarea {
-    width: 150px;
+    width: 170px;
     height: 87px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 16px;
     color: #f7f7f7;
     padding: 5px;
     font-family: "Euclid Circular A", "Poppins";
@@ -985,16 +992,14 @@ body {
 
   }
 
-  /* Estilo para el botón de enviar */
   form input[type="submit"] {
     width: 100px;
-    height: 53px;
+    height: 50px;
     background-color: #000000a3;
     color: #fff;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    margin-left: 19%;
     transition: 1s ease;
     font-size: 15px;
     color: #f7f7f7;
@@ -1002,15 +1007,12 @@ body {
     margin-top: 5px;
   }
 
-  /* Estilo para el botón de enviar al pasar el ratón por encima */
   form input[type="submit"]:hover {
     background-color: #000000;
-    /* Cambia el color al pasar el ratón por encima (puedes cambiarlo) */
   }
 
   .campo-invalido {
     border: 2px solid red;
-    /* Borde rojo cuando no está completo */
   }
 
   #mensajeError {
@@ -1019,44 +1021,45 @@ body {
     font-family: "Euclid Circular A", "Poppins";
     position: absolute;
     left: -100%;
-    /* Fuera del área visible inicialmente */
-    top: 11%;
+    top: 9%;
     transition: left .8s ease;
     border-bottom: 1px solid red;
   }
 
   .div-msj {
-    margin-top: 13em;
-    margin-left: .5em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 19px;
   }
 
   #check {
-    opacity: 0;
+        opacity: 0;
     display: none;
     color: white;
     font-family: "Euclid Circular A", "Poppins";
-    font-size: 26px;
+    font-size: 25px;
     transition: opacity 0.8s ease-in-out;
     text-shadow: 3px 1px 2px #000000;
+    margin-top: 4.2em;
+    width: 212px;
+    text-align: center;
   }
 
   #img-msj {
     opacity: 0;
     display: none;
     transition: opacity 0.5s ease-in-out;
-    width: 50px;
+    width: 63px;
+    margin-bottom: 2em;
   }
 
   .contenido-contacto {
     display: flex;
     flex-direction: row;
-    position: absolute;
     column-gap: 3em;
-    margin-top: 22.1em;
-    left: 10%;
+    
+    margin-right: 14px;
   }
 
   .divs-contenido {
@@ -1070,13 +1073,9 @@ body {
     width: 30px;
   }
 
-  .icono-contacto-w {
-    width: 30px;
-    margin-left: 21px;
-  }
-
   .ancla-icon-con {
     text-decoration: none;
+    text-align: center;
   }
 
   .texto-icono {
@@ -1124,18 +1123,20 @@ body {
 
   footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 5px;
+    flex-direction: row-reverse;
+    justify-content: space-around;
     transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background: rgba(131, 113, 113, 0);
     box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.2px);
     z-index: 1;
     animation: slide-top 3s ease-in-out;
-    height: 56px;
+    height: 44px;
     border-top: 1px solid white;
+    width: 100%;
     align-items: center;
+    margin-top: 84px;
+    padding-left: 0px;
   }
 
   .fg-proyectos {
@@ -1143,6 +1144,7 @@ body {
     font-family: 'Gilda Display', serif;
     font-size: 1em;
     left: 2%;
+    margin-bottom: 0;
   }
 
   .span-7 {
@@ -1226,20 +1228,18 @@ body {
     font-size: 25px;
   }
 
-  .active {
-    font-size: 16.2px;
-  }
-
   .navbar-overlay {
     position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
-    height: 100%;
+    width: 100vh;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     visibility: hidden;
     opacity: 0;
-    transition: 0.3s;
+    transition: 1s;
+
   }
 
   body.open .navbar-overlay {
@@ -1258,28 +1258,28 @@ body {
   }
 
   .navbar-menu {
-    position: fixed;
+        position: fixed;
     z-index: 3;
     top: 0;
     left: 0;
     translate: -100% 0;
-    height: 100%;
     padding: 12px 20px;
     display: flex;
-    gap: 1px;
     flex-direction: column;
     align-items: flex-start;
     background: #000000;
     visibility: hidden;
-    transition: translate 0.3s;
-    padding-left: 5px;
-    justify-content: space-between;
-
+    transition: translate 0.8s;
+    justify-content: center;
+    height: 100vh;
   }
 
   body.open .navbar-menu {
     translate: 0 0;
     visibility: visible;
+    background: transparent;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
   }
 }
 
