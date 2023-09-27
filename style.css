@@ -160,7 +160,7 @@ body {
 
 
   .text-inicio {
-    font-size: 19px;
+    font-size: 18px;
     text-shadow: 1px 8px 5px rgba(0, 0, 0, 1);
     transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     text-transform: uppercase;
@@ -169,6 +169,7 @@ body {
     animation: slide-top 3s ease-in-out;
     position: relative;
     left: -22px;
+    margin-left: 5px;
   }
 
   @keyframes slide-top {
@@ -450,12 +451,12 @@ body {
   #section-sm {
     display: flex;
     flex-direction: column;
-    transition: opacity 1s ease, transform 4s ease;
+    transition: opacity 1s ease, transform 2s ease;
     height: 201px;
     padding-left: 21px;
     padding-top: 20px;
     opacity: 0;
-    transform: translateY(-5em);
+    transform: translateY(-3em);
   }
 
   #section-sm.mostrar {
@@ -761,6 +762,7 @@ body {
     height: 450px;
     margin-top: 22em;
     opacity: 0;
+    margin-bottom: 20px;
   }
 
   #section-proyectos.mostrar {
@@ -832,7 +834,7 @@ body {
 
   .div-img-proyecto {
     width: 11em;
-    height: 5em;
+    height: 6.5em;
     overflow: hidden;
     position: relative;
     border-radius: 1em;
@@ -906,7 +908,7 @@ body {
     transform: translateY(0px);
     opacity: 0;
     transition: opacity 1s ease, transform 2s ease;
-    margin-top: 22em;
+    margin-top: 27em;
     background-image: url(assets/bg-expulsion.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -1051,7 +1053,7 @@ body {
     display: none;
     transition: opacity 0.5s ease-in-out;
     width: 63px;
-    margin-bottom: 2em;
+    margin-bottom: 3.2em;
   }
 
   .contenido-contacto {
@@ -1201,7 +1203,7 @@ body {
   }
 
   .menu-icono {
-    width: 30px;
+    width: 27px;
     margin-left: 5px;
   }
 
