@@ -11,27 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/*
-body {
-  padding: 0px;
-  margin: 0px;
-  color: #f9f9f9;
-  width: 101%;
-  min-height: 100vh;
-  background-image: url("assets/bg-lacaida.png");
-  background-size: 101%;
-  background-repeat: no-repeat;
-  display: grid;
-  align-items: start;
-  font-family: 'Montserrat', sans-serif;
-  transition: all 1s linear;
-  animation: shadow-inset-center 3s linear both;
-  grid-template-rows: 8% 100%;
-  overflow-x: hidden;
-  background-color: #000000;
-  scroll-behavior: smooth;
-}*/
-
 @media (min-width: 100px) {
 
   body {
@@ -79,6 +58,122 @@ body {
     animation: slide-top 3s ease-in-out;
     height: 40px;
   }
+
+  button {
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+
+
+  button .navbar-burger {
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    box-sizing: border-box;
+  }
+
+  .menu-icono {
+    width: 27px;
+    margin-left: 5px;
+  }
+
+  .nombre-inicio {
+    font-family: 'Gilda Display', serif;
+    text-shadow: 3px 2px 5px #000000;
+    font-size: 15px;
+    color: white;
+    animation-duration: 10s;
+    animation-name: fade;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+  }
+
+  .navbar-overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+
+  }
+
+  body.open .navbar-overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar-menu>button {
+    color: rgba(255, 255, 255, 0.5);
+    background: transparent;
+    padding: 0 8px;
+  }
+
+  .navbar-menu>button.active {
+    color: inherit;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    translate: -100% 0;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #000000;
+    visibility: hidden;
+    transition: translate 0.8s;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  body.open .navbar-menu {
+    translate: 0 0;
+    visibility: visible;
+    background: #000000a6;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+  }
+
+
 
   .navbar {
     position: fixed;
@@ -148,6 +243,8 @@ body {
       opacity: 100%;
     }
   }
+
+
 
   .div2 {
     display: flex;
@@ -298,7 +395,7 @@ body {
     animation-name: spinner-loading;
     transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     left: -58px;
-    top: 8.7%;
+    top: 9.2%;
   }
 
 
@@ -339,7 +436,7 @@ body {
     animation-duration: 5s;
     animation-name: fade;
     letter-spacing: 0.5px;
-    top: 11.5%;
+    top: 12%;
     left: 8%;
   }
 
@@ -615,20 +712,18 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    transform: translateY(30%);
+    transform: translateY(40%);
     transition: opacity 1s ease, transform 2s ease;
     height: 450px;
-    margin-top: 10em;
+    margin-top: 5em;
     gap: 40px;
     opacity: 0;
     margin-left: 5px;
   }
 
-
-
   #section-edu.mostrar {
     opacity: 1;
-    transform: translateY(48%);
+    transform: translateY(50%);
   }
 
   .div-educacion {
@@ -810,7 +905,7 @@ body {
     transform: translateY(100px);
     transition: opacity 1s ease, transform 2s ease;
     height: 450px;
-    margin-top: 22em;
+    margin-top: 20em;
     opacity: 0;
     margin-bottom: 20px;
   }
@@ -883,8 +978,8 @@ body {
   }
 
   .div-img-proyecto {
-    width: 11em;
-    height: 6.5em;
+    width: 12em;
+    height: 7.5em;
     overflow: hidden;
     position: relative;
     border-radius: 1em;
@@ -958,7 +1053,7 @@ body {
     transform: translateY(0px);
     opacity: 0;
     transition: opacity 1s ease, transform 2s ease;
-    margin-top: 26em;
+    margin-top: 30em;
     background-image: url(assets/bg-expulsion.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -1212,134 +1307,11 @@ body {
     animation-name: spinner-loading;
     transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
-
-
-  button {
-    border: 0;
-    padding: 0;
-    font-family: inherit;
-    background: transparent;
-    color: inherit;
-    cursor: pointer;
-  }
-
-
-  button .navbar-burger {
-    margin-top: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-items: center;
-    width: 70px;
-    height: 70px;
-    padding: 0;
-    margin-top: 20px;
-  }
-
-  .material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    box-sizing: border-box;
-  }
-
-  .menu-icono {
-    width: 27px;
-    margin-left: 5px;
-  }
-
-  .nombre-inicio {
-    font-family: 'Gilda Display', serif;
-    text-shadow: 3px 2px 5px #000000;
-    font-size: 17px;
-    color: white;
-    animation-duration: 10s;
-    animation-name: fade;
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-  .navbar-title {
-    font-size: 14.1px;
-    color: white;
-    margin-bottom: 0px;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
-  }
-
-  .navbar-overlay {
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100vh;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    visibility: hidden;
-    opacity: 0;
-    transition: 1s;
-
-  }
-
-  body.open .navbar-overlay {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .navbar-menu>button {
-    color: rgba(255, 255, 255, 0.5);
-    background: transparent;
-    padding: 0 8px;
-  }
-
-  .navbar-menu>button.active {
-    color: inherit;
-  }
-
-  .navbar-menu {
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    translate: -100% 0;
-    padding: 12px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: #000000;
-    visibility: hidden;
-    transition: translate 0.8s;
-    justify-content: center;
-    height: 100vh;
-  }
-
-  body.open .navbar-menu {
-    translate: 0 0;
-    visibility: visible;
-    background: transparent;
-    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
-  }
 }
 
+@media (min-width: 500px) {
 
-
-
-
-
+}
 
 
 ::-webkit-scrollbar {
