@@ -1027,7 +1027,6 @@ html {
   .descripcion-proyecto {
     position: absolute;
     top: -11%;
-    left: 8%;
     width: 9.3em;
     color: white;
     opacity: 0;
@@ -1085,6 +1084,7 @@ html {
     font-size: 30px;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
+    margin-bottom: 0px;
   }
 
 
@@ -1463,6 +1463,7 @@ html {
 
   #section-proyectos {
     align-items: center;
+    margin-top: 23em;
   }
 
   .titulo-proyectos {
@@ -1473,9 +1474,6 @@ html {
   .div-img-proyecto {
     width: 17em;
   }
-
-
-
 
   .descripcion-proyecto-letras {
     font-size: 18px;
@@ -1498,6 +1496,285 @@ html {
   .ancla-rombo2 {
     font-size: 19px;
   }
+
+  .texto-rombo3 {
+    font-size: 22px;
+    left: 15em;
+  }
+
+  .span-5 {
+    left: -19%;
+  }
+
+  .text-idea {
+    top: 85%;
+    left: -24%;
+    font-size: 19px;
+  }
+
+  form {
+    width: 250px;
+  }
+
+  form input[type="text"],
+  form input[type="email"] {
+    width: 200px;
+    height: 30px;
+  }
+
+  form textarea {
+    width: 200px;
+    height: 96px;
+  }
+
+
+  .icono-contacto {
+    font-size: 19px;
+  }
+
+  .texto-icono {
+    font-size: 17px;
+  }
+
+}
+
+@media (min-width: 720px) {
+
+  .div1 {
+    height: 62px;
+  }
+
+  .navbar {
+    height: 62px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+
+  .navbar-menu {
+    visibility: visible;
+    height: 0px;
+    flex-direction: row;
+    translate: none;
+    background-color: transparent;
+  }
+
+  .div-anclas-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 16px;
+    margin-left: -18px;
+  }
+
+  .nombre-inicio {
+    font-size: 25px;
+  }
+
+  button {
+    display: none;
+  }
+
+  .text-inicio {
+    font-size: 31px;
+    left: -33%;
+    margin-top: 110px;
+  }
+
+  .text-inicio-sec {
+    font-size: 90px;
+    left: 3%;
+  }
+
+  .span-2 {
+    top: 150px;
+    height: 150px;
+    width: 150px;
+  }
+
+  .text-disciplina {
+    font-size: 21px;
+    top: 7%;
+    right: 15%;
+  }
+
+  .span-1 {
+    width: 150px;
+    height: 150px;
+    top: 12.5%;
+  }
+
+  .text-creatividad {
+    top: 15%;
+    left: 14%;
+    font-size: 21px;
+  }
+
+  #section-sm {
+    padding-top: 100px;
+  }
+
+  .titulo-sm {
+    font-size: 40px;
+  }
+
+  .text-sm {
+    font-size: 20px;
+    margin-top: 90px;
+  }
+
+  .span-3 {
+    right: -40%;
+    width: 180px;
+    height: 180px;
+  }
+
+  .popup-trigger {
+    top: 53%;
+    right: -5%;
+    font-size: 21px;
+  }
+
+  .contenedor {
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .imagen img {
+    margin-right: 0px;
+    width: 220px;
+    height: 300px;
+  }
+
+  .info p {
+    font-size: 21px;
+  }
+
+  #section-edu {
+    margin-top: 20em;
+    margin-left: -5em;
+    left: -1%;
+  }
+
+  .titulo-edu {
+    font-size: 40px;
+  }
+
+  .texto-rombo3 {
+    font-size: 35px;
+    left: 13em;
+    top: 7%;
+  }
+
+  .div-text-curso {
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .div-text-curso img {
+    width: 21px;
+  }
+
+  .cursos {
+    font-size: 20px;
+  }
+
+  .span-4 {
+    right: -29%;
+    top: 96%;
+    width: 140px;
+    height: 140px;
+  }
+
+  .text-consistencia {
+    top: 90%;
+    right: -11%;
+    font-size: 21px;
+  }
+
+  .titulo-skills {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .habilidad {
+    gap: 31px;
+  }
+
+  .iconos-skills {
+    width: 30px;
+    height: 30px;
+
+  }
+
+  .habilidad p {
+    font-size: 21px;
+  }
+
+  .medidor {
+    width: 150px;
+    left: 60.5%;
+    height: 25px;
+  }
+
+  #section-proyectos {
+    margin-top: 29em;
+  }
+
+  .titulo-proyectos {
+    font-size: 40px;
+  }
+
+  .div-img-proyecto {
+        height: 8.5em;
+    width: 20em;
+  }
+
+  .div-contenido-proyectos {
+    gap: 1em;
+  }
+
+  .descripcion-proyecto-letras {
+    font-size: 21px;
+  }
+
+  .icono-proyectos {
+    width: 30px;
+    height: 30px;
+  }
+
+  .titulo-sec-proyectos {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+
+  .span-5 {
+    left: -50%;
+    width: 130px;
+    height: 130px;
+    margin-top: 17%;
+  }
+
+  .text-idea {
+    top: 116%;
+    left: -60%;
+    font-size: 25px;
+  }
+
+  #section-contacto {
+    margin-top: 42em;
+    height: 35em;
+  }
+
+  .titulo-contacto {
+    font-size: 40px;
+  }
+
+
+
+
+
+
 
 }
 
