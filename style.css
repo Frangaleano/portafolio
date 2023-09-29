@@ -260,11 +260,10 @@ html {
     transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     text-transform: uppercase;
     font-family: 'Prompt', sans-serif;
-    margin-top: 90px;
+    margin-top: 5em;
     animation: slide-top 3s ease-in-out;
     position: relative;
     left: -22px;
-    margin-left: 5px;
   }
 
   @keyframes slide-top {
@@ -1218,7 +1217,6 @@ html {
     display: flex;
     flex-direction: row;
     column-gap: 3em;
-
     margin-right: 14px;
   }
 
@@ -1576,26 +1574,27 @@ html {
   }
 
   .text-inicio {
-    font-size: 31px;
-    left: -33%;
-    margin-top: 110px;
+    font-size: 1.8em;
+    left: -18%;
+    margin-top: 4em;
   }
 
   .text-inicio-sec {
-    font-size: 90px;
+    font-size: 101px;
     left: 3%;
+    margin-top: 60px;
   }
 
   .span-2 {
-    top: 150px;
+    top: 10em;
     height: 150px;
     width: 150px;
   }
 
   .text-disciplina {
     font-size: 21px;
-    top: 7%;
-    right: 15%;
+    top: 7.1%;
+    right: 12%;
   }
 
   .span-1 {
@@ -1605,7 +1604,7 @@ html {
   }
 
   .text-creatividad {
-    top: 15%;
+        top: 14.5%;
     left: 14%;
     font-size: 21px;
   }
@@ -1631,8 +1630,8 @@ html {
 
   .popup-trigger {
     top: 53%;
-    right: -5%;
-    font-size: 21px;
+    right: -7%;
+    font-size: 23px;
   }
 
   .contenedor {
@@ -1692,6 +1691,10 @@ html {
     font-size: 21px;
   }
 
+  .div-skills {
+    margin-top: 8em;
+  }
+
   .titulo-skills {
     font-size: 40px;
     margin-bottom: 40px;
@@ -1718,7 +1721,7 @@ html {
   }
 
   #section-proyectos {
-    margin-top: 29em;
+    margin-top: 35em;
   }
 
   .titulo-proyectos {
@@ -1726,7 +1729,7 @@ html {
   }
 
   .div-img-proyecto {
-        height: 8.5em;
+    height: 8.5em;
     width: 20em;
   }
 
@@ -1766,11 +1769,90 @@ html {
     height: 35em;
   }
 
+  .div-contacto {
+        gap: 57px;
+  }
+
   .titulo-contacto {
     font-size: 40px;
   }
 
+  form {
+    width: 21em;
+    height: 22em;
+  }
 
+  form label {
+    font-size: 23px;
+  }
+
+  form input[type="text"],
+  form input[type="email"] {
+    width: 12em;
+    height: 35px;
+    font-size: 26px;
+  }
+
+  form input[type="submit"] {
+    width: 9em;
+    height: 2.8em;
+    font-size: 24px;
+  }
+
+
+  form textarea {
+    width: 13em;
+    height: 8em;
+    font-size: 24px;
+  }
+
+  .span-6 {
+        top: 20em;
+        width: 180px;
+    height: 180px;
+        left: -54px;
+  }
+
+  .icono-contacto {
+    width: 56px;
+  }
+
+  .texto-icono {
+        font-size: 22px;
+  }
+      
+  .text-com {
+    top: 80%;
+    left: 12%;
+    font-size: 22px;
+  }
+
+  .span-7 {
+    width: 50px;
+    height: 50px;
+  }
+
+  footer {
+    height: 77px;
+    margin-top: 96px;
+  }
+
+  .fg-proyectos {
+    font-size: 2em;
+  }
+
+  .rombo2 {
+    width: 40px;
+    height: 40px;
+  }
+
+  #ancla-rombo2 {
+    font-size: 21px;
+  }
+
+  .contenido-contacto {
+        column-gap: 5em;
+  }
 
 
 
