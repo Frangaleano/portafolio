@@ -54,7 +54,7 @@ html {
     justify-content: center;
     align-items: center;
     opacity: 1;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 3s ease-in-out;
     z-index: 9999;
 }
 
@@ -63,7 +63,7 @@ html {
     color: #fff;
     opacity: 0;
     transform: translateY(-60px);
-    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 2s ease-in-out;
     font-family: 'Gilda Display', serif;
     text-align: center;
 }
