@@ -43,6 +43,32 @@ html {
     }
   }
 
+  .pantalla-inicio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    z-index: 9999;
+}
+
+.pantalla-inicio h1 {
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    font-family: 'Gilda Display', serif;
+    text-align: center;
+}
+
+
   .div1 {
     display: flex;
     flex-direction: row;
@@ -1329,6 +1355,32 @@ html {
 }
 
 @media (min-width: 500px) {
+
+  .pantalla-inicio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    z-index: 9999;
+}
+
+.pantalla-inicio h1 {
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    font-family: 'Gilda Display', serif;
+    text-align: center;
+}
+
   .text-inicio {
     font-size: 22px;
     left: -23%;
@@ -1538,6 +1590,32 @@ html {
 
 @media (min-width: 720px) {
 
+  .pantalla-inicio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    z-index: 9999;
+}
+
+.pantalla-inicio h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    font-family: 'Gilda Display', serif;
+    text-align: center;
+}
+
+
   .div1 {
     height: 62px;
   }
@@ -1604,7 +1682,7 @@ html {
   }
 
   .text-creatividad {
-        top: 14.5%;
+    top: 14.5%;
     left: 14%;
     font-size: 21px;
   }
@@ -1659,6 +1737,8 @@ html {
     font-size: 40px;
   }
 
+
+
   .texto-rombo3 {
     font-size: 35px;
     left: 13em;
@@ -1670,12 +1750,25 @@ html {
     gap: 12px;
   }
 
+
   .div-text-curso img {
     width: 21px;
   }
 
   .cursos {
     font-size: 20px;
+  }
+
+  .modal {
+    left: 50%;
+    top: 40%;
+    width: 22em;
+    height: 258px;
+  }
+
+  .modal img {
+    width: 19em;
+    height: 218px;
   }
 
   .span-4 {
@@ -1737,6 +1830,7 @@ html {
     gap: 1em;
   }
 
+
   .descripcion-proyecto-letras {
     font-size: 21px;
   }
@@ -1770,7 +1864,7 @@ html {
   }
 
   .div-contacto {
-        gap: 57px;
+    gap: 57px;
   }
 
   .titulo-contacto {
@@ -1807,10 +1901,10 @@ html {
   }
 
   .span-6 {
-        top: 20em;
-        width: 180px;
+    top: 20em;
+    width: 180px;
     height: 180px;
-        left: -54px;
+    left: -54px;
   }
 
   .icono-contacto {
@@ -1818,13 +1912,27 @@ html {
   }
 
   .texto-icono {
-        font-size: 22px;
+    font-size: 22px;
   }
-      
+
   .text-com {
     top: 80%;
     left: 12%;
     font-size: 22px;
+  }
+
+  #check {
+    font-size: 37px;
+  }
+
+  #mensajeError {
+    font-size: 23px;
+    margin-left: 47px;
+  }
+
+  #img-msj {
+    width: 75px;
+    margin-bottom: 1.2em;
   }
 
   .span-7 {
@@ -1835,6 +1943,7 @@ html {
   footer {
     height: 77px;
     margin-top: 96px;
+    padding-left: 16px;
   }
 
   .fg-proyectos {
@@ -1844,6 +1953,7 @@ html {
   .rombo2 {
     width: 40px;
     height: 40px;
+    bottom: 18px;
   }
 
   #ancla-rombo2 {
@@ -1851,12 +1961,50 @@ html {
   }
 
   .contenido-contacto {
-        column-gap: 5em;
+    column-gap: 5em;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .text-inicio {
+    font-size: 2.5em;
+    left: -10%;
+    margin-top: 3em;
+    width: 19em;
   }
 
+  .span-2 {
+    left: 91%;
+    top: 12em;
+    height: 250px;
+    width: 250px;
+  }
 
+  .text-disciplina {
+    font-size: 25px;
+    top: 8.1%;
+    right: 9%;
+  }
 
+  .text-inicio-sec {
+    font-size: 9em;
+    left: 13%;
+    margin-top: 40px;
+  }
 
+  .span-1 {
+    left: -42px;
+    width: 200px;
+    height: 200px;
+    top: 11.5%;
+  }
+
+  .text-creatividad {
+    top: 14.5%;
+    left: 11%;
+    font-size: 24px;
+  }
 
 }
 

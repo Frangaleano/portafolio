@@ -28,6 +28,27 @@ let imagenModal = document.getElementById("imagen-modal");
 let modalTimer;
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  const pantallaInicio = document.querySelector(".pantalla-inicio");
+  const mensajeInicio = pantallaInicio.querySelector("h1");
+  const body = document.body;
+
+  setTimeout(function() {
+      mensajeInicio.style.opacity = "1";
+      mensajeInicio.style.transform = "translateY(0)";
+      body.style.overflow = "hidden"; // Evitar el desplazamiento mientras se muestra la pantalla de inicio
+      setTimeout(function() {
+          mensajeInicio.style.opacity = "0";
+          mensajeInicio.style.transform = "translateY(-20px)";
+          pantallaInicio.style.opacity = "0";
+          setTimeout(function() {
+              pantallaInicio.style.display = "none";
+              body.style.overflow = "auto"; // Restablecer el desplazamiento
+          }, 1000); // Tiempo que dura la pantalla de inicio
+      }, 2000); // Tiempo que dura el mensaje de inicio
+  }, 1000); // Tiempo de espera antes de mostrar el mensaje de inicio
+});
+
 
 
 function verAnclaRombo() {

@@ -10,12 +10,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="./style.css" rel="stylesheet" />
   <link rel="shortcut icon" href="./assets/icono-pagina.png">
 </head>
 
 <body>
+
+<div class="pantalla-inicio">
+    <h1>"Beauty perishes in life, but is immortal in art"</h1>
+</div>
+
+<div id="body">
 
   <header class="div1" id="nav-inicio">
 
@@ -24,7 +31,7 @@
       <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
 
       <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
-        <span class="material-icons"> 
+        <span class="material-icons">
           <img class="menu-icono" src="./assets/menu.png" alt="menu">
         </span>
       </button>
@@ -113,9 +120,11 @@
       <p class="text-sm">Soy un apasionado del desarrollo web con un enfoque creativo en el diseño Front-End. Encuentro
         inspiración en la unión del arte y la tecnología en línea, mi portafolio
         refleja mi aprendizaje autodidacta, donde fusiono colores, formas y código para crear experiencias digitales
-        únicas. <span class="text-sm-none"><br>Además de mi amor por la programación, soy un tatuador profesional y un estudiante ávido. Mi
-        creatividad
-        se nutre de esta diversidad de intereses. <br> Te invito a explorar mi portafolio y descubrir mis proyectos.</span>
+        únicas. <span class="text-sm-none"><br>Además de mi amor por la programación, soy un tatuador profesional y un
+          estudiante ávido. Mi
+          creatividad
+          se nutre de esta diversidad de intereses. <br> Te invito a explorar mi portafolio y descubrir mis
+          proyectos.</span>
       </p>
 
       <span class="span-3"></span>
@@ -274,7 +283,7 @@
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-              <img src="./assets/imagen-proyecto1.png" alt="Proyecto 1" class="scale-image">
+            <img src="./assets/imagen-proyecto1.png" alt="Proyecto 1" class="scale-image">
           </div>
           <a href="https://habiaunavezsalon.netlify.app/index.html" class="titulo-sec-proyectos" target="_blank">Había
             una vez</a>
@@ -295,7 +304,7 @@
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-              <img src="./assets/imagen-proyecto2.png" alt="Proyecto 2" class="scale-image">
+            <img src="./assets/imagen-proyecto2.png" alt="Proyecto 2" class="scale-image">
           </div>
           <a href="https://hechoamanottt.netlify.app/index.html" class="titulo-sec-proyectos" target="_blank">Hecho a
             mano.</a>
@@ -312,7 +321,7 @@
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-              <img src="./assets/imagen-proyecto3.png" alt="Proyecto 3" class="scale-image">
+            <img src="./assets/imagen-proyecto3.png" alt="Proyecto 3" class="scale-image">
           </div>
           <a href="https://mokeponjs.netlify.app/" class="titulo-sec-proyectos" target="_blank">Mokepon!</a>
           <div class="descripcion-proyecto">
@@ -328,10 +337,10 @@
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
-              <img src="./assets/imagen-proyecto4.png" alt="Proyecto 4" class="scale-image">
+            <img src="./assets/imagen-proyecto4.png" alt="Proyecto 4" class="scale-image">
           </div>
-          <a href="https://contadordospuntocero.netlify.app/" class="titulo-sec-proyectos"
-            target="_blank">Contador 2.0</a>
+          <a href="https://contadordospuntocero.netlify.app/" class="titulo-sec-proyectos" target="_blank">Contador
+            2.0</a>
           <div class="descripcion-proyecto">
             <p class="descripcion-proyecto-letras">Contador<br>suma-resta
             </p>
@@ -374,27 +383,27 @@
           </div>
         </div>
 
-          <form id="miFormulario" method="get" novalidate>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required class="campo">
+        <form id="miFormulario" method="get" novalidate>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required class="campo">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required class="campo">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required class="campo">
 
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required class="campo"></textarea>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required class="campo"></textarea>
 
-            <input type="submit" value="Enviar" onclick="enviarFormulario(event)">
-          </form>
-          <div id="mensajeError"></div>
+          <input type="submit" value="Enviar" onclick="enviarFormulario(event)">
+        </form>
+        <div id="mensajeError"></div>
 
-          <div class="div-msj">
-            <p class="Mensaje" id="check">Gracias por comunicarte conmigo.</p>
-            <img id="img-msj" src="./assets/marca-de-verificacion.png" alt="check">
-          </div>
+        <div class="div-msj">
+          <p class="Mensaje" id="check">Gracias por comunicarte conmigo.</p>
+          <img id="img-msj" src="./assets/marca-de-verificacion.png" alt="check">
         </div>
-        <i class="text-com">.Comunicación</i>
-        <span class="span-6"></span>
+      </div>
+      <i class="text-com">.Comunicación</i>
+      <span class="span-6"></span>
 
     </section>
 
@@ -405,7 +414,7 @@
 
 
   </div>
-
+</div>
   <script type="text/javascript">
     const toggleMenuOpen = () => {
       document.body.classList.toggle("open");
@@ -445,13 +454,13 @@
       }
 
       if (!formCompleto) {
-        mensajeError.innerHTML = "Fíjate si completaste bien todo!";
-        mensajeError.style.left = "15%";
 
+          mensajeError.innerHTML = "Fíjate si completaste bien todo!";
+          mensajeError.style.left = "18%";
         setTimeout(function () {
           mensajeError.style.opacity = "0"
         }, 3000);
-      
+
 
       } else {
         // Ocultar el formulario
