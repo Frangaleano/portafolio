@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
           setTimeout(function() {
               pantallaInicio.style.display = "none";
               body.style.overflow = "auto"; // Restablecer el desplazamiento
-          }, 6000); // Tiempo que dura la pantalla de inicio
+          }, 4000); // Tiempo que dura la pantalla de inicio
       }, 4000); // Tiempo que dura el mensaje de inicio
   }, 1000); // Tiempo de espera antes de mostrar el mensaje de inicio
 });

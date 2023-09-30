@@ -62,7 +62,6 @@ html {
     font-size: 1rem;
     color: #fff;
     opacity: 0;
-    transform: translateY(-60px);
     transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
     font-family: 'Gilda Display', serif;
     text-align: center;
@@ -935,7 +934,7 @@ html {
     transform: translateY(100px);
     transition: opacity 1s ease, transform 2s ease;
     height: 450px;
-    margin-top: 20em;
+    margin-top: 22.5em;
     opacity: 0;
     margin-bottom: 20px;
   }
@@ -2005,6 +2004,8 @@ html {
     left: 11%;
     font-size: 24px;
   }
+
+  
 
 }
 
