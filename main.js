@@ -1,7 +1,9 @@
 const sectionInicio = document.getElementById("inicio")
 const contenedor = document.querySelector(".contenedor");
 const imagen = document.querySelector(".imagen");
-const info = document.querySelector(".info");
+const info = document.querySelector(".info"); 
+const windowHeight = window.innerHeight;
+const scrollY = window.scrollY;
 
 const botonSM = document.getElementById("boton-sm")
 const botonPro = document.getElementById("boton-pro")
@@ -14,12 +16,7 @@ const popupTrigger = document.querySelector('.popup-trigger');
 const popup = document.getElementById('popup');
 
 const habilidadesAnimadas = [];
-const textRombo3 = document.querySelector(".texto-rombo3")
 
-
-
-let textoDiablo = document.getElementById("texto-diablo")
-let textoCaida = document.getElementById("texto-caida")
 let secciones = document.querySelectorAll(".ancla-1")
 let anclaRombo = document.getElementById("ancla-rombo")
 let isHovered = false;
@@ -44,43 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
           setTimeout(function() {
               pantallaInicio.style.display = "none";
               body.style.overflow = "auto"; // Restablecer el desplazamiento
-          }, 4000); // Tiempo que dura la pantalla de inicio
-      }, 4000); // Tiempo que dura el mensaje de inicio
-  }, 1000); // Tiempo de espera antes de mostrar el mensaje de inicio
+          }, 3000); // Tiempo que dura la pantalla de inicio
+      }, 3000); // Tiempo que dura el mensaje de inicio
+  }, 500); // Tiempo de espera antes de mostrar el mensaje de inicio
 });
-
-
-
-function verAnclaRombo() {
-  anclaRombo.style.transition = "opacity 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), visibility 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)"
-  anclaRombo.style.visibility = "visible"
-  anclaRombo.style.opacity = "1"
-}
-
-function ocultarAnclaRombo() {
-  anclaRombo.style.transition = "opacity 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), visibility 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)"
-  anclaRombo.style.visibility = "hidden"
-  anclaRombo.style.opacity = "0"
-}
-
-
-function dibujarLineas() {
-  const lineas = document.querySelectorAll('.linea');
-  lineas.forEach((linea) => {
-    linea.style.width = '100%'; // Cambiar el ancho al 100% para dibujar la línea
-    linea.style.opacity = "1"
-  });
-  textRombo3.style.opacity = "1"
-}
-
-function ocultarLineas() {
-  const lineas = document.querySelectorAll('.linea');
-  lineas.forEach((linea) => {
-    linea.style.width = '0'; 
-    linea.style.opacity = "0"; // Restablecer el ancho a 0 para ocultar la línea
-  });
-  textRombo3.style.opacity = "0"
-}
 
 
 function EscucharBotones() {
@@ -111,15 +75,8 @@ function EscucharBotones() {
 }
 
 
-
-function inicio() {
-  location.reload()
-}
-
 function mostrarSeccionSobreMi() {
   const sobreMiSection = document.getElementById('section-sm');
-  const windowHeight = window.innerHeight;
-  const scrollY = window.scrollY;
 
   const sobreMiSectionTop = sobreMiSection.getBoundingClientRect().top;
 
@@ -132,8 +89,6 @@ function mostrarSeccionSobreMi() {
 
 function mostrarSeccionEducacion() {
   const sectionEdu = document.getElementById('section-edu');
-  const windowHeight = window.innerHeight;
-  const scrollY = window.scrollY;
 
   const sectionEduTop = sectionEdu.getBoundingClientRect().top;
 
@@ -147,8 +102,6 @@ function mostrarSeccionEducacion() {
 
 function mostrarSeccionProyectos() {
   const sectionProyectos = document.getElementById('section-proyectos');
-  const windowHeight = window.innerHeight;
-  const scrollY = window.scrollY;
 
   const sectionProyectosTop = sectionProyectos.getBoundingClientRect().top;
 
@@ -170,7 +123,6 @@ function animarMedidores() {
 
     // Verificar si la sección de educación está visible en la pantalla
     const sectionEdu = document.getElementById('section-edu');
-    const windowHeight = window.innerHeight;
     const sectionEduTop = sectionEdu.getBoundingClientRect().top;
     const isVisible = sectionEduTop < windowHeight / 1.5;
 
@@ -214,8 +166,6 @@ window.addEventListener('scroll', animarMedidores);
 
 function mostrarSeccionContacto() {
   const sectionContacto = document.getElementById('section-contacto');
-  const windowHeight = window.innerHeight;
-  const scrollY = window.scrollY;
 
   const sectionContactoTop = sectionContacto.getBoundingClientRect().top;
 
@@ -292,6 +242,11 @@ botonPro.addEventListener("click", function () {
 botonCon.addEventListener("click", function () {
   scrollToSection("section-contacto");
 });
+
+
+function inicio() {
+  location.reload()
+}
 
 window.addEventListener('scroll', mostrarSeccionSobreMi);
 
