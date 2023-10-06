@@ -265,6 +265,33 @@ function obtenerRutaImagen(idCurso) {
   }
 }
 
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const offset = section.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth" // Esto habilita el desplazamiento suave
+    });
+  }
+}
+
+// Luego, agrega eventos de clic a tus botones de navegación para llamar a esta función:
+botonSM.addEventListener("click", function () {
+  scrollToSection("section-sm");
+});
+
+botonEdu.addEventListener("click", function () {
+  scrollToSection("section-edu");
+});
+
+botonPro.addEventListener("click", function () {
+  scrollToSection("section-proyectos");
+});
+
+botonCon.addEventListener("click", function () {
+  scrollToSection("section-contacto");
+});
 
 window.addEventListener('scroll', mostrarSeccionSobreMi);
 
