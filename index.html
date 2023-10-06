@@ -70,6 +70,7 @@
   <div class="div2" id="inicio">
 
     <section id="section-inicio">
+
       <div class="span-1">
       </div>
 
@@ -78,8 +79,8 @@
 
       <h2 class="text-inicio">¡BIENVENIDOS A MI <br>PORTAFOLIO!<br> Estudiante, Tatuador <br> y también..</h2>
 
-      <div class="rombo" onmouseover="verAnclaRombo()" onmouseout="ocultarAnclaRombo()">
-        <a id="ancla-rombo" href="https://bepatrickdavid.com/" target="_blank">Inspiración</a>
+      <div class="rombo">
+        <b class="text-rombo">7</b>
       </div>
 
       <i class="text-creatividad">
@@ -118,13 +119,9 @@
     <section id="section-sm">
       <h2 class="titulo-sm">Sobre mí</h2>
       <p class="text-sm">Soy un apasionado del desarrollo web con un enfoque creativo en el diseño Front-End. Encuentro
-        inspiración en la unión del arte y la tecnología en línea, mi portafolio
+        inspiración en la unión del arte y la tecnología, mi portafolio
         refleja mi aprendizaje autodidacta, donde fusiono colores, formas y código para crear experiencias digitales
-        únicas. <span class="text-sm-none"><br>Además de mi amor por la programación, soy un tatuador profesional y un
-          estudiante ávido. Mi
-          creatividad
-          se nutre de esta diversidad de intereses. <br> Te invito a explorar mi portafolio y descubrir mis
-          proyectos.</span>
+        únicas.
       </p>
 
       <span class="span-3"></span>
@@ -193,10 +190,9 @@
         <img src="" alt="Certificado" id="imagen-modal">
       </div>
 
-      <div class="rombo3" onmouseover="dibujarLineas()" onmouseout="ocultarLineas()">
+      <div class="rombo3">
         <b class="texto-rombo3">11:11</b>
       </div>
-      <div class="linea derecha"></div>
 
       <div class="div-skills">
         <h2 class="titulo-skills">Skills</h2>
@@ -383,7 +379,8 @@
           </div>
         </div>
 
-        <form id="miFormulario" method="get" novalidate>
+        <form id="miFormulario" action="https://formspree.io/f/xvojvlld"
+        method="POST">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" required class="campo">
 

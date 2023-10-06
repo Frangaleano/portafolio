@@ -49,23 +49,23 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: #0000007b;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1;
     transition: opacity 1s ease-in-out;
     z-index: 9999;
-}
+  }
 
-.pantalla-inicio h1 {
+  .pantalla-inicio h1 {
     font-size: 1rem;
     color: #fff;
     opacity: 0;
     transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
     font-family: 'Gilda Display', serif;
     text-align: center;
-}
+  }
 
 
   .div1 {
@@ -215,14 +215,14 @@ html {
     font-family: "Poppins";
     box-sizing: border-box;
     padding: 10px 4px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(255, 255, 255);
   }
 
   .ancla-1 {
     font-family: "Euclid Circular A", "Poppins";
     text-decoration: none;
     text-shadow: 3px 2px 5px #000000;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     padding: 5px;
   }
@@ -231,7 +231,7 @@ html {
     content: "";
     display: block;
     height: 1px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     transform: scale(0, 1);
     transform-origin: right;
     transition: transform .5s;
@@ -243,6 +243,7 @@ html {
 
   .ancla-1.seleccionada {
     opacity: 50%;
+    color: rgb(255, 255, 255);
   }
 
 
@@ -250,7 +251,7 @@ html {
     font-family: 'Gilda Display', serif;
     text-shadow: 3px 2px 5px #000000;
     font-size: 20px;
-    color: white;
+    color: rgb(255, 255, 255);
     animation-duration: 10s;
     animation-name: fade;
     cursor: pointer;
@@ -330,7 +331,7 @@ html {
   }
 
   .rombo2:hover {
-    border: black;
+    border: rgb(0, 0, 0);
   }
 
   .text-disciplina {
@@ -343,6 +344,20 @@ html {
     letter-spacing: 0.5px;
     top: 5.5%;
     right: 14%;
+  }
+
+  .text-disciplina::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform .5s;
+  }
+
+  .text-disciplina:hover::after {
+    transform: scale(1, 1);
   }
 
 
@@ -473,7 +488,7 @@ html {
     content: "";
     display: block;
     height: 1px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     transform: scale(0, 1);
     transform-origin: left;
     transition: transform .5s;
@@ -483,7 +498,7 @@ html {
     content: "";
     display: block;
     height: 1px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     transform: scale(0, 1);
     transform-origin: right;
     transition: transform .5s;
@@ -516,7 +531,7 @@ html {
     height: 40px;
     border-radius: 25px;
     border: 0;
-    color: #f7f7f7;
+    color: #ffffff;
     background: transparent;
     font-family: "Euclid Circular A", "Poppins";
     cursor: pointer;
@@ -575,7 +590,7 @@ html {
 
   .button:hover {
     border-radius: 6px;
-    box-shadow: inset 0 0 11px 25px rgba(109, 80, 80);
+    box-shadow: inset 0 0 11px 25px rgb(199, 196, 196);
 
   }
 
@@ -641,7 +656,7 @@ html {
     margin-top: 55px;
     font-family: "Euclid Circular A", "Poppins";
     z-index: 0;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
   }
 
   .text-sm-none {
@@ -783,7 +798,7 @@ html {
     font-family: "Euclid Circular A", "Poppins";
     font-size: 13px;
     cursor: pointer;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     z-index: 1;
     margin-bottom: 15px;
   }
@@ -835,7 +850,7 @@ html {
   }
 
   .span-4 {
-    border: dotted 2px rgba(255, 255, 255, 1);
+    border: dotted 4px rgba(255, 255, 255, 1);
     width: 70px;
     height: 70px;
     border-radius: 100%;
@@ -860,11 +875,10 @@ html {
     right: 14%;
   }
 
-
   .div-skills {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     gap: 8px;
     height: 500px;
     padding-left: 15px;
@@ -886,7 +900,7 @@ html {
     width: 191px;
     align-items: center;
     z-index: 1;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
   }
 
 
@@ -1009,7 +1023,7 @@ html {
     font-family: "Euclid Circular A", "Poppins";
     font-size: 20px;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transition: color 0.5s;
   }
@@ -1052,7 +1066,7 @@ html {
     position: absolute;
     top: -11%;
     width: 9.3em;
-    color: white;
+    color: rgb(255, 255, 255);
     opacity: 0;
     transform: translateY(10%);
     transition: opacity 1s, transform 1s;
@@ -1196,7 +1210,7 @@ html {
   }
 
   .campo-invalido {
-    border: 2px solid red;
+    border: 2px solid rgb(255, 0, 0);
   }
 
   #mensajeError {
@@ -1207,7 +1221,7 @@ html {
     left: -100%;
     top: 9%;
     transition: left .8s ease;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid rgb(255, 0, 0);
   }
 
   .div-msj {
@@ -1220,7 +1234,7 @@ html {
   #check {
     opacity: 0;
     display: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: "Euclid Circular A", "Poppins";
     font-size: 25px;
     transition: opacity 0.8s ease-in-out;
@@ -1284,7 +1298,7 @@ html {
     content: "";
     display: block;
     height: 1px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     transform: scale(0, 1);
     transform-origin: right;
     transition: transform .5s;
@@ -1323,7 +1337,7 @@ html {
     box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.2px);
     height: 44px;
-    border-top: 1px solid white;
+    border-top: 1px solid rgb(255, 255, 255);
     width: 100%;
     align-items: center;
     margin-top: 84px;
@@ -1368,9 +1382,9 @@ html {
     opacity: 1;
     transition: opacity 2s ease-in-out;
     z-index: 9999;
-}
+  }
 
-.pantalla-inicio h1 {
+  .pantalla-inicio h1 {
     font-size: 1rem;
     color: #fff;
     opacity: 0;
@@ -1378,7 +1392,7 @@ html {
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     font-family: 'Gilda Display', serif;
     text-align: center;
-}
+  }
 
   .text-inicio {
     font-size: 22px;
@@ -1602,9 +1616,9 @@ html {
     opacity: 1;
     transition: opacity 2s ease-in-out;
     z-index: 9999;
-}
+  }
 
-.pantalla-inicio h1 {
+  .pantalla-inicio h1 {
     font-size: 1.5rem;
     color: #fff;
     opacity: 0;
@@ -1612,7 +1626,7 @@ html {
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     font-family: 'Gilda Display', serif;
     text-align: center;
-}
+  }
 
 
   .div1 {
@@ -1646,7 +1660,7 @@ html {
     font-size: 25px;
   }
 
-  button {
+  .navbar-burger {
     display: none;
   }
 
@@ -1684,6 +1698,16 @@ html {
     top: 14.5%;
     left: 14%;
     font-size: 21px;
+  }
+
+  .button {
+    top: 75px;
+    width: 120px;
+    height: 50px;
+  }
+
+  .button-text {
+    font-size: 16px;
   }
 
   #section-sm {
@@ -1966,14 +1990,53 @@ html {
 
 @media (min-width: 1024px) {
 
+  .ancla-1:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  .nombre-inicio:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  .rombo {
+    width: 65px;
+    height: 65px;
+    background: transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    margin: 50px;
+    border: 8px solid black;
+    top: 102px;
+    right: 362px;
+    transition: .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
+    display: flex;
+  }
+
+  .text-rombo {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transform: rotate(313deg);
+    position: absolute;
+    font-family: 'Gilda Display';
+    font-size: 40px;
+  }
+
   .text-inicio {
     font-size: 2.5em;
     left: -10%;
-    margin-top: 3em;
+    margin-top: 2em;
     width: 19em;
   }
 
   .span-2 {
+    border: dotted 4px rgba(255, 255, 255, 1);
     left: 91%;
     top: 12em;
     height: 250px;
@@ -1983,8 +2046,23 @@ html {
   .text-disciplina {
     font-size: 25px;
     top: 8.1%;
-    right: 9%;
+    right: 10%;
   }
+
+  .text-disciplina::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform .5s;
+  }
+
+  .text-disciplina:hover::after {
+    transform: scale(1, 1);
+  }
+
 
   .text-inicio-sec {
     font-size: 9em;
@@ -1993,6 +2071,7 @@ html {
   }
 
   .span-1 {
+    border: dotted 4px rgba(255, 255, 255, 1);
     left: -42px;
     width: 200px;
     height: 200px;
@@ -2001,11 +2080,245 @@ html {
 
   .text-creatividad {
     top: 14.5%;
-    left: 11%;
+    left: 12%;
     font-size: 24px;
   }
 
-  
+  .text-creatividad::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform .5s;
+  }
+
+  .text-creatividad:hover::after {
+    transform: scale(1, 1);
+  }
+
+
+  #button {
+    display: flex;
+  }
+
+  #section-sm {
+    flex-direction: row;
+    padding-left: 70px;
+  }
+
+  .titulo-sm {
+    font-size: 40px;
+  }
+
+  .text-sm {
+    font-size: 22px;
+    margin-top: 90px;
+    width: 29em;
+    margin-right: 106px;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    margin-right: 110px;
+    margin-top: 64px;
+  }
+
+  .imagen img {
+    width: 300px;
+    height: 420px;
+  }
+
+  .span-3 {
+    border: dotted 4px rgba(255, 255, 255, 1);
+    right: 46%;
+    bottom: -248%;
+    width: 230px;
+    height: 230px;
+  }
+
+  .popup-trigger {
+    top: 300%;
+    right: 65%;
+    font-size: 26px;
+  }
+
+  .popup-trigger::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform .5s;
+  }
+
+  .oppup-trigger:hover::after {
+    transform: scale(1, 1);
+  }
+
+
+  .popup-container {
+    left: 28%;
+    position: absolute;
+    top: 279%;
+    font-size: 22px;
+    font-family: "Euclid Circular A", "Poppins";
+    transition: opacity 1s transform 1s;
+  }
+
+  #section-edu {
+    flex-direction: row;
+    gap: 6%;
+    align-items: center;
+    margin-top: 14em;
+    margin-left: -13em;
+  }
+
+  .div-skills {
+    margin-top: 14em;
+  }
+
+
+  .medidor {
+    left: 115.5%;
+  }
+
+  .span-4 {
+    border: dotted 4px rgba(255, 255, 255, 1);
+    left: -31%;
+    top: 120%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .text-consistencia {
+    top: 135%;
+    left: -2%;
+    font-size: 24px;
+    width: 145px;
+  }
+
+  .text-consistencia::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform .5s;
+  }
+
+  .text-consistencia:hover::after {
+    transform: scale(1, 1);
+  }
+
+
+  .rombo3 {
+    width: 120px;
+    height: 120px;
+    top: 152%;
+    left: 54%;
+    background: black;
+    position: fixed;
+    transform: rotate(45deg);
+    margin: 50px;
+    border: 3px solid white;
+    transition: background-color .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: 0px 0px 20px 2px rgb(255 255 255 / 75%);
+  }
+
+  .texto-rombo3 {
+    font-size: 30px;
+    font-family: 'Gilda Display', serif;
+    color: white;
+    z-index: 4;
+    transform: rotate(-45deg);
+    left: 0.5em;
+    top: 31%;
+    opacity: 1;
+  }
+
+  #section-proyectos {
+    margin-top: 27em;
+  }
+
+  .div-proyectos {
+    flex-direction: row;
+    width: 44em;
+    column-gap: 3em;
+    row-gap: 3em;
+    margin-top: 3em;
+  }
+
+  .div-img-proyecto {
+    height: 10.5em;
+    width: 20em;
+  }
+
+  .titulo-sec-proyectos:hover {
+    color: white;
+  }
+
+  .span-5 {
+    border: dotted 4px rgba(255, 255, 255, 1);
+    left: 92%;
+    width: 200px;
+    height: 200px;
+    margin-top: 26%;
+  }
+
+  .text-idea {
+    top: 109%;
+    left: 114%;
+    font-size: 28px;
+  }
+
+  .text-idea::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform .5s;
+  }
+
+  .text-idea:hover::after {
+    transform: scale(1, 1);
+  }
+
+
+  #section-contacto {
+    margin-top: 23em;
+  }
+
+  .span-6 {
+    border: dotted 4px rgba(255, 255, 255, 1);
+    top: 20em;
+    width: 230px;
+    height: 230px;
+    left: -54px;
+  }
+
+  .text-com {
+    font-size: 25px;
+  }
+
+  #mensajeError {
+    margin-left: 11em;
+  }
+
+  #check {
+    width: 10em;
+  }
+
+
 
 }
 

@@ -106,7 +106,7 @@ function EscucharBotones() {
   // Agrega un evento para ocultar la ventana emergente cuando el mouse salga de la palabra
   popupTrigger.addEventListener('mouseout', () => {
     popup.style.opacity = '0';
-    popup.style.transform = 'translate(-50%, -50%) translateX(-10%)';
+    popup.style.transform = 'translate(-50%, -50%) translateX(-20%)';
   });
 }
 
