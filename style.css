@@ -124,6 +124,7 @@ html {
 
   .menu-icono {
     width: 27px;
+    height: 27px;
     margin-left: 5px;
   }
 
@@ -194,7 +195,6 @@ html {
     translate: 0 0;
     visibility: visible;
     background: #000000a6;
-    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
   }
 
@@ -584,6 +584,7 @@ html {
 
   .button-links a img {
     width: 16px;
+    height: 16px;
   }
 
 
@@ -1268,6 +1269,7 @@ html {
 
   .icono-contacto {
     width: 30px;
+    height: 30px;
   }
 
   .ancla-icon-con {
@@ -1401,6 +1403,7 @@ html {
 
   .menu-icono {
     width: 33px;
+    height: 33px;
   }
 
   .span-2 {
@@ -1435,6 +1438,11 @@ html {
   .text-creatividad {
     top: 13.4%;
     left: 8%;
+  }
+
+  .button-links a img {
+    width: 15px;
+    height: 15px;
   }
 
   .span-3 {
@@ -1592,7 +1600,8 @@ html {
 
 
   .icono-contacto {
-    font-size: 19px;
+    width: 40px;
+    height: 40px;
   }
 
   .texto-icono {
@@ -1708,6 +1717,11 @@ html {
 
   .button-text {
     font-size: 16px;
+  }
+
+  .button-links a img {
+    width: 20px;
+    height: 20px;
   }
 
   #section-sm {
@@ -1932,6 +1946,7 @@ html {
 
   .icono-contacto {
     width: 56px;
+    height: 56px;
   }
 
   .texto-icono {
@@ -2065,9 +2080,9 @@ html {
 
 
   .text-inicio-sec {
-    font-size: 9em;
-    left: 13%;
-    margin-top: 40px;
+    font-size: 7em;
+    left: 24%;
+    margin-top: -10px;
   }
 
   .span-1 {
@@ -2101,6 +2116,11 @@ html {
 
   #button {
     display: flex;
+  }
+
+  .button-links a img {
+    width: 20px;
+    height: 20px;
   }
 
   #section-sm {
@@ -2308,6 +2328,11 @@ html {
 
   .text-com {
     font-size: 25px;
+  }
+
+  .icono-contacto {
+    width: 50px;
+    height: 50px;
   }
 
   #mensajeError {
