@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Fjalla+One&family=Gilda+Display&family=Montserrat:wght@100&family=Prompt&display=swap');
-
-
-
 * {
   padding: 0px;
   margin: 0px;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 @media (min-width: 100px) {
-
   body {
     padding: 0px;
     margin: 0px;
@@ -31,13 +25,10 @@ html {
     background-color: #000000;
     scroll-behavior: smooth;
   }
-
-
   @keyframes shadow-inset-center {
     0% {
       box-shadow: inset 0 0 0 0 transparent;
     }
-
     100% {
       box-shadow: inset 0 0 250px 50px rgb(0, 0, 0);
     }
@@ -49,7 +40,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0000007b;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,17 +48,15 @@ html {
     transition: opacity 1s ease-in-out;
     z-index: 9999;
   }
-
+  
   .pantalla-inicio h1 {
-    font-size: 1rem;
+    font-size: 0.8em;
     color: #fff;
     opacity: 0;
     transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
     font-family: 'Gilda Display', serif;
     text-align: center;
   }
-
-
   .div1 {
     display: flex;
     flex-direction: row;
@@ -83,7 +72,6 @@ html {
     animation: slide-top 3s ease-in-out;
     height: 40px;
   }
-
   button {
     border: 0;
     padding: 0;
@@ -92,8 +80,6 @@ html {
     color: inherit;
     cursor: pointer;
   }
-
-
   button .navbar-burger {
     margin-top: 20px;
     position: absolute;
@@ -106,7 +92,6 @@ html {
     padding: 0;
     margin-top: 20px;
   }
-
   .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -121,13 +106,10 @@ html {
     direction: ltr;
     box-sizing: border-box;
   }
-
   .menu-icono {
     width: 27px;
-    height: 27px;
     margin-left: 5px;
   }
-
   .nombre-inicio {
     font-family: 'Gilda Display', serif;
     text-shadow: 3px 2px 5px #000000;
@@ -138,13 +120,11 @@ html {
     cursor: pointer;
     text-decoration: none;
   }
-
   a {
     text-decoration: none;
     color: white;
     font-size: 25px;
   }
-
   .navbar-overlay {
     position: fixed;
     z-index: 2;
@@ -156,24 +136,19 @@ html {
     visibility: hidden;
     opacity: 0;
     transition: 1s;
-
   }
-
   body.open .navbar-overlay {
     visibility: visible;
     opacity: 1;
   }
-
   .navbar-menu>button {
     color: rgba(255, 255, 255, 0.5);
     background: transparent;
     padding: 0 8px;
   }
-
   .navbar-menu>button.active {
     color: inherit;
   }
-
   .navbar-menu {
     position: fixed;
     z-index: 3;
@@ -190,14 +165,13 @@ html {
     justify-content: center;
     height: 100vh;
   }
-
   body.open .navbar-menu {
     translate: 0 0;
     visibility: visible;
     background: #000000a6;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
   }
-
   .navbar {
     position: fixed;
     z-index: 3;
@@ -217,7 +191,6 @@ html {
     padding: 10px 4px;
     border-bottom: 1px solid rgb(255, 255, 255);
   }
-
   .ancla-1 {
     font-family: "Euclid Circular A", "Poppins";
     text-decoration: none;
@@ -226,7 +199,6 @@ html {
     font-size: 18px;
     padding: 5px;
   }
-
   .ancla-1::after {
     content: "";
     display: block;
@@ -236,17 +208,13 @@ html {
     transform-origin: right;
     transition: transform .5s;
   }
-
   .ancla-1:hover::after {
     transform: scale(1, 1);
   }
-
   .ancla-1.seleccionada {
     opacity: 50%;
     color: rgb(255, 255, 255);
   }
-
-
   .nombre-inicio {
     font-family: 'Gilda Display', serif;
     text-shadow: 3px 2px 5px #000000;
@@ -256,20 +224,14 @@ html {
     animation-name: fade;
     cursor: pointer;
   }
-
-
   @keyframes fade {
     from {
       opacity: 0%;
     }
-
     to {
       opacity: 100%;
     }
   }
-
-
-
   .div2 {
     display: flex;
     flex-direction: column;
@@ -278,8 +240,6 @@ html {
     overflow: hidden;
     align-items: center;
   }
-
-
   .text-inicio {
     font-size: 18px;
     text-shadow: 1px 8px 5px rgba(0, 0, 0, 1);
@@ -291,28 +251,23 @@ html {
     position: relative;
     left: -22px;
   }
-
   @keyframes slide-top {
     0% {
       transform: translateY(200px);
       opacity: 0%;
     }
-
     100% {
       transform: translateY(0px);
       opacity: 100%;
     }
   }
-
   .text-inicio:hover {
     transform: scale(1.05);
     transition-duration: 1s;
   }
-
   .rombo {
     display: none;
   }
-
   .rombo2 {
     width: 25px;
     height: 25px;
@@ -329,11 +284,9 @@ html {
     z-index: 999;
     backdrop-filter: blur(2.2px);
   }
-
   .rombo2:hover {
     border: rgb(0, 0, 0);
   }
-
   .text-disciplina {
     position: absolute;
     font-family: 'Gilda Display', serif;
@@ -345,7 +298,6 @@ html {
     top: 5.5%;
     right: 14%;
   }
-
   .text-disciplina::after {
     content: "";
     display: block;
@@ -355,12 +307,9 @@ html {
     transform-origin: right;
     transition: transform .5s;
   }
-
   .text-disciplina:hover::after {
     transform: scale(1, 1);
   }
-
-
   .texto-rombo3 {
     position: absolute;
     font-family: 'Gilda Display', serif;
@@ -374,17 +323,12 @@ html {
     z-index: 9999;
     top: 0px;
   }
-
-
   .linea {
     display: none;
   }
-
   .derecha {
     display: none;
   }
-
-
   #ancla-rombo2 {
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -394,37 +338,30 @@ html {
     font-family: 'Gilda Display';
     font-size: 15px;
   }
-
-
   #ancla-rombo {
     display: none;
   }
-
   .text-inicio-sec {
     font-family: 'Fjalla One', sans-serif;
     border-radius: 100px;
-    font-size: 50px;
+    font-size: 60px;
     text-shadow: 3px 2px 5px #000000;
     text-transform: uppercase;
     margin-top: 40px;
     animation-name: fade;
     animation-duration: 5s;
     position: relative;
-    left: -1%;
+    left: 7%;
     margin-bottom: 40px;
   }
-
   @keyframes fade {
     from {
       opacity: 0%;
     }
-
     to {
       opacity: 100%;
     }
   }
-
-
   .span-1 {
     z-index: 0;
     position: absolute;
@@ -441,8 +378,6 @@ html {
     left: -58px;
     top: 9.2%;
   }
-
-
   .span-2 {
     z-index: 0;
     position: absolute;
@@ -458,20 +393,14 @@ html {
     animation-name: spinner-loading;
     transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
-
-
-
   @keyframes spinner-loading {
     0% {
       transform: rotate(0deg)
     }
-
     to {
       transform: rotate(1turn)
     }
   }
-
-
   .text-creatividad {
     position: absolute;
     font-family: 'Gilda Display', serif;
@@ -480,10 +409,9 @@ html {
     animation-duration: 5s;
     animation-name: fade;
     letter-spacing: 0.5px;
-    top: 11%;
-    left: 12%;
+    top: 12%;
+    left: 8%;
   }
-
   .text-disciplina::after {
     content: "";
     display: block;
@@ -493,7 +421,6 @@ html {
     transform-origin: left;
     transition: transform .5s;
   }
-
   .text-creatividad::after {
     content: "";
     display: block;
@@ -503,27 +430,20 @@ html {
     transform-origin: right;
     transition: transform .5s;
   }
-
   @keyframes fade {
     0% {
       opacity: 0%;
     }
-
     100% {
       opacity: 100%;
     }
   }
-
-
   .text-creatividad:hover::after {
     transform: scale(1, 1);
   }
-
   .text-disciplina:hover::after {
     transform: scale(1, 1);
   }
-
-
   .button {
     position: fixed;
     overflow: hidden;
@@ -543,11 +463,9 @@ html {
     backdrop-filter: blur(2.2px);
     right: 5px;
   }
-
   .button i {
     font-size: 18px;
   }
-
   .button-text,
   .button-links {
     position: absolute;
@@ -559,7 +477,6 @@ html {
     height: 100%;
     transition: 0.5s;
   }
-
   .button-text {
     gap: 10px;
     justify-content: center;
@@ -567,7 +484,6 @@ html {
     font-size: 13px;
     margin-left: 4px;
   }
-
   .button-links {
     opacity: 0;
     justify-content: center;
@@ -576,54 +492,38 @@ html {
     transition: 0.2s;
     padding-top: 3px;
   }
-
   .button-links a {
     translate: 0 50px;
     transition: 0.3s;
   }
-
   .button-links a img {
     width: 16px;
-    height: 16px;
   }
-
-
-
   .button:hover {
     border-radius: 6px;
     box-shadow: inset 0 0 11px 25px rgb(199, 196, 196);
-
   }
-
   .button:hover .button-links a:nth-child(1) {
     transition-delay: 0.05s;
   }
-
   .button:hover .button-links a:nth-child(2) {
     transition-delay: 0.1s;
   }
-
   .button:hover .button-links a:nth-child(3) {
     transition-delay: 0.15s;
   }
-
   .button:hover .button-text {
     translate: 0 -100%;
   }
-
   .button:hover .button-links {
     opacity: 1;
   }
-
   .button:hover .button-links a {
     translate: 0;
   }
-
   .button-links i {
     color: #f7f7f7;
   }
-
-
   #section-sm {
     display: flex;
     flex-direction: column;
@@ -634,21 +534,16 @@ html {
     opacity: 0;
     transform: translateY(-3em);
   }
-
   #section-sm.mostrar {
     opacity: 1;
     transform: translateY(0px);
   }
-
-
   .titulo-sm {
     font-size: 30px;
     position: absolute;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
   }
-
-
   .text-sm {
     font-size: 13px;
     line-height: 1.5em;
@@ -659,13 +554,9 @@ html {
     z-index: 0;
     background-color: rgb(0, 0, 0);
   }
-
   .text-sm-none {
     display: none;
   }
-
-
-
   .span-3 {
     border: dotted 2px rgba(255, 255, 255, 1);
     width: 80px;
@@ -679,7 +570,6 @@ html {
     right: -13%;
     margin-top: -2%;
   }
-
   .popup-trigger {
     position: absolute;
     font-family: 'Gilda Display', serif;
@@ -691,12 +581,9 @@ html {
     top: 23%;
     right: 9%;
   }
-
   .popup-container {
     display: none;
   }
-
-
   .contenedor {
     display: flex;
     flex-direction: row-reverse;
@@ -705,19 +592,13 @@ html {
     z-index: 1;
     gap: 3px;
   }
-
   .imagen {
     margin-right: 9%;
   }
-
-
-
   .imagen img {
     width: 110px;
     height: 170px;
   }
-
-
   .info {
     display: flex;
     flex-direction: column;
@@ -726,33 +607,28 @@ html {
     margin-top: 30px;
     opacity: 1;
   }
-
   .info p {
     font-size: 16px;
     font-family: "Euclid Circular A", "Poppins";
   }
-
   .div-ubicacion {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 5px;
   }
-
   .icono-info {
     width: 20px;
     height: 20px;
     margin-bottom: 27px;
     margin-right: 12px;
   }
-
   .div-edad {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 5px;
   }
-
   #section-edu {
     display: flex;
     flex-direction: column;
@@ -765,12 +641,10 @@ html {
     opacity: 0;
     margin-left: 5px;
   }
-
   #section-edu.mostrar {
     opacity: 1;
     transform: translateY(50%);
   }
-
   .div-educacion {
     display: flex;
     flex-direction: column;
@@ -778,7 +652,6 @@ html {
     height: 220px;
     padding-right: 25px;
   }
-
   .titulo-edu {
     font-size: 30px;
     font-family: 'Prompt', sans-serif;
@@ -786,7 +659,6 @@ html {
     margin-bottom: 26px;
     margin-left: 15px;
   }
-
   .div-text-curso {
     display: flex;
     flex-direction: row;
@@ -794,7 +666,6 @@ html {
     align-items: flex-start;
     gap: 7px;
   }
-
   .cursos {
     font-family: "Euclid Circular A", "Poppins";
     font-size: 13px;
@@ -803,7 +674,6 @@ html {
     z-index: 1;
     margin-bottom: 15px;
   }
-
   /* Estilos para el modal */
   .modal {
     display: none;
@@ -821,13 +691,11 @@ html {
     object-fit: cover;
     margin-left: 86px;
   }
-
   .modal img {
     width: 267px;
     height: 179px;
     opacity: 1;
   }
-
   /* Estilo para el fondo oscuro del modal */
   .modal::before {
     content: "";
@@ -841,15 +709,12 @@ html {
     pointer-events: none;
     transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
-
   .modal.abierto::before {
     opacity: 1;
   }
-
   .modal::after {
     opacity: 0;
   }
-
   .span-4 {
     border: dotted 2px rgba(255, 255, 255, 1);
     width: 70px;
@@ -875,7 +740,6 @@ html {
     top: 66%;
     right: 14%;
   }
-
   .div-skills {
     display: flex;
     flex-direction: column;
@@ -885,15 +749,12 @@ html {
     padding-left: 15px;
     margin-top: 50px;
   }
-
   .titulo-skills {
     font-size: 30px;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
     margin-bottom: 20px;
   }
-
-
   .habilidad {
     display: flex;
     flex-direction: row;
@@ -903,19 +764,15 @@ html {
     z-index: 1;
     background-color: rgb(0, 0, 0);
   }
-
-
   .iconos-skills {
     width: 20px;
     height: 20px;
   }
-
   .habilidad p {
     font-family: "Euclid Circular A", "Poppins";
     margin-bottom: 0px;
     font-size: 14px;
   }
-
   .medidor {
     height: 23px;
     border: 1px solid #ccc;
@@ -926,12 +783,10 @@ html {
     left: 60.5%;
     position: absolute;
   }
-
   .medidor::-webkit-meter-bar {
     background-color: #f0f0f0;
     border-radius: 5px;
   }
-
   .medidor::-webkit-meter-optimum-value,
   .medidor::-webkit-meter-suboptimum-value,
   .medidor::-webkit-meter-even-less-good-value {
@@ -941,7 +796,6 @@ html {
     width: 0;
     /* Ancho inicial de la parte verde */
   }
-
   #section-proyectos {
     display: flex;
     flex-direction: column;
@@ -953,19 +807,16 @@ html {
     opacity: 0;
     margin-bottom: 20px;
   }
-
   #section-proyectos.mostrar {
     opacity: 1;
     transform: translateY(180px);
   }
-
   .titulo-proyectos {
     font-size: 30px;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
     margin-left: 86px;
   }
-
   .div-proyectos {
     display: flex;
     flex-direction: column;
@@ -977,7 +828,6 @@ html {
     align-content: center;
     width: 315px;
   }
-
   .text-idea {
     position: absolute;
     font-family: 'Gilda Display', serif;
@@ -989,7 +839,6 @@ html {
     top: 84.5%;
     left: -7%;
   }
-
   .span-5 {
     border: dotted 2px rgba(255, 255, 255, 1);
     width: 100px;
@@ -1003,14 +852,10 @@ html {
     left: -6%;
     margin-top: -24%;
   }
-
-
   .f-proyectos,
   .g-proyectos {
     display: none;
   }
-
-
   .div-contenido-proyectos {
     display: flex;
     flex-direction: column;
@@ -1019,7 +864,6 @@ html {
     position: relative;
     gap: 0.6em;
   }
-
   .titulo-sec-proyectos {
     font-family: "Euclid Circular A", "Poppins";
     font-size: 20px;
@@ -1028,7 +872,6 @@ html {
     cursor: pointer;
     transition: color 0.5s;
   }
-
   .div-img-proyecto {
     width: 12em;
     height: 7.5em;
@@ -1036,7 +879,6 @@ html {
     position: relative;
     border-radius: 1em;
   }
-
   .scale-image {
     width: 100%;
     height: 100%;
@@ -1047,22 +889,17 @@ html {
     /* Repetir cada 2 segundos */
     transition: filter 1s ease;
   }
-
-
   @keyframes scaleAnimation {
     0% {
       transform: scale(1);
     }
-
     50% {
       transform: scale(1.1);
     }
-
     100% {
       transform: scale(1);
     }
   }
-
   .descripcion-proyecto {
     position: absolute;
     top: -11%;
@@ -1072,7 +909,6 @@ html {
     transform: translateY(10%);
     transition: opacity 1s, transform 1s;
   }
-
   .descripcion-proyecto-letras {
     font-family: "Euclid Circular A", "Poppins";
     text-shadow: 3px 1px 2px #000000;
@@ -1081,23 +917,17 @@ html {
     text-shadow: 3px 1px 2px #000000;
     font-size: 15px;
   }
-
   .icono-proyectos {
     width: 15px;
     height: 15px;
   }
-
-
   .div-contenido-proyectos:hover .descripcion-proyecto {
     opacity: 1;
     transform: translateY(30%);
   }
-
   .div-contenido-proyectos:hover .scale-image {
     filter: blur(5px) brightness(0.5);
   }
-
-
   #section-contacto {
     display: flex;
     flex-direction: column;
@@ -1113,27 +943,22 @@ html {
     height: 533px;
     width: 100%;
   }
-
   #section-contacto.mostrar {
     opacity: 1;
     transform: translateY(80px);
   }
-
   .titulo-contacto {
     font-size: 30px;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
     margin-bottom: 0px;
   }
-
-
   .div-contacto {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     gap: 40px;
   }
-
   form {
     display: flex;
     flex-direction: column;
@@ -1146,7 +971,6 @@ html {
     backdrop-filter: blur(4px);
     align-items: center;
   }
-
   form label {
     font-weight: bold;
     font-family: "Euclid Circular A", "Poppins";
@@ -1155,10 +979,8 @@ html {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     padding: 6px;
   }
-
   form input[type="text"],
   form input[type="email"] {
     width: 170px;
@@ -1173,8 +995,6 @@ html {
     font-family: "Euclid Circular A", "Poppins";
     text-shadow: 3px 4px 7px rgb(0 0 0);
   }
-
-
   form textarea {
     width: 170px;
     height: 87px;
@@ -1188,9 +1008,7 @@ html {
     margin-bottom: 10px;
     text-shadow: 3px 4px 7px rgb(0 0 0);
     resize: none;
-
   }
-
   form input[type="submit"] {
     width: 100px;
     height: 50px;
@@ -1205,15 +1023,12 @@ html {
     font-family: "Euclid Circular A", "Poppins";
     margin-top: 5px;
   }
-
   form input[type="submit"]:hover {
     background-color: #000000;
   }
-
   .campo-invalido {
     border: 2px solid rgb(255, 0, 0);
   }
-
   #mensajeError {
     color: white;
     font-size: 15px;
@@ -1224,14 +1039,12 @@ html {
     transition: left .8s ease;
     border-bottom: 1px solid rgb(255, 0, 0);
   }
-
   .div-msj {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 19px;
   }
-
   #check {
     opacity: 0;
     display: none;
@@ -1244,7 +1057,6 @@ html {
     width: 212px;
     text-align: center;
   }
-
   #img-msj {
     opacity: 0;
     display: none;
@@ -1252,38 +1064,31 @@ html {
     width: 63px;
     margin-bottom: 3.2em;
   }
-
   .contenido-contacto {
     display: flex;
     flex-direction: row;
     column-gap: 3em;
     margin-right: 14px;
   }
-
   .divs-contenido {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
-
   .icono-contacto {
     width: 30px;
-    height: 30px;
   }
-
   .ancla-icon-con {
     text-decoration: none;
     text-align: center;
   }
-
   .texto-icono {
     color: white;
     font-family: "Euclid Circular A", "Poppins";
     font-size: 15px;
     text-shadow: 3px 1px 2px #000000;
   }
-
   .text-com {
     position: absolute;
     font-family: 'Gilda Display', serif;
@@ -1295,7 +1100,6 @@ html {
     top: 78%;
     left: 10%;
   }
-
   .text-com::after {
     content: "";
     display: block;
@@ -1305,12 +1109,9 @@ html {
     transform-origin: right;
     transition: transform .5s;
   }
-
   .text-com:hover::after {
     transform: scale(1, 1);
   }
-
-
   .span-6 {
     z-index: 0;
     position: absolute;
@@ -1326,8 +1127,6 @@ html {
     transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     left: -29px;
   }
-
-
   footer {
     display: flex;
     flex-direction: row-reverse;
@@ -1345,7 +1144,6 @@ html {
     margin-top: 84px;
     padding-left: 1px;
   }
-
   .fg-proyectos {
     position: absolute;
     font-family: 'Gilda Display', serif;
@@ -1353,7 +1151,6 @@ html {
     left: 2%;
     margin-bottom: 0;
   }
-
   .span-7 {
     z-index: 0;
     position: absolute;
@@ -1368,9 +1165,7 @@ html {
     transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
 }
-
 @media (min-width: 500px) {
-
   .pantalla-inicio {
     position: fixed;
     top: 0;
@@ -1395,28 +1190,22 @@ html {
     font-family: 'Gilda Display', serif;
     text-align: center;
   }
-
   .text-inicio {
     font-size: 22px;
     left: -23%;
   }
-
   .menu-icono {
     width: 33px;
-    height: 33px;
   }
-
   .span-2 {
     top: 145px;
     height: 100px;
     width: 100px;
   }
-
   .text-disciplina {
     top: 6%;
     right: 15%;
   }
-
   .text-inicio-sec {
     font-family: 'Fjalla One', sans-serif;
     border-radius: 100px;
@@ -1430,188 +1219,139 @@ html {
     left: 1%;
     margin-bottom: 40px;
   }
-
   .span-1 {
     top: 11.5%;
   }
-
   .text-creatividad {
     top: 13.4%;
     left: 8%;
   }
-
-  .button-links a img {
-    width: 15px;
-    height: 15px;
-  }
-
   .span-3 {
     right: -24%;
     width: 130px;
     height: 130px;
   }
-
   .popup-trigger {
     top: 38%;
     right: 3%;
   }
-
-
   #section-sm {
     padding-top: 74px;
   }
-
-
   .titulo-sm {
     font-size: 35px;
   }
-
-
   .text-sm {
     font-size: 15px;
     width: 24em;
     margin-top: 69px;
   }
-
   .contenedor {
     margin-top: 21px;
   }
-
   .imagen img {
     width: 170px;
     height: 250px;
   }
-
   .icono-info {
     width: 25px;
     height: 25px;
   }
-
   .info p {
     font-size: 18px;
   }
-
-
   #section-edu {
     margin-top: 11em;
     margin-left: 0px;
     left: -1.5%;
   }
-
   .titulo-edu {
     margin-bottom: 36px;
     font-size: 35px;
     margin-left: 0px;
   }
-
   .cursos {
     font-size: 15px;
     margin-bottom: 20px;
   }
-
   .div-skills {
     margin-top: 4em;
     padding-left: 0px;
   }
-
   .habilidad p {
     font-size: 16px;
   }
-
   .span-4 {
     right: -16%;
     top: 67%;
   }
-
   .text-consistencia {
     top: 71%;
     right: 3%;
   }
-
   .titulo-skills {
     font-size: 35px;
   }
-
   #section-proyectos {
     align-items: center;
     margin-top: 23em;
   }
-
   .titulo-proyectos {
     font-size: 35px;
     margin-left: 0px;
   }
-
   .div-img-proyecto {
     width: 17em;
   }
-
   .descripcion-proyecto-letras {
     font-size: 18px;
     text-align: center;
   }
-
   .descripcion-proyecto {
     width: 10.3em;
   }
-
   .div-contenido-proyectos:hover .descripcion-proyecto {
     transform: translateY(35%);
   }
-
   .rombo2 {
     bottom: 9px;
     right: 18px;
   }
-
   .ancla-rombo2 {
     font-size: 19px;
   }
-
   .texto-rombo3 {
     font-size: 22px;
     left: 15em;
   }
-
   .span-5 {
     left: -19%;
   }
-
   .text-idea {
     top: 85%;
     left: -24%;
     font-size: 19px;
   }
-
   form {
     width: 250px;
   }
-
   form input[type="text"],
   form input[type="email"] {
     width: 200px;
     height: 30px;
   }
-
   form textarea {
     width: 200px;
     height: 96px;
   }
-
-
   .icono-contacto {
-    width: 40px;
-    height: 40px;
+    font-size: 19px;
   }
-
   .texto-icono {
     font-size: 17px;
   }
-
 }
-
 @media (min-width: 720px) {
-
   .pantalla-inicio {
     position: fixed;
     top: 0;
@@ -1626,7 +1366,6 @@ html {
     transition: opacity 2s ease-in-out;
     z-index: 9999;
   }
-
   .pantalla-inicio h1 {
     font-size: 1.5rem;
     color: #fff;
@@ -1636,19 +1375,15 @@ html {
     font-family: 'Gilda Display', serif;
     text-align: center;
   }
-
-
   .div1 {
     height: 62px;
   }
-
   .navbar {
     height: 62px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
   }
-
   .navbar-menu {
     visibility: visible;
     height: 0px;
@@ -1656,7 +1391,6 @@ html {
     translate: none;
     background-color: transparent;
   }
-
   .div-anclas-nav {
     display: flex;
     flex-direction: row;
@@ -1664,357 +1398,277 @@ html {
     column-gap: 16px;
     margin-left: -18px;
   }
-
   .nombre-inicio {
     font-size: 25px;
   }
-
   .navbar-burger {
     display: none;
   }
-
   .text-inicio {
     font-size: 1.8em;
     left: -18%;
     margin-top: 4em;
   }
-
   .text-inicio-sec {
     font-size: 101px;
     left: 3%;
     margin-top: 60px;
   }
-
   .span-2 {
     top: 10em;
     height: 150px;
     width: 150px;
   }
-
   .text-disciplina {
     font-size: 21px;
     top: 7.1%;
     right: 12%;
   }
-
   .span-1 {
     width: 150px;
     height: 150px;
     top: 12.5%;
   }
-
   .text-creatividad {
     top: 14.5%;
     left: 14%;
     font-size: 21px;
   }
-
   .button {
     top: 75px;
     width: 120px;
     height: 50px;
   }
-
   .button-text {
     font-size: 16px;
   }
-
-  .button-links a img {
-    width: 20px;
-    height: 20px;
-  }
-
   #section-sm {
     padding-top: 100px;
   }
-
   .titulo-sm {
     font-size: 40px;
   }
-
   .text-sm {
     font-size: 20px;
     margin-top: 90px;
   }
-
   .span-3 {
     right: -40%;
     width: 180px;
     height: 180px;
   }
-
   .popup-trigger {
     top: 53%;
     right: -7%;
     font-size: 23px;
   }
-
   .contenedor {
     gap: 12px;
     margin-top: 40px;
   }
-
   .imagen img {
     margin-right: 0px;
     width: 220px;
     height: 300px;
   }
-
   .info p {
     font-size: 21px;
   }
-
   #section-edu {
     margin-top: 20em;
     margin-left: -5em;
     left: -1%;
   }
-
   .titulo-edu {
     font-size: 40px;
   }
-
-
-
   .texto-rombo3 {
     font-size: 35px;
     left: 13em;
     top: 7%;
   }
-
   .div-text-curso {
     align-items: baseline;
     gap: 12px;
   }
-
-
   .div-text-curso img {
     width: 21px;
   }
-
   .cursos {
     font-size: 20px;
   }
-
   .modal {
     left: 50%;
     top: 40%;
     width: 22em;
     height: 258px;
   }
-
   .modal img {
     width: 19em;
     height: 218px;
   }
-
   .span-4 {
     right: -29%;
     top: 96%;
     width: 140px;
     height: 140px;
   }
-
   .text-consistencia {
     top: 90%;
     right: -11%;
     font-size: 21px;
   }
-
   .div-skills {
     margin-top: 8em;
   }
-
   .titulo-skills {
     font-size: 40px;
     margin-bottom: 40px;
   }
-
   .habilidad {
     gap: 31px;
   }
-
   .iconos-skills {
     width: 30px;
     height: 30px;
-
   }
-
   .habilidad p {
     font-size: 21px;
   }
-
   .medidor {
     width: 150px;
     left: 60.5%;
     height: 25px;
   }
-
   #section-proyectos {
     margin-top: 35em;
   }
-
   .titulo-proyectos {
     font-size: 40px;
   }
-
   .div-img-proyecto {
     height: 8.5em;
     width: 20em;
   }
-
   .div-contenido-proyectos {
     gap: 1em;
   }
-
-
   .descripcion-proyecto-letras {
     font-size: 21px;
   }
-
   .icono-proyectos {
     width: 30px;
     height: 30px;
   }
-
   .titulo-sec-proyectos {
     font-size: 25px;
     margin-top: 10px;
   }
-
   .span-5 {
     left: -50%;
     width: 130px;
     height: 130px;
     margin-top: 17%;
   }
-
   .text-idea {
     top: 116%;
     left: -60%;
     font-size: 25px;
   }
-
   #section-contacto {
     margin-top: 42em;
     height: 35em;
   }
-
   .div-contacto {
     gap: 57px;
   }
-
   .titulo-contacto {
     font-size: 40px;
   }
-
   form {
     width: 21em;
     height: 22em;
   }
-
   form label {
     font-size: 23px;
   }
-
   form input[type="text"],
   form input[type="email"] {
     width: 12em;
     height: 35px;
     font-size: 26px;
   }
-
   form input[type="submit"] {
     width: 9em;
     height: 2.8em;
     font-size: 24px;
   }
-
-
   form textarea {
     width: 13em;
     height: 8em;
     font-size: 24px;
   }
-
   .span-6 {
     top: 20em;
     width: 180px;
     height: 180px;
     left: -54px;
   }
-
   .icono-contacto {
     width: 56px;
-    height: 56px;
   }
-
   .texto-icono {
     font-size: 22px;
   }
-
   .text-com {
     top: 80%;
     left: 12%;
     font-size: 22px;
   }
-
   #check {
     font-size: 37px;
   }
-
   #mensajeError {
     font-size: 23px;
     margin-left: 47px;
   }
-
   #img-msj {
     width: 75px;
     margin-bottom: 1.2em;
   }
-
   .span-7 {
     width: 50px;
     height: 50px;
   }
-
   footer {
     height: 77px;
     margin-top: 96px;
     padding-left: 16px;
   }
-
   .fg-proyectos {
     font-size: 2em;
   }
-
   .rombo2 {
     width: 40px;
     height: 40px;
     bottom: 18px;
   }
-
   #ancla-rombo2 {
     font-size: 21px;
   }
-
   .contenido-contacto {
     column-gap: 5em;
   }
 }
-
 @media (min-width: 1024px) {
-
   .ancla-1:hover {
     text-decoration: none;
     color: white;
   }
-
   .nombre-inicio:hover {
     text-decoration: none;
     color: white;
   }
-
   .rombo {
     width: 65px;
     height: 65px;
@@ -2022,6 +1676,7 @@ html {
     position: absolute;
     transform: rotate(45deg);
     margin: 50px;
+    border: 8px solid black;
     border: 5px solid black;
     top: 102px;
     right: 362px;
@@ -2029,6 +1684,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
     display: flex;
   }
@@ -2042,14 +1698,12 @@ html {
     font-family: 'Gilda Display';
     font-size: 40px;
   }
-
   .text-inicio {
     font-size: 2.5em;
     left: -10%;
     margin-top: 2em;
     width: 19em;
   }
-
   .span-2 {
     border: dotted 4px rgba(255, 255, 255, 1);
     left: 91%;
@@ -2057,13 +1711,11 @@ html {
     height: 250px;
     width: 250px;
   }
-
   .text-disciplina {
     font-size: 25px;
     top: 8.1%;
     right: 10%;
   }
-
   .text-disciplina::after {
     content: "";
     display: block;
@@ -2073,18 +1725,14 @@ html {
     transform-origin: right;
     transition: transform .5s;
   }
-
   .text-disciplina:hover::after {
     transform: scale(1, 1);
   }
-
-
   .text-inicio-sec {
-    font-size: 7em;
-    left: 24%;
-    margin-top: -10px;
+    font-size: 9em;
+    left: 13%;
+    margin-top: 40px;
   }
-
   .span-1 {
     border: dotted 4px rgba(255, 255, 255, 1);
     left: -42px;
@@ -2092,13 +1740,11 @@ html {
     height: 200px;
     top: 11.5%;
   }
-
   .text-creatividad {
     top: 14.5%;
     left: 12%;
     font-size: 24px;
   }
-
   .text-creatividad::after {
     content: "";
     display: block;
@@ -2108,48 +1754,34 @@ html {
     transform-origin: right;
     transition: transform .5s;
   }
-
   .text-creatividad:hover::after {
     transform: scale(1, 1);
   }
-
-
   #button {
     display: flex;
   }
-
-  .button-links a img {
-    width: 20px;
-    height: 20px;
-  }
-
   #section-sm {
     flex-direction: row;
     padding-left: 70px;
   }
-
   .titulo-sm {
     font-size: 40px;
   }
-
   .text-sm {
     font-size: 22px;
     margin-top: 90px;
     width: 29em;
     margin-right: 106px;
   }
-
   .contenedor {
     flex-direction: column;
     margin-right: 110px;
     margin-top: 64px;
   }
-
   .imagen img {
     width: 300px;
     height: 420px;
   }
-
   .span-3 {
     border: dotted 4px rgba(255, 255, 255, 1);
     right: 46%;
@@ -2157,13 +1789,11 @@ html {
     width: 230px;
     height: 230px;
   }
-
   .popup-trigger {
     top: 300%;
     right: 65%;
     font-size: 26px;
   }
-
   .popup-trigger::after {
     content: "";
     display: block;
@@ -2173,12 +1803,9 @@ html {
     transform-origin: right;
     transition: transform .5s;
   }
-
   .oppup-trigger:hover::after {
     transform: scale(1, 1);
   }
-
-
   .popup-container {
     left: 28%;
     position: absolute;
@@ -2187,7 +1814,6 @@ html {
     font-family: "Euclid Circular A", "Poppins";
     transition: opacity 1s transform 1s;
   }
-
   #section-edu {
     flex-direction: row;
     gap: 6%;
@@ -2195,16 +1821,12 @@ html {
     margin-top: 14em;
     margin-left: -13em;
   }
-
   .div-skills {
     margin-top: 14em;
   }
-
-
   .medidor {
     left: 115.5%;
   }
-
   .span-4 {
     border: dotted 4px rgba(255, 255, 255, 1);
     left: -31%;
@@ -2212,14 +1834,12 @@ html {
     width: 200px;
     height: 200px;
   }
-
   .text-consistencia {
     top: 135%;
     left: -2%;
     font-size: 24px;
     width: 145px;
   }
-
   .text-consistencia::after {
     content: "";
     display: block;
@@ -2229,12 +1849,9 @@ html {
     transform-origin: right;
     transition: transform .5s;
   }
-
   .text-consistencia:hover::after {
     transform: scale(1, 1);
   }
-
-
   .rombo3 {
     width: 120px;
     height: 120px;
@@ -2252,7 +1869,6 @@ html {
     z-index: 1;
     box-shadow: 0px 0px 20px 2px rgb(255 255 255 / 75%);
   }
-
   .texto-rombo3 {
     font-size: 30px;
     font-family: 'Gilda Display', serif;
@@ -2263,11 +1879,9 @@ html {
     top: 31%;
     opacity: 1;
   }
-
   #section-proyectos {
     margin-top: 27em;
   }
-
   .div-proyectos {
     flex-direction: row;
     width: 44em;
@@ -2275,16 +1889,13 @@ html {
     row-gap: 3em;
     margin-top: 3em;
   }
-
   .div-img-proyecto {
     height: 10.5em;
     width: 20em;
   }
-
   .titulo-sec-proyectos:hover {
     color: white;
   }
-
   .span-5 {
     border: dotted 4px rgba(255, 255, 255, 1);
     left: 92%;
@@ -2292,13 +1903,11 @@ html {
     height: 200px;
     margin-top: 26%;
   }
-
   .text-idea {
     top: 109%;
     left: 114%;
     font-size: 28px;
   }
-
   .text-idea::after {
     content: "";
     display: block;
@@ -2308,16 +1917,12 @@ html {
     transform-origin: right;
     transition: transform .5s;
   }
-
   .text-idea:hover::after {
     transform: scale(1, 1);
   }
-
-
   #section-contacto {
     margin-top: 23em;
   }
-
   .span-6 {
     border: dotted 4px rgba(255, 255, 255, 1);
     top: 20em;
@@ -2325,45 +1930,27 @@ html {
     height: 230px;
     left: -54px;
   }
-
   .text-com {
     font-size: 25px;
   }
-
-  .icono-contacto {
-    width: 50px;
-    height: 50px;
-  }
-
   #mensajeError {
     margin-left: 11em;
   }
-
   #check {
     width: 10em;
   }
-
-
-
 }
-
-
-
-
-
 ::-webkit-scrollbar {
   width: 10px;
   /* Ancho de la barra de desplazamiento */
   background-color: black;
   /* Color de fondo de la barra */
 }
-
 /* Estilo del riel de la barra de desplazamiento */
 ::-webkit-scrollbar-track {
   background-color: black;
   /* Color de fondo del riel */
 }
-
 /* Estilo del mango de la barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
   background-color: #232323;
@@ -2371,13 +1958,11 @@ html {
   border-radius: 5px;
   /* Borde redondeado para el mango */
 }
-
 /* Estilo del mango de la barra de desplazamiento cuando se mueve */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #cccccc;
   /* Cambia el color al pasar el mouse */
 }
-
 /* Estilo del fondo de la barra de desplazamiento cuando se arrastra */
 ::-webkit-scrollbar-thumb:active {
   background-color: #999999;
