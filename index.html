@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="¡Bienvenido a mi portafolio de Desarrollo Front End! Soy un apasionado desarrollador con experiencia en HTML, CSS y JavaScript. Explora mis proyectos y contáctame y creemos juntos tu proximo proyecto.">
   <title>FG - Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -194,50 +195,50 @@
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/js.png" alt="js">
           <p>Javascript</p>
-          <meter class="medidor" id="js-medidor" min="0" max="100" value="0" data-valor-deseado="50"></meter>
+          <meter class="medidor" id="js-medidor" min="0" max="100" value="0" valor="50"></meter>
         </div>
 
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/python.png" alt="python">
           <p>Python</p>
-          <meter class="medidor" id="py-medidor" min="0" max="100" value="0" data-valor-deseado="50"></meter>
+          <meter class="medidor" id="py-medidor" min="0" max="100" value="0" valor="50"></meter>
         </div>
 
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/html-5.png" alt="html">
           <p>Html</p>
-          <meter class="medidor" id="html-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+          <meter class="medidor" id="html-medidor" min="0" max="100" value="0" valor="100"></meter>
         </div>
 
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/css-3.png" alt="css">
           <p>Css</p>
-          <meter class="medidor" id="css-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+          <meter class="medidor" id="css-medidor" min="0" max="100" value="0" valor="100"></meter>
         </div>
 
 
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/sass.png" alt="sass">
           <p>Sass</p>
-          <meter class="medidor" id="sass-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+          <meter class="medidor" id="sass-medidor" min="0" max="100" value="0" valor="100"></meter>
         </div>
 
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/bootstrap.png" alt="bootstrap">
           <p>Bootstrap</p>
-          <meter class="medidor" id="bt-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+          <meter class="medidor" id="bt-medidor" min="0" max="100" value="0" valor="100"></meter>
         </div>
 
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/git.png" alt="git">
           <p>Git</p>
-          <meter class="medidor" id="git-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+          <meter class="medidor" id="git-medidor" min="0" max="100" value="0" valor="100"></meter>
         </div>
 
         <div class="habilidad">
           <img class="iconos-skills" src="./assets/canva.png" alt="canva">
           <p>Canva</p>
-          <meter class="medidor" id="canva-medidor" min="0" max="100" value="0" data-valor-deseado="100"></meter>
+          <meter class="medidor" id="canva-medidor" min="0" max="100" value="0" valor="100"></meter>
         </div>
 
       <span class="span-4"></span>
@@ -269,9 +270,6 @@
 
           </div>
         </div>
-
-        <p class="f-proyectos">F</p>
-        <p class="g-proyectos">G</p>
 
         <div class="div-contenido-proyectos">
           <div class="div-img-proyecto">
@@ -387,78 +385,8 @@
 
   </div>
 </div>
-
-  <script type="text/javascript">
-    const toggleMenuOpen = () => {
-      document.body.classList.toggle("open");
-    };
-  </script>
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" async></script> 
   <script type="text/javascript" src="/main.js"></script>
-
-  <script>
-
-    function enviarFormulario(event) {
-      event.preventDefault(); // Evita la recarga de la página por defecto
-
-      var campos = document.querySelectorAll(".campo");
-      var mensajeError = document.getElementById("mensajeError");
-      var formCompleto = true;
-
-      // Validación del campo Nombre: debe contener solo letras
-      var regexNombre = /^[A-Za-z]+$/;
-      var nombre = document.getElementById("nombre");
-      if (!regexNombre.test(nombre.value)) {
-        nombre.style.border = "1px solid red";
-        formCompleto = false;
-      } else {
-        nombre.classList.remove("campo-invalido");
-      }
-
-      // Validación del campo Correo Electrónico: debe tener "@" y ".com"
-      var regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
-      var email = document.getElementById("email");
-      if (!regexEmail.test(email.value)) {
-        email.style.border = "1px solid red";
-        formCompleto = false;
-      } else {
-        email.classList.remove("campo-invalido");
-      }
-
-      if (!formCompleto) {
-
-          mensajeError.innerHTML = "Fíjate si completaste bien todo!";
-          mensajeError.style.left = "18%";
-        setTimeout(function () {
-          mensajeError.style.opacity = "0"
-        }, 3000);
-
-
-      } else {
-        // Ocultar el formulario
-        document.getElementById("miFormulario").style.display = "none";
-        mensajeError.style.display = "none"
-
-        // Mostrar el mensaje de agradecimiento y la imagen con una animación suave
-        var mensajeAgradecimiento = document.getElementById("check");
-        var imgMensaje = document.getElementById("img-msj");
-
-
-        mensajeAgradecimiento.style.display = "block"
-        imgMensaje.style.display = "block";
-        setTimeout(function () {
-          imgMensaje.style.opacity = "1";
-          mensajeAgradecimiento.style.opacity = "1";
-        }, 100); // Retraso para mostrar la imagen después de un breve momento
-      }
-    }
-
-
-
-
-
-  </script>
 
 </body>
 
