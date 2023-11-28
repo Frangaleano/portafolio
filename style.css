@@ -694,6 +694,7 @@
   .imagen img {
     width: 110px;
     height: 170px;
+    border-radius: 50%;
   }
 
   .info {
@@ -1474,7 +1475,7 @@
 
   .imagen img {
     margin-right: 0px;
-    width: 220px;
+    width: 180px;
     height: 300px;
   }
 
@@ -1854,7 +1855,7 @@
   }
 
   .imagen img {
-    width: 300px;
+    width: 250px;
     height: 420px;
   }
 
