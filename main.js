@@ -178,43 +178,45 @@ function enviarFormulario(event) {
   var regexNombre = /^[A-Za-z]+$/;
   var nombre = document.getElementById("nombre");
   if (!regexNombre.test(nombre.value)) {
-    nombre.style.border = "1px solid red";
-    formCompleto = false;
+      nombre.style.border = "1px solid red";
+      formCompleto = false;
   } else {
-    nombre.classList.remove("campo-invalido");
+      nombre.classList.remove("campo-invalido");
   }
 
   // Validación del campo Correo Electrónico: debe tener "@" y ".com"
   var regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
   var email = document.getElementById("email");
   if (!regexEmail.test(email.value)) {
-    email.style.border = "1px solid red";
-    formCompleto = false;
+      email.style.border = "1px solid red";
+      formCompleto = false;
   } else {
-    email.classList.remove("campo-invalido");
+      email.classList.remove("campo-invalido");
   }
 
   if (!formCompleto) {
-    mensajeError.innerHTML = "Fíjate si completaste bien todo!";
-    mensajeError.style.left = "18%";
-    setTimeout(function () {
-      mensajeError.style.opacity = "0";
-    }, 3000);
+      mensajeError.innerHTML = "Fíjate si completaste bien todo!";
+      mensajeError.style.left = "18%";
+      setTimeout(function () {
+          mensajeError.style.opacity = "0";
+      }, 3000);
   } else {
-    // Ocultar el formulario
-    document.getElementById("miFormulario").style.display = "none";
-    mensajeError.style.display = "none";
-
-    // Mostrar el mensaje de agradecimiento y la imagen con una animación suave
-    var mensajeAgradecimiento = document.getElementById("check");
-    var imgMensaje = document.getElementById("img-msj");
-
-    mensajeAgradecimiento.style.display = "block";
-    imgMensaje.style.display = "block";
-    setTimeout(function () {
-      imgMensaje.style.opacity = "1";
-      mensajeAgradecimiento.style.opacity = "1";
-    }, 100); // Retraso para mostrar la imagen después de un breve momento
+      // Enviar los datos a través de EmailJS
+      emailjs.send('service_jpqf64r', 'template_4qzuycs', {
+          nombre: nombre.value,
+          email: email.value,
+          mensaje: document.getElementById("mensaje").value
+      })
+      .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          // Ocultar el formulario y mostrar el mensaje de éxito
+          document.getElementById("miFormulario").style.display = "none";
+          document.getElementById("mensajeExito").style.display = "block";
+      }, function(error) {
+          console.log('FAILED...', error);
+          mensajeError.innerHTML = "Hubo un error al enviar el formulario.";
+          mensajeError.style.display = "block";
+      });
   }
 }
 
