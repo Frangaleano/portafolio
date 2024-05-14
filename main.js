@@ -211,7 +211,8 @@ function enviarFormulario(event) {
           console.log('SUCCESS!', response.status, response.text);
           // Ocultar el formulario y mostrar el mensaje de éxito
           document.getElementById("miFormulario").style.display = "none";
-          document.getElementById("mensajeExito").style.display = "block";
+          document.getElementById("check").style.display = "block";
+          document.getElementById("img-msj").style.display = "block"
       }, function(error) {
           console.log('FAILED...', error);
           mensajeError.innerHTML = "Hubo un error al enviar el formulario.";
