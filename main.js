@@ -213,6 +213,8 @@ function enviarFormulario(event) {
           document.getElementById("miFormulario").style.display = "none";
           document.getElementById("check").style.display = "block";
           document.getElementById("img-msj").style.display = "block"
+          document.getElementById("check").style.opacity = "1";
+          document.getElementById("img-msj").style.opacity = "1"
       }, function(error) {
           console.log('FAILED...', error);
           mensajeError.innerHTML = "Hubo un error al enviar el formulario.";
