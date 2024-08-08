@@ -1082,7 +1082,7 @@
     transform: translateY(2em);
     opacity: 0;
     transition: opacity 1s ease, transform 2s ease;
-    margin-top: 30em;
+    margin-top: 31em;
     background-image: url("./assets/bg-expulsion.webp");
     background-size: cover;
     background-repeat: no-repeat;
