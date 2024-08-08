@@ -14,7 +14,7 @@
     margin: 0px;
     color: #f9f9f9;
     min-height: 100vh;
-    background-image: url("assets/bg-lacaida.png");
+    background-image: url("assets/bg-lacaida.webp");
     background-size: 101%;
     background-repeat: no-repeat;
     display: grid;
@@ -353,7 +353,7 @@
     animation-duration: 5s;
     animation-name: fade;
     letter-spacing: 0.5px;
-    top: 5.5%;
+    top: 4.5%;
     right: 14%;
   }
 
@@ -437,7 +437,7 @@
     animation-name: spinner-loading;
     transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     left: -58px;
-    top: 9.2%;
+    top: 8.2%;
   }
 
   .span-2 {
@@ -474,7 +474,7 @@
     animation-duration: 5s;
     animation-name: fade;
     letter-spacing: 0.5px;
-    top: 12%;
+    top: 10.3%;
     left: 8%;
   }
 
@@ -859,7 +859,7 @@
     animation-name: fade;
     letter-spacing: 0.5px;
     top: 66%;
-    right: 14%;
+    right: 17%;
   }
 
   .div-skills {
@@ -930,8 +930,8 @@
     position: relative;
     transform: translateY(100px);
     transition: opacity 1s ease, transform 2s ease;
-    height: 450px;
-    margin-top: 22.5em;
+    height: 55em;
+    margin-top: 16.5em;
     opacity: 0;
     margin-bottom: 20px;
   }
@@ -968,7 +968,7 @@
     animation-duration: 5s;
     animation-name: fade;
     letter-spacing: 0.5px;
-    top: 84.5%;
+    top: 74.5%;
     left: -7%;
   }
 
@@ -1069,6 +1069,8 @@
     filter: blur(5px) brightness(0.5);
   }
 
+
+
   #section-contacto {
     display: flex;
     flex-direction: column;
@@ -1076,7 +1078,7 @@
     opacity: 0;
     transition: opacity 1s ease, transform 2s ease;
     margin-top: 30em;
-    background-image: url("assets/bg-expulsion.jpeg");
+    background-image: url("./assets/bg-expulsion.webp");
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0px 0px 12px 15px rgb(0 0 0 / 97%) inset;
@@ -1107,7 +1109,7 @@
   form {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 233px;
     height: 324px;
     background-color: transparent;
     padding: 5px 11px;
@@ -1130,8 +1132,8 @@
 
   form input[type="text"],
   form input[type="email"] {
-    width: 170px;
-    height: 25px;
+    width: 190px;
+    height: 30px;
     padding: 5px;
     border: 1px solid rgb(204, 204, 204);
     border-radius: 10px;
@@ -1144,8 +1146,8 @@
   }
 
   form textarea {
-    width: 170px;
-    height: 87px;
+    width: 190px;
+    height: 90px;
     border: 1px solid rgb(204, 204, 204);
     border-radius: 5px;
     background-color: transparent;
@@ -1284,13 +1286,13 @@
     width: 100px;
     height: 100px;
     border-radius: 300px;
-    top: 16em;
+    top: 17em;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 60s;
     animation-name: spinner-loading;
     transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    left: -29px;
+    left: -53px;
   }
 
   footer {
@@ -1332,6 +1334,69 @@
     animation-name: spinner-loading;
     transition: all 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
+}
+
+@media (min-width: 400px) {
+
+  .text-inicio {
+    font-size: 21px;
+    text-shadow: 1px 8px 5px rgba(0, 0, 0, 1);
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    text-transform: uppercase;
+    font-family: 'Prompt', sans-serif;
+    margin-top: 4em;
+    animation: slide-top 3s ease-in-out;
+    position: relative;
+    left: -37px;
+  }
+
+
+  .text-disciplina {
+    top: 4.5%;
+  }
+
+  .text-creatividad {
+    top: 10%;
+  }
+
+  .modal {
+        display: none;
+    position: fixed;
+    z-index: 4;
+    left: 21%;
+    top: 33%;
+    transform: translate(-50%, -50%);
+    width: 326px;
+    height: 221px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
+    transition: opacity 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    object-fit: cover;
+    margin-left: 86px;
+  }
+
+  .modal img {
+    width: 290px;
+    height: 195px;
+  }
+
+  .text-consistencia {
+    right: 18%;
+  }
+
+  #section-proyectos {
+    margin-top: 14.5em;
+  }
+
+  .text-idea {
+    top: 62.5%;
+  }
+
+  #section-contacto {
+    margin-top: 29em;
+  }
+
 }
 
 /*estilos para pantallas desde 720px - tablet*/
@@ -1567,6 +1632,7 @@
 
   #section-proyectos {
     margin-top: 35em;
+    height: 59em;
   }
 
   .titulo-proyectos {

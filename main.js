@@ -142,11 +142,11 @@ function cerrarModal() {
 
 function obtenerRutaImagen(idCurso) {
   const imagenes = {
-    curso1: "./assets/imagen-curso1.png",
-    curso2: "./assets/imagen-curso2.jpeg",
-    curso3: "./assets/imagen-curso3.png",
-    curso4: "./assets/imagen-curso4.png",
-    curso5: "./assets/imagen-curso5.png",
+    curso1: "./assets/imagen-curso1.webp",
+    curso2: "./assets/imagen-curso2.webp",
+    curso3: "./assets/imagen-curso3.webp",
+    curso4: "./assets/imagen-curso4.webp",
+    curso5: "./assets/imagen-curso5.webp",
   };
   return imagenes[idCurso] || "";
 }
