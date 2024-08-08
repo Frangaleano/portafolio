@@ -14,9 +14,6 @@
     margin: 0px;
     color: #f9f9f9;
     min-height: 100vh;
-    background-image: url("assets/bg-lacaida.webp");
-    background-size: 101%;
-    background-repeat: no-repeat;
     display: grid;
     align-items: start;
     font-family: 'Montserrat', sans-serif;
@@ -291,6 +288,14 @@
     align-items: center;
   }
 
+  #section-inicio {
+    background-image: url(assets/bg-lacaida.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    box-shadow: 0px 0px 20px 20px rgb(0 0 0 / 40%) inset;
+  }
+
   .text-inicio {
     font-size: 18px;
     text-shadow: 1px 8px 5px rgba(0, 0, 0, 1);
@@ -300,7 +305,7 @@
     margin-top: 5em;
     animation: slide-top 3s ease-in-out;
     position: relative;
-    left: -22px;
+    left: 16px;
   }
 
   @keyframes slide-top {
@@ -409,7 +414,7 @@
     animation-name: fade;
     animation-duration: 5s;
     position: relative;
-    left: 7%;
+    left: 14%;
     margin-bottom: 40px;
   }
 
@@ -618,7 +623,7 @@
     padding-left: 21px;
     padding-top: 54px;
     opacity: 0;
-    transform: translateY(-3em);
+    transform: translateY(-2em);
   }
 
   #section-sm.mostrar {
@@ -928,7 +933,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    transform: translateY(100px);
+    transform: translateY(4em);
     transition: opacity 1s ease, transform 2s ease;
     height: 55em;
     margin-top: 16.5em;
@@ -1074,7 +1079,7 @@
   #section-contacto {
     display: flex;
     flex-direction: column;
-    transform: translateY(0px);
+    transform: translateY(2em);
     opacity: 0;
     transition: opacity 1s ease, transform 2s ease;
     margin-top: 30em;
