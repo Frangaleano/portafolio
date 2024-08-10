@@ -13,28 +13,13 @@
     padding: 0px;
     margin: 0px;
     color: #f9f9f9;
-    min-height: 100vh;
     display: grid;
     align-items: start;
     font-family: 'Montserrat', sans-serif;
-    transition: all 1s linear;
-    animation: shadow-inset-center 3s linear both;
-    grid-template-rows: 8% 100%;
     overflow-x: hidden;
     background-color: rgb(0, 0, 0);
     scroll-behavior: smooth;
   }
-
-  @keyframes shadow-inset-center {
-    0% {
-      box-shadow: inset 0 0 0 0 transparent;
-    }
-
-    100% {
-      box-shadow: inset 0 0 250px 50px rgb(0, 0, 0);
-    }
-  }
-
 
   ::-webkit-scrollbar {
     width: 10px;
@@ -82,7 +67,7 @@
     text-align: center;
   }
 
-  .div1 {
+  .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -94,7 +79,7 @@
     backdrop-filter: blur(5.2px);
     width: 159%;
     z-index: 3;
-    animation: slide-top 10s ease-in-out;
+    animation: slide-top 7s ease;
     height: 40px;
   }
 
@@ -295,6 +280,9 @@
     width: 100%;
     box-shadow: 0px 0px 20px 20px rgb(0 0 0 / 40%) inset;
     margin-top: 41px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .text-inicio {
@@ -303,10 +291,9 @@
     transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     text-transform: uppercase;
     font-family: 'Prompt', sans-serif;
-    margin-top: 3em;
+    margin-top: 2em;
     animation: slide-top 10s ease-in-out;
-    position: relative;
-    left: 44px;
+    margin-right: 3em;
   }
 
   @keyframes slide-top {
@@ -381,7 +368,7 @@
     animation-duration: 5s;
     animation-name: fade;
     letter-spacing: 2.5px;
-    left: 15em;
+    left: 13em;
     color: #6a6a6a;
     z-index: 9999;
     top: 0px;
@@ -410,9 +397,8 @@
     margin-top: 40px;
     animation-name: fade;
     animation-duration: 5s;
-    position: relative;
-    left: 18%;
     margin-bottom: 40px;
+    text-align: center;
   }
 
   @keyframes fade {
@@ -618,9 +604,9 @@
     transition: opacity 1s ease, transform 2s ease;
     height: 201px;
     padding-left: 21px;
-    padding-top: 54px;
+    padding-top: 69px;
     opacity: 0;
-    transform: translateY(-2em);
+    transform: translateY(-1em);
   }
 
   #section-sm.mostrar {
@@ -936,6 +922,7 @@
     margin-top: 16.5em;
     opacity: 0;
     margin-bottom: 20px;
+    align-items: center;
   }
 
   #section-proyectos.mostrar {
@@ -947,7 +934,6 @@
     font-size: 30px;
     font-family: 'Prompt', sans-serif;
     text-shadow: 3px 4px 7px rgb(102, 101, 101);
-    margin-left: 86px;
   }
 
   .div-proyectos {
@@ -970,8 +956,7 @@
     animation-duration: 5s;
     animation-name: fade;
     letter-spacing: 0.5px;
-    top: 74.5%;
-    left: -7%;
+    top: 54em;
   }
 
   .span-5 {
@@ -984,8 +969,7 @@
     animation-timing-function: linear;
     animation-duration: 60s;
     animation-name: spinner-loading;
-    left: -6%;
-    margin-top: -24%;
+    margin-top: 0em;
   }
 
   .div-contenido-proyectos {
@@ -1345,10 +1329,8 @@
     transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     text-transform: uppercase;
     font-family: 'Prompt', sans-serif;
-    margin-top: 4em;
+    margin-top: 2em;
     animation: slide-top 3s ease-in-out;
-    position: relative;
-    left: -37px;
   }
 
 
@@ -1361,7 +1343,7 @@
   }
 
   .modal {
-        display: none;
+    display: none;
     position: fixed;
     z-index: 4;
     left: 21%;
@@ -1377,6 +1359,10 @@
     margin-left: 86px;
   }
 
+  #section-proyectos {
+    transform: translateY(7em);
+  }
+
   .modal img {
     width: 290px;
     height: 195px;
@@ -1387,16 +1373,30 @@
   }
 
   #section-proyectos {
-    margin-top: 14.5em;
+    margin-top: 16.5em;
   }
 
   .text-idea {
-    top: 62.5%;
+    top: 54em;
   }
 
   #section-contacto {
     margin-top: 29em;
+    transform: translateY(3em);
   }
+
+}
+
+@media (min-width: 550px) {
+  .text-inicio {
+    left: 66px;
+  }
+
+  .text-inicio-sec {
+    left: 25%;
+    font-size: 67px;
+  }
+
 
 }
 
@@ -1428,7 +1428,7 @@
     text-align: center;
   }
 
-  .div1 {
+  .header {
     height: 62px;
   }
 
@@ -1464,14 +1464,14 @@
   }
 
   .text-inicio {
-    font-size: 1.8em;
-    left: -18%;
-    margin-top: 4em;
+    font-size: 1.5em;
+    left: 9%;
+    margin-top: 3em;
   }
 
   .text-inicio-sec {
     font-size: 101px;
-    left: 3%;
+    left: 22%;
     margin-top: 60px;
   }
 
@@ -1483,19 +1483,19 @@
 
   .text-disciplina {
     font-size: 21px;
-    top: 7.1%;
-    right: 12%;
+    top: 5%;
+    right: 15%;
   }
 
   .span-1 {
     width: 150px;
     height: 150px;
-    top: 12.5%;
+    top: 9.5%;
   }
 
   .text-creatividad {
-    top: 14.5%;
-    left: 14%;
+    top: 11.5%;
+    left: 12%;
     font-size: 21px;
   }
 
@@ -1520,6 +1520,7 @@
   .text-sm {
     font-size: 20px;
     margin-top: 90px;
+    width: 400px;
   }
 
   .span-3 {
@@ -1530,7 +1531,7 @@
 
   .popup-trigger {
     top: 53%;
-    right: -7%;
+    right: -5%;
     font-size: 23px;
   }
 
@@ -1550,9 +1551,7 @@
   }
 
   #section-edu {
-    margin-top: 20em;
-    margin-left: -5em;
-    left: -1%;
+    margin-top: 23em;
   }
 
   .titulo-edu {
@@ -1633,7 +1632,6 @@
 
   #section-proyectos {
     margin-top: 35em;
-    height: 59em;
   }
 
   .titulo-proyectos {
@@ -1671,13 +1669,13 @@
   }
 
   .text-idea {
-    top: 116%;
-    left: -60%;
+    top: 42em;
     font-size: 25px;
+    left: -8em;
   }
 
   #section-contacto {
-    margin-top: 42em;
+    margin-top: 47em;
     height: 35em;
   }
 
@@ -1828,7 +1826,7 @@
 
   .text-inicio {
     font-size: 2.5em;
-    left: -10%;
+    left: 5%;
     margin-top: 2em;
     width: 19em;
   }
@@ -1863,7 +1861,7 @@
 
   .text-inicio-sec {
     font-size: 9em;
-    left: 13%;
+    left: 24%;
     margin-top: 40px;
   }
 
@@ -2101,7 +2099,7 @@
   }
 
   .text-idea {
-    top: 109%;
+    top: 42%;
     left: 114%;
     font-size: 28px;
   }
